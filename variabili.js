@@ -2,7 +2,6 @@
 // Per mandare una qualsiasi linea di testo in console si utilizza il seguente commando console.log(). 
 // Var definisce variabili, per definire una variabile scrivere var + nome variabile = il suo contenuto 
 
-
 var porcoDio = 666
 console.log(porcoDio)
 // questi sono i tipi di dato primitivi.
