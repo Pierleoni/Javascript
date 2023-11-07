@@ -118,7 +118,7 @@
                     <br> è un valore primitivo immutabile che è unico
                 </li>
                 <li>number :
-                    <br> sono i numeri, sia interi che frazionari 
+                    <br> sono i numeri, sia interi che frazionari
                 </li>
                 <li>object :
                     <br> è un oggetto che può memorizzare molte coppie chiave-valore diverse
@@ -129,7 +129,40 @@
             <br>Possiamo quindi immaginare una variabile come una scatola che può essere riempita con i dati che
             desideri.
             Var definisce variabili, per definire una variabile scrivere var + nome variabile = il suo contenuto dove
-            var, per l'appunto, sta per variabile
+            var, per l'appunto, sta per variabile. <br> Ci sono essenzialmente 3 modi per dichiarare una variabile in
+            Js:
+            var, let, const. Tutti e tre sono usati per dichiarare variabili, e hanno importanti differenze in termini
+            di scopo/ambito, ... e mutabilità
+
+            <ol>
+                <li>
+                    var :
+                    <!-- può essere utilizzato nell'intero programma, -->
+                    <ul>
+                        <li>
+                            Le variabili dichiarate con var sono limitate alle funzioni nelle quali sono dichiarate
+                        </li>
+                        <li>
+                            le variabili sono mosse in alto della loro funzione contenitiva o della loro global scope
+                            durante la fase di compilazione. Questo può portare a un comportamento inaspettato se non si
+                            sta attenti.
+                        </li>
+                        <li>
+                            Si può ri-dichiarare una variabile con var nello stesso ambito, ciò non generare errore
+                        </li>
+                        <li>
+                            le variabili var non sono block-scoped, quindi possono essere accessibili al di fuori del
+                            blocco in cui sono definite.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    let : verra utilizzato solo nell'ambito di dove lo hai dichiarato
+                </li>
+                <li>
+                    const:
+                </li>
+            </ol>
             </p>
         </div>
 
