@@ -12,7 +12,7 @@ var num1 = 333
 var stringhe = "Hello World, dio bestia"
 // boolean: vero o falso 
 var booleano = false
-// undefined: variabili per cui è avvenuto una allocazione di memeoria ma non hanno valore 
+// undefined: variabili per cui è avvenuto una allocazione di memoria ma non hanno valore 
 var indefinito = undefined
 // null: il codice sa che dovra creare una allocazione di memoria in RAM ma non c'è ancora l'indirizzo in memoria
 // tante variabili maggiore sarà il lavoro svolto dalla RAM quindi diventerà piu lenta 

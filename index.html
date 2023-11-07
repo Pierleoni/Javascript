@@ -11,19 +11,128 @@
 <script type="text/Javascript" src="strings.js"></script>
 
 <body>
-    <div>
-        <h1>Fundamentals</h1>
-        <p>
-            Per iniziare ad usare Javascript dobbiamo prima aprire sul nostro code editor un foglio HTML e dopodiche tra
-            i tag head e body aggiungere uno o più tag script. All'interno di questi tag usare gli attributi type e src
-            per linkare il foglio o i fogli di Javascript.
+    <div id="bordo">
+        <div class="ph">
+            <h1>Inizio</h1>
+            <p>
+                Per iniziare ad usare Javascript dobbiamo prima aprire sul nostro code editor un foglio HTML e dopodiche
+                tra
+                i tag head e body aggiungere uno o più tag script. All'interno di questi tag usare gli attributi type e
+                src
+                per linkare il foglio o i fogli di Javascript.
+                <br>
+                <img src="/Media/Photo/Linking Js .png" height="100px" width="400px" alt="Linking Js">
+                <br>In questo caso ci sono linkati 3 file di Js ognuno dei quali fa 3 cose ben distinte tra loro.
+                <br>In seguito andare sul nostro browser (Chrome, Firefox, Opera, etc.) e aprire la console (ctrl +
+                shift +
+                j [Windows / Linux] o Cmd + shift +j [Mac]), oppure andare sul documento online → click tasto destro →
+                analizza → tab console (shortcut F12).
+                <!-- Per aprire una nuova finestra su scrimba: una volta registrati bisogna andare dalla dashboard su My Scrims → 
+                cliccare su "+New Scrim" → cliccare su Javascript → create new scrim   -->
+
+            </p>
+        </div>
+        <div class="ph">
+            <h1>Javascript</h1>
+            <p>
+            <h2>Commenti di Javascript</h2>
+            i commenti di Js esattamente come quelli di html e CSS verrano intenzionalmente ignorati e sevono anche
+            questi per creare note per te o per altri su cio che il codice fa in quel momento.
+            <br> Ci sono due tipi di commenti gli in-line comment e i multiline comment:
+            <br> gli in-line comment vengono scritti su una riga e se mandiamo accappo dobbiamo necessariamente ri-fare
+            un nuovo commento,<br>
+            mentre i commenti multi-line sono utili perchè posso andare accappo senza dover riscrivere un nuovo commento
+            <br>[n.d.r. i commenti in-line su Js possono essere creati tramite doppio slash (//) ad inizio commento o
+            ctrl + ù,
+            mentre per i commenti multi-line devo scrivere /* ad inizio commento e */ a fine commento].
             <br>
-            <img src="/Media/Photo/Linking Js .png" height="100px" width="400px" alt="">
-            <br>In questo caso ci sono linkati 3 file di Js ognuno dei quali fa 3 cose ben distinte tra loro.
-            <br>In seguito andare sul nostro browser (Chrome, Firefox, Opera, etc.) e aprire la console (ctrl + shift +
-            j [Windows / Linux] o Cmd + shift +j [Mac]), oppure andare sul documento online → click tasto destro →
-            analizza → tab console (shortcut F12).
-        </p>
+            <img src="/Media/Photo/Esempio commenti Js.png" height="160px" width="600px" alt="Esempio commenti Js">
+            <br>
+            <small>Questo è un esempio di in-line comment e multi-line comment</small>
+            <br>
+            <h2>Data Types e variabili </h2>
+            in informatica i data sono qualsiasi cosa ha siginificato per il computer e Js fornisce 7 tipi di data:
+            <ol>
+                <li>undefined :
+                    <br> sono data non definiti, si utilizzano quando ho una variabile che non ho ancora impostato. <br>
+                    Quindi sono variabili per cui è avvenuto una allocazione di memoria ma non hanno valore
+                </li>
+                <li>null :
+                    <br> sono data che non significano nulla (null), si utliizzano quando hai impostato una variabile
+                    che non è niente. <br> Quindi è più corretto dire che il codice sa che dovra creare una allocazione
+                    di memoria in RAM ma non c'è ancora l'indirizzo in memoria
+                </li>
+                <li>boolean :
+                    <br> siginifica vero o falso o on, off.
+                    <br>In javascript i dati booleani rappesentano un valore binario (1,0) che esattamente come il
+                    codice binario può avere due valori; vero/falso o meglio dire on/off.
+                    <br>Spesso questi valori vengono usati nelle istruzioni condizionali e nel flusso di controllo per
+                    prendere decisioni nel codice.<br>
+                    Alcuni punti chiave riguardanti i booleani in Js:
+                    1. Valori: come menzionato prima le variabili booleane hanno solo due valori; <b>vero o falso</b>
+                    <br>
+                    2. Operatori di confronto: una variabile booleana viene usata in concomitanza con gli operatori di
+                    confronto per confrontare i valori.
+                    Ad esempio:
+                    <ul type="A">
+                        <li>
+                            ===(uguaglianza stretta o strict equality): ritorna a "vero" se i due valori sono uguali e
+                            hanno lo stesso data type
+                        </li>
+                        <li>
+                            !== (disuguaglianza stretta o strict inequality ): ritorna a "vero" se i due valori non sono
+                            uguali e hanno differenti data type
+                        </li>
+                        <li>
+                            "<" (minore di): ritorna a "vero" se l'operando di siinsitra i minore di quello a destra
+                                </li>
+                        <li>
+                            ">" (maggiore di): ritorna a "vero" se l'operando di sinistra è maggiore di quello a destra
+                        </li>
+                        <li>
+                            <= (minore di o uguale a): ritorna a vero se l'operando di sinistra è minore o uguale
+                                dell'operando di destra </li>
+                        <li>
+                            >= (maggiore di o uguale a): ritorna a vero se l'operando di sinistra è maggiore di o uguale
+                            a quello di destra
+                        </li>
+                    </ul>
+                    3.Operatori logici: si possono usare operatori logici per combinare o modificare i valori booleani
+                    <ul class="A">
+                        <li>
+                            && (logical AND): ritorna vero se entrambi gli operandi sono veri
+                        </li>
+                        <li>
+                            || (logical OR): ritorna vero se almeno uno degli operandi è vero
+                        </li>
+                        <li>
+                            ! (logical NOT): ritorna il valore booleano opposto del operando (es: "!true" è "false"
+                            viceversa "!false" è "true")
+                        </li>
+                    </ul>
+                </li>
+                <li>string :
+                    <br>le stringhe sono una sorta di testo, cioè sequenze di caratteri con determinate proprietà
+                </li>
+                <li>symbol :
+                    <br> è un valore primitivo immutabile che è unico
+                </li>
+                <li>number :
+                    <br> sono i numeri, sia interi che frazionari 
+                </li>
+                <li>object :
+                    <br> è un oggetto che può memorizzare molte coppie chiave-valore diverse
+                </li>
+            </ol>
+            Con Js spesso si imposterano i dati di una variabile, una variabile consente ai computer di archiviare e
+            manipolare i dati in modo dinamico è fondamentalmente un'etichetta per indicare i dati.
+            <br>Possiamo quindi immaginare una variabile come una scatola che può essere riempita con i dati che
+            desideri.
+            Var definisce variabili, per definire una variabile scrivere var + nome variabile = il suo contenuto dove
+            var, per l'appunto, sta per variabile
+            </p>
+        </div>
+
     </div>
 </body>
 
