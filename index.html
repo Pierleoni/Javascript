@@ -9,6 +9,7 @@
 <script type="text/Javascript" src="variabili.js"></script>
 <script type="text/Javascript" src="numbers.Js"></script>
 <script type="text/Javascript" src="strings.js"></script>
+<!-- <script type="text/Javascript" src="prova.js"></script> -->
 
 <body>
     <div id="bordo">
@@ -132,12 +133,11 @@
             var, per l'appunto, sta per variabile. <br> Ci sono essenzialmente 3 modi per dichiarare una variabile in
             Js:
             var, let, const. Tutti e tre sono usati per dichiarare variabili, e hanno importanti differenze in termini
-            di scopo/ambito, ... e mutabilità
+            di scope, hoisting(la possibilità di dichiarare una variabile anche a fine c ) e mutabilità
 
             <ol>
                 <li>
                     var :
-                    <!-- può essere utilizzato nell'intero programma, -->
                     <ul>
                         <li>
                             Le variabili dichiarate con var sono limitate alle funzioni nelle quali sono dichiarate
@@ -149,20 +149,143 @@
                         </li>
                         <li>
                             Si può ri-dichiarare una variabile con var nello stesso ambito, ciò non generare errore
+                            quindi
+                            può essere utilizzato nell'intero programma.
                         </li>
                         <li>
-                            le variabili var non sono block-scoped, quindi possono essere accessibili al di fuori del
+                            le variabili var non sono block-scoped (locali), quindi possono essere accessibili al di
+                            fuori del
                             blocco in cui sono definite.
                         </li>
                     </ul>
                 </li>
                 <li>
-                    let : verra utilizzato solo nell'ambito di dove lo hai dichiarato
+                    let : verra utilizzato solo nell'ambito dove lo abbiamo dichiarato, poichè le variabili sdichiarate
+                    con let sono block-scoped (locali).
+                    <ul>
+                        <li>
+                            Essendo queste variabili locali sono accessibili nel blocco (diciharazione o istruzione
+                            composta) dove sono definite.
+                        </li>
+                        <li>
+                            le variabili let sono sempre hoisted, ma a differenza di var non sono inizializzate fino a
+                            che l'interperete raggiunge la linea dove sono dichiarate
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    const:
+                    const: le variabili dichiarate con il const sono block-scoped come let
+                    <ul>
+                        <li>
+                            la parola chiave const crea variabili che non possono essere ri-assegnate, una volta che la
+                            variabile const è assegnata al valore non può essere cambiata.
+                        </li>
+                        <li>
+                            la variabile const deve essere inizializzata durante la dichiarazione.
+                        </li>
+                    </ul>
                 </li>
             </ol>
+            N.B. Nello sviluppo moderno di Js, si raccomanda di usare const di default, <br> usare let solo quando si sa
+            che il valore della variabile cambierà <br> mentre var è raramente usato di questi tempi, a causa del suo
+            comportamento e dei problemi potenziali legati al hoisting e scope.
+            <div class="info">
+                <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+                <h2>Hoisting</h2>
+                <p>
+                    L'hoisting un meccanismo di Js che permette alla variabile e funzione dichiarate di essere spostate
+                    al top della loro containing scope durante la fase di compilazione, prima che il codice venga
+                    eseguito.
+                    <br> Questo siginifica che puoi usare una variabile o chiamare una funzione prima che questa venga
+                    dichiarata nel codice, senza commettere nessun ReferenceError. <br>
+                    <mark>Quindi, in parole povere, l'hoisting permette di usare una variabile prima che venga
+                        dichiarata</mark>
+                    Ci sono due grossi aspetti del hoisting in Js:
+                <ol type="1.">
+                    <li>Viariable Hoisting: </li>
+                    <ul>
+                        <li>
+                            Quando dichiari una variabile usando var, let o const, la dichiarazione è hoistata al top
+                            della corrente funzione o del global scope.
+                        </li>
+                        <li>
+                            Solo la dichiarazione è hoistata, non la inizizalizzazione. Se si vuole inizilalizzare una
+                            variabile in seguito nel codice, quella parte non verra hoistata.
+                        </li>
+                    </ul>
+                    <br>
+                    <img src="/Media/Photo/Hoisting Variables.png" height="30%" width="40%" alt="">
+                    <br> <br>
+                    <li>
+                        Hoisting funzione:
+                    </li>
+                    <ul class="1.">
+                        <li>le dichiarazioni della fuznione sono sempre hoistate al top del loro containing
+                            scope(contente l'ambito di aplicazione), e possono essere chiamate prima della loro attuale
+                            dichiarazione nel codice. </li>
+                        <br>
+                        <img src="/Media/Photo/Hoisting function.png" height="40%" width="60%" alt="">
+                    </ul>
+                </ol>
+                <mark>è Importante notare che l'hoisting è un comportamento specifico delle dichiarazioni di variabili e
+                    funzioni, non di assegnazioni di variabili o espressioni di funzione.</mark>
+                </p>
+            </div>
+            </p>
+            <H2>Memorizzazione dei valori con l'operatore di assegnazione</H2>
+            <p>
+                C'è una differenza tra dichiarare una variabile ed assegnarla:
+                <br> <br>
+                <img src="/Media/Photo/declare and assign a variables.png" height="40%" width="30%" alt="">
+                <br>A riga 4 sto dichiarando la variabile mentre a riga 7 la sto assegnando, per quanto riguarda la
+                seconda variabile, "var b", il segno dell'uguale è l'operatore di assegnazione. Questo siginifica che 2
+                viene assegnato a b ma non abbiamo controllato se b = 2. Detto questo dopo l'assegnazione della
+                variabile b possiamo assegnare altre variabili, ad esempio alla variabile a possiamo assegnare il numero
+                7 (a = 7;). <br>
+                [n.d.r. utilizzare sempre il punto e virgola alla fine di un argomento, non è obbligatorio come su CSS
+                ma torna utile per la visualizzazione e per capire quando una si è concluso quell'argomento ].
+            <div class="info">
+                <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+                <h3>Console.log() command</h3>
+                <p>Per visualizzare o stampare dei messaggi e dei valori nella console del browser. Questo commando è
+                    utile sia per vedere cosa sta facendo il codice in quel momento sia per il debugging che per le
+                    informazioni di logging.
+                    <br>
+                    Per visualizzare l'output del console.log bisogna andare sulla developer console del browser; andare
+                    sul browser che si sta utilizzando (Firefox, Chrome, Safari, etc.) → cliccare il tasto destro del
+                    mouse (shortcut F12) → andare sulla voce analizza → tab console.
+                    <br>
+                    Andiamo ad elencare le diverse funzionalità del commando console.log
+                <ol type="1.">
+                    <li>
+                        Visualizzare i messaggi:
+                        <br> Si può usare console.log () per visualizzare i messaggi e il testo nella console.
+                        <br> Ciò è utile per fornire un feedback e un informazione riguardo a cosa sta facendo il
+                        codice.
+                        <br>
+                        Es: <br>
+                        <img src="/Media/Photo/console.log(message) .png" alt="">
+                    </li>
+                    <li>
+                        Variabili e valori di logging:
+                        <br>si può loggare i valori delle variabili, espressioni o le strutture di dati per analizzare
+                        il loro stato corrente.
+                        <br>Ciò è molto utile per il debugging e per capire il comportamento del codice.
+                        <br>Es:
+                        <br>
+                        <img src="/Media/Photo/console.log(variabili e valori di logging).png" alt="">
+
+
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+                </p>
+            </div>
+            <br>
+
             </p>
         </div>
 
