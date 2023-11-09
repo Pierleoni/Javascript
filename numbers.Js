@@ -9,6 +9,10 @@ tot+=2
 tot-=2
 tot/=2
 
+//per aumentare o diminuire di 1 
+tot++
+tot--
+
 
 // Questa operazione mostra il resto della divisione anchesi detto modulo
 tot=numb1%2
