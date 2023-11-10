@@ -63,16 +63,17 @@ let arrConatenato = arraySTL.concat(arrayAlberto)
 naturalmente gli array possono contenere ulteriori array che a loro volta possono contenere altri array fino all'infinito ovvero finche non crashsa.
 */
 
-let skibbidTioilet = [[0,1], [2,3], [666, 51]] 
+let skibbidToilet = [[0,1], [2,3], [666, 51]] 
+console.log(skibbidToilet)
 
 
 /*Per accedere ad un elemento dentro un altro array prima bisogna richiamare la posizione dell'array → in seguito la posizione dell'elemento  */
 
-skibbidTioilet[2][0]
+skibbidToilet[2][0]
 
 //Ritorna un array mutlidimensionale in forma monodimensionale 
 
-skibbidTioilet.flat()
+skibbidToilet.flat()
 
 //spread operator si può utilizzare al posto di concat, quello che fa e aprire il contentuto dell'array e metterlo come elementi separati all'intenro di dove è stato posizionato
 /*ESERCIZIO PER LE FUNZIONI: RICREARE IL METODO FLAT CON GLI SPREAD OPERATOR  */
@@ -109,5 +110,4 @@ le modifiche avverrano nell'ordine in cui sono scritti i metodi.*/
 //skibbidTioilet.flat().sort(function(a, b){return b-a})
 
 
-
-console.log(skibbidTioilet.flat().sort(function(a, b){return a-b}));
+//console.log(skibbidTioilet.flat().sort(function(a, b){return a-b}));

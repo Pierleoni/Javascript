@@ -59,13 +59,16 @@
             <ol>
                 <li>undefined :
                     <br> sono data non definiti, si utilizzano quando ho una variabile che non ho ancora impostato. <br>
-                    Quindi sono variabili per cui è avvenuto una allocazione di memoria ma non hanno valore
+                    Quindi sono variabili per cui è avvenuto una allocazione di memoria ma non hanno valore.
                 </li>
                 <li>null :
                     <br> sono data che non significano nulla (null), si utliizzano quando hai impostato una variabile
                     che non è niente. <br> Quindi è più corretto dire che il codice sa che dovra creare una allocazione
-                    di memoria in RAM ma non c'è ancora l'indirizzo in memoria
+                    di memoria in RAM ma non c'è ancora l'indirizzo in memoria.
                 </li>
+                <br>La differenza sostanziale tra il null e l'undefined è che null è uno specifico valore che può essere
+                assegnato a una variabile per indicare l'assenza intenzionale di un valore dell'oggetto, mentre
+                undefined è un valore di default per le variabili non inizializzate
                 <li>boolean :
                     <br> siginifica vero o falso o on, off.
                     <br>In javascript i dati booleani rappesentano un valore binario (1,0) che esattamente come il
@@ -73,7 +76,7 @@
                     <br>Spesso questi valori vengono usati nelle istruzioni condizionali e nel flusso di controllo per
                     prendere decisioni nel codice.<br>
                     Alcuni punti chiave riguardanti i booleani in Js:
-                    1. Valori: come menzionato prima le variabili booleane hanno solo due valori; <b>vero o falso</b>
+                    1. Valori: come menzionato prima le variabili booleane hanno solo due valori; <b>vero o falso</b>.
                     <br>
                     2. Operatori di confronto: una variabile booleana viene usata in concomitanza con gli operatori di
                     confronto per confrontare i valori.
@@ -116,16 +119,40 @@
                     </ul>
                 </li>
                 <li>string :
-                    <br>le stringhe sono una sorta di testo, cioè sequenze di caratteri con determinate proprietà
+                    <br>le stringhe sono una sorta di testo, cioè sequenze di caratteri con determinate proprietà.
+                    Quindi sono tipi di dati primitivi che vengono usati per rappresentare dati testuali.
+                    <br> Su javascript le stringhe vengono create usando le virgolette singole (``:shortcut alt+96 del
+                    tastierino numerico) o doppie ("").
+                    Javascript tratta le virgolette singole o doppie indifferentemente per creare le stringhe, quindi
+                    puoi scegliere lo stile che più ti aggrada.
+                    <br>N.B. Le stringhe in Javascript sono immutabili; ovvero una volta create non possono essere
+                    cambiate.
+                    <br>Tuttavia ci sono diversi metodi per manipolare una stringa, creandone delle nuove basate su
+                    quella originale.
+                    <br>Es:
+                    <br>
+                    <img src="/Media/Photo/Manipulate original string to create new onepng.png" height="200px"
+                        width="500px" alt="">
+
                 </li>
                 <li>symbol :
-                    <br> è un valore primitivo immutabile che è unico
+                    <br> è un valore primitivo immutabile che è unico a differneza degli altri dati primitivi (strings,
+                    numbers and booleans).
+                    <br>Quindi possiamo dire che i simboli sono garantiti per essere unici, e spesso vengono usati come
+                    chiavi proprietarie negli oggetti per evitare i conflitti di denominazione.
                 </li>
                 <li>number :
                     <br> sono i numeri, sia interi che frazionari
                 </li>
                 <li>object :
-                    <br> è un oggetto che può memorizzare molte coppie chiave-valore diverse
+                    <br> è un oggetto che può memorizzare molte coppie chiave-valore diverse.
+                    <br>Nello specifico è un complesso data type che permette di immagazzinare e organizzare dati usando
+                    una collezione di coppie chiave-valore.
+                    <br>Gli oggetti vengono usati per rappesentare le entità del mondo reale e sono fondamentali parti
+                    del linguaggio, possono contenere proprietà e metodi rendedoli una struttura dati versatile.
+                    <br>Vengono spesso usati in vari contesti (come ad esempio: rappresentare strutture dei dati, creare
+                    classi e instanze, interagire con il DOM[Document Object Model]nel web developement, etc.),
+                    comprederli è fondamentale per saper programmare su Js.
                 </li>
             </ol>
             Con Js spesso si imposterano i dati di una variabile, una variabile consente ai computer di archiviare e
@@ -277,17 +304,94 @@
                         <br>Ciò è molto utile per il debugging e per capire il comportamento del codice.
                         <br>Es:
                         <br>
-                        <img src="/Media/Photo/console.log(variabili e valori di logging).png" alt="">
+                        <img src="/Media/Photo/console.log(variabili e valori di logging).png" height="100px"
+                            width="400px" alt="">
                     </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        L'ispezioni di oggetti:
+                        <br>si possonono loggare le proprietà e i valori degli oggetti e arrays, rendendo più facile
+                        ispezionare il loro contentuto
+                        <br>Es:
+                        <br>
+                        <img src="/Media/Photo/l'ispezioni di oggetti del console.log.png" height="100px" width="490px"
+                            alt="">
+                    </li>
+                    <li>
+                        Errori di logging:
+                        <br>Nel caso si verifichi un errore nel codice lo si può loggare tramite il console.log().
+                        Quindi trmaite questo comando si loggano messaggi di errore, stack traces(è una lista di
+                        funzioni che mostra la sequenza di invocazioni di funzioni che ha portato a un errore o
+                        un'eccezzione), e altre informationi rilevanti per aiutare la diagnosi e per ovviare ai
+                        problemi.
+                        <br>Es:
+                        <br>
+                        <img src="/Media/Photo/Console.log(Errori di logging).png" height="100px" width="490px" alt="">
+                    </li>
+                    <li>
+                        Interagire con la console:
+                        <br>oltre al logging, la console fornisce altri metodi come:
+                        <ul>
+                            <li>
+                                console.warn()
+                            </li>
+                            <li>
+                                console.error()
+                            </li>
+                            <li>
+                                console.info().
+                            </li>
+
+                        </ul>
+                        Questi tre metodi sono utili per distinguere differenti tipi di output.
+                        <br>Es:
+                        <br>
+                        <img src="/Media/Photo/console.log(interagire con la console).png" height="100px" width="490px"
+                            alt="">
+                    </li>
+                    <li>
+                        Logging Condizionale:
+                        <br>si può condizionalmente loggare messaggi basati su certe codinzioni o flags. <br>
+                        Ciò è utile per selettivamente abilitare o disabilitare l'output del debug.
+                        <br>Es:
+                        <br>
+                        <img src="/Media/Photo/console.log(logging condizionale).png" height="100px" width="490px"
+                            alt="">
+                    </li>
                 </ol>
                 </p>
             </div>
             <br>
 
+            </p>
+            <h2>inizializzazioni delle variabili con l'operatore di assegnazione e variabili non inizializzate </h2>
+            <p>
+                Per inizializzare una variabile scrivere
+                <br>var/let/const a = 9.
+                <br>Quindi, come detto in precedenza, var/let/const dichiarano la variabile e =9 la inizializza con
+                l'operatore di assegnazione (=).
+                <br>Per quanto riguarda la variabili non inizializzate, diciamo che ho dichiarato 3 variabili non
+                inizializzate
+                <br>
+                <br>
+                <img src="/Media/Photo/declare uninitialized Variables.png" height="150px" width="200px" alt="">
+                <br>adesso devo inizializzare e per fare ciò scrivo l'operatore di assegnazione su ciascuna variabile
+                assegnando dei valori
+                <br>
+                <br>
+                <img src="/Media/Photo/uninitialized variables.png" height="400px" width="200px" alt="">
+                <br>una volta inizializzate, dalla riga 14 alla 16 ho assegnato dei vlaori aggiuntivi a tutti e tre;
+                cioè a =4 + 1 = 5, b = 5 + 5 = 10 c = "I am" + "string" = "I am string".
+                <br>[n.d.r. Ricorda che le variabili in js sono case sensivity,cioè:
+                <br> dichiariamo var PiPPosolo;
+                <br> dopodichè assegniamo un valore riscrivendola PIPPOSOLO = 120;
+                <br> se provassimo al logare l'asseganzione della variabile su console ci darebbe errore perchè non
+                definità per js poichè entrambi le variabili sono scritte in modo diverso. Si consiglia di usare il
+                camelCase(es: pippoSolo)]
+            </p>
+            <br>
+            <h2>Numbers</h2>
+            <p>
+                
             </p>
         </div>
 
