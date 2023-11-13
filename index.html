@@ -591,6 +591,7 @@
                             </li>
                         </ul>
                     </ul>
+                    <br>
                 </li>
                 <li>Infinity and -Infinity:
                     <br>rappresentano, rispettivamente, l'infinito poisitivo e negativo. Questi sono valori speciali che
@@ -619,7 +620,92 @@
                     Tutto Questo può essere utile nel caso in cui io voglia prevenire comportamenti non intenzionali nel
                     codice, a causa di operazioni che danno come risultato l'infinito.
                 </li>
+                <li>
+                    Parse & Convert :
+                    <br>i termini "parse" e "convert" sono spesso usati nel contesto della lavorazione dei dati;
+                    specialmente quando si tratta di stringhe o numeri.
+                    Per quanto riguarda il parsing abbiamo due caratteristiche:
+                    <ul type="A">
+                        <li>
+                            Parse strings to number:
+                            <br>"ParseInt()" e "ParseFloat()" sono due funzioni che vengono usata per convertire,
+                            rispettivamente, le stringhe in numeri interi o con la virgola.
+                            <br>Es:
+                            <br>let numericString = "123";<br>
+                            let numericValue = parseInt(numericString);<br>
+                            console.log(numericValue); // 123
+                            <br>
+                            <br>
+                            let floatString = "3.14";<br>
+                            let floatValue = parseFloat(floatString);<br>
+                            console.log(floatValue); // 3.14
+
+                        </li>
+                        <br>
+                        <li>JSON Parsing:
+                            <br>il metodo JSON.Parse() viene usato per analizzare (parsing) a stringa JSON e convertirla
+                            in un oggetto di JS.
+                            <br>Es:
+                            <br>let jsonString = '{"name": "John", "age": 30}';<br>
+                            let parsedObject = JSON.parse(jsonString);<br>
+                            console.log(parsedObject.name); // John
+                            <br>
+                            <br>
+                            <div class="info">
+                                <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+                                <h3>Parsing</h3>
+                                <br>
+                                <p>
+                                    Il termine Parsing in inglese sta per "interpretare/analizzare",
+                                    <br><mark>è spesso riferito al processo di analisi o interpretazione dei dati, in
+                                        modo particolare quando si tratta di strighe o di testo. </mark>
+                                </p>
+                            </div>
+                            <br>
+                            <ul type="A">
+                                Invece per quanto riguarda la conversione in Js abbiamo 3 metodi:
+                                <li>
+                                    Convertire i numeri alle stringhe:
+                                    <br>per convertire un numero in una stringa bisogna usare il metodo "toString()" o
+                                    mediante la concatenazione di una stringa vuota.
+                                    <br>ES:
+                                    <br>let number = 42;
+                                    <br>let stringNumber = number.toString();
+                                    <br>console.log(stringNumber); // "42"
+                                </li>
+                                <br>
+                                <li>
+                                    Convertire in Booleano:
+                                    <br>I valori in Js possono essere implicitamente convertiti in booleani in certi
+                                    contesti (ad esempio negli statements condizionali).
+                                    <br>Si può usare la funzione "Boolean()" per la conversione esplicita.
+                                    <br>ES:
+                                    <br>let truthyValue = "Hello";
+                                    <br>let booleanValue = Boolean(truthyValue);
+                                    <br>console.log(booleanValue); // true
+                                </li>
+                                <br>
+                                <li>
+                                    Convertire in un array:
+                                    <br>è possibile convertire oggetti simili e iterabili(ad esempio stringhe o
+                                    NodeLists) in arrays, usando "Array.from" o lo spread generator "..."
+                                    <br>Es:
+                                    <br>let iterableString = "hello";
+                                    <br>let charArray = Array.from(iterableString);
+                                    <br>console.log(charArray); // ["h", "e", "l", "l", "o"]
+                                </li>
+                                <br>
+                            </ul>
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+                <br>
                 <li></li>
+                <br>
+                <li></li>
+                <br>
+
             </ol>
             </p>
         </div>
