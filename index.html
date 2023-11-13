@@ -142,7 +142,7 @@
                     <br>Quindi possiamo dire che i simboli sono garantiti per essere unici, e spesso vengono usati come
                     chiavi proprietarie negli oggetti per evitare i conflitti di denominazione.
                 </li>
-                <li>number :
+                <li> <a href="Numbers" target="_self">number</a>:
                     <br> sono i numeri, sia interi che frazionari. Quindi sono tipi di dato fondamentali che vengono
                     usati per rappresentare valori numerici.
                     <br>Ci sono diversi aspetti che introduremmo in seguito nel dettaglio.
@@ -395,7 +395,7 @@
                 camelCase(es: pippoSolo)]
             </p>
             <br>
-            <h2>Numbers</h2>
+            <h2> <a href="number" target="_self">Numbers</a> </h2>
             <p>Come già detto sopra i numeri sono dati primitivi fondamentali per rappresentare i valori numerici in
                 Javascript, hanno varie funzionalità e caratteristiche e possono essere usati sempre nell'ambito
                 aritmetico.
@@ -699,14 +699,136 @@
                         </li>
                         <br>
                     </ul>
+                    La differenza tra parse e convert è che: il convert converte i tipi di dati o rappresentazioni;
+                    quindi nel pratico quando converti un numero cambia il numero.
+                    <br>Mentre il parse cambia l'azione; cioè crea una copia leggibile in un altro modo per il numero.
+                </li>
+                <br>
+                <li>
+                    Number to string conversion:
+                    <br>ti permette di convertire un numero in una stringa.
+                    <br>I metodi più usati sono:
+                    <ul type="A">
+                        <li>
+                            Usare il metodo to.String:
+                            <br>Es:
+                            <br>let myNumber = 42;
+                            <br>let myString = myNumber.toString();
+                            <br>console.log(typeof myNumber); // Output: number
+                            <br>console.log(typeof myString); // Output: string
+
+                        </li>
+                        <br>
+                        <li>
+                            Concatenazione con una stringa vuota:
+                            <br>Es:
+                            <br>let myNumber = 123;
+                            <br>let myString = '' + myNumber;
+                            <br>console.log(typeof myNumber); // Output: number
+                            <br>console.log(typeof myString); // Output: string
+
+                        </li>
+                        <li>Usare la funzione "String()":
+                            <br>Es:
+                            <br>let myNumber = 3.14;
+                            <br>let myString = String(myNumber);
+                            <br>console.log(typeof myNumber); // Output: number
+                            <br>console.log(typeof myString); // Output: string
+
+                        </li>
+                        <br>Tutti questi metodi convertirano i numeri alla loro rappresentazione come stringa. Sono
+                        tutti validi, bisogna solo scegliere quello che troviamo piu leggibile o conveniente per il
+                        nostro utilizzo in un caso specifico.
+                    </ul>
+                </li>
+                <br>
+                <li>Number Methods:
+                    <ul type="A">
+                        <li>toFixed():
+                            <br>Formatta un numero usando la notazione del punto fisso.
+                            <br>Es:
+                            <br>let myNumber = 3.14159;
+                            <br>let formattedNumber = myNumber.toFixed(2); // Rounds to 2 decimal places
+                            <br>console.log(formattedNumber); // Output: "3.14"
+
+                        </li>
+                        <li>toPrecision:
+                            <br>Formatta il numero con una precisione specificata.
+                            <br>Es:
+                            <br>let myNumber = 123.456789;
+                            <br>let formattedNumber = myNumber.toPrecision(5); // Total digits including integer and
+                            decimal parts
+                            <br>console.log(formattedNumber); // Output: "123.46"
+
+                        </li>
+                        <li>toExponential():
+                            <br>Converte un numero in notazione esponenziale.
+                            <br>Es:
+                            <br>let myNumber = 12345;
+                            <br>let exponentialNumber = myNumber.toExponential(2); // 2 decimal places in exponential
+                            notation
+                            <br>console.log(exponentialNumber); // Output: "1.23e+4"
+                        </li>
+                    </ul>
+                </li>
+                <br>
+            </ol>
+            </p>
+            <h2>Strings</h2>
+            <p>
+                Come accenato prima le stringhe in Javascript sono una sequenza di caretteri che sono usati per
+                rappesentare e manipolare un testo, si creano usando le virgolette singole(''), le virgolette doppie("")
+                o le backsticks(``: shortcut alt + 96 del tastierino numerico).
+                <br>Ci sono alcuni metodi basici che si possono eseguire con le stringe in Js.
+                <br>!! <mark>Le stringhe in Javascript sono immutabili, cioè una volta create non possono essere
+                    cambiate</mark>!!
+                <br>Tuttavia si può creare una nuova stringa basandosi su un'altra esistente attraverso la
+                concatenazione o usando metodi che restituiscono nuove stringhe.
+                <br>I metodi sono vari e numerosi, qui ci sono quelli più comuni:
+            <ol type="1.">
+                <li>
+                    Lenght:
+                    <br>Restituisce la lunghezza di una stringa.
+                    <br>Es:
+                    <br><img src="/Media/Photo/string.length.png" height="200px" width="600px" alt="">
+                    <br><small>Note: i caratteri presenti nella mia stringa in totale sono di 41 caratteri</small>
+                    <br>
+                    <br>N.B.quando si parla dei caratteri delle stringhe si includono pure gli spazi e la puntegiattura.
+                    Inoltre la length non è un metodo ma un oggetto della stringa poiche si accede direttamente con la
+                    notazione del punto (`string.length`), anziche usando le parentesi come si fa per i metodi.
+                    <br>Un altra cosa da sapere è che se vuoi trovare i caratteri di una stringa, in termini dell'unità
+                    di codice UTF-16, si usa l'oggetto length.
+                    <br> Mentre se si vuole sapere l'attuale numero di caratteri (considerando i caratteri Unicode che
+                    possono essere composti da più unità di codice), si usa l'oggetto `Intl`. 
+                    <!-- let myString = "😊🌍"; // A string with emoji and a globe character
+                    console.log(myString.length); // Outputs 4 (UTF-16 code units)
+                    console.log([...myString].length); // Outputs 2 (actual number of characters), notare come funziona con gli emoji ma non con i caratteri canonici, perche? -->
+                </li>
+                <br>
+                <li>
+                    Accedere ai caratteri:
+                    <br>Si può accedere individualmente ai caratteri tramite l'annotazione tra parentesi quadre.
+                    <br>l'indice di questa numerazione parte da 0 ovvero per accedere al primo carattere si scrive 0, per il secondo 1, per il terzo 2,etc.
                 </li>
                 <br>
                 <li></li>
                 <br>
                 <li></li>
                 <br>
-
+                <li></li>
+                <br>
+                <li></li>
+                <br>
+                <li></li>
+                <br>
+                <li></li>
+                <br>
+                <li></li>
+                <br>
+                <li></li>
+                <br>
             </ol>
+
             </p>
         </div>
 
