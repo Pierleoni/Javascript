@@ -11,6 +11,7 @@
 <script type="text/Javascript" src="strings.js"></script>
 <script type="text/javascript" src="array.js"></script>
 <script type="text/javascript" src="statements.js"></script>
+<script type="text/javascript" src="function.js"></script>
 
 <!-- <script type="text/Javascript" src="prova.js"></script> -->
 
@@ -142,7 +143,7 @@
                     <br>Quindi possiamo dire che i simboli sono garantiti per essere unici, e spesso vengono usati come
                     chiavi proprietarie negli oggetti per evitare i conflitti di denominazione.
                 </li>
-                <li> <a href="Numbers" target="_self">number</a>:
+                <li id="number"> <a href="#numb" target="_self">number</a>:
                     <br> sono i numeri, sia interi che frazionari. Quindi sono tipi di dato fondamentali che vengono
                     usati per rappresentare valori numerici.
                     <br>Ci sono diversi aspetti che introduremmo in seguito nel dettaglio.
@@ -395,7 +396,7 @@
                 camelCase(es: pippoSolo)]
             </p>
             <br>
-            <h2> <a href="number" target="_self">Numbers</a> </h2>
+            <h2 id="numb"> <a href="#number" target="_self">Numbers</a> </h2>
             <p>Come già detto sopra i numeri sono dati primitivi fondamentali per rappresentare i valori numerici in
                 Javascript, hanno varie funzionalità e caratteristiche e possono essere usati sempre nell'ambito
                 aritmetico.
@@ -799,16 +800,18 @@
                     <br>Un altra cosa da sapere è che se vuoi trovare i caratteri di una stringa, in termini dell'unità
                     di codice UTF-16, si usa l'oggetto length.
                     <br> Mentre se si vuole sapere l'attuale numero di caratteri (considerando i caratteri Unicode che
-                    possono essere composti da più unità di codice), si usa l'oggetto `Intl`. 
+                    possono essere composti da più unità di codice), si usa l'oggetto `Intl`.
                     <!-- let myString = "😊🌍"; // A string with emoji and a globe character
                     console.log(myString.length); // Outputs 4 (UTF-16 code units)
-                    console.log([...myString].length); // Outputs 2 (actual number of characters), notare come funziona con gli emoji ma non con i caratteri canonici, perche? -->
+                    console.log([...myString].length); // Outputs 2 (actual number of characters), 
+                    notare come funziona con gli emoji ma non con i caratteri canonici, perche? -->
                 </li>
                 <br>
                 <li>
                     Accedere ai caratteri:
                     <br>Si può accedere individualmente ai caratteri tramite l'annotazione tra parentesi quadre.
-                    <br>l'indice di questa numerazione parte da 0 ovvero per accedere al primo carattere si scrive 0, per il secondo 1, per il terzo 2,etc.
+                    <br>l'indice di questa numerazione parte da 0 ovvero per accedere al primo carattere si scrive 0,
+                    per il secondo 1, per il terzo 2,etc.
                 </li>
                 <br>
                 <li></li>
