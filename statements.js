@@ -101,9 +101,9 @@ switch (cazziInCulo) {
         break;
 }
 /* DA FARE : UNA VOLTA FATTI GLI OGGETTI  */
-for (const key in object) {
+/*for (const key in object) {
     if (Object.hasOwnProperty.call(object, key)) {
         const element = object[key];
         
     }
-}
+}*/

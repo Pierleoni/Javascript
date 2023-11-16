@@ -37,7 +37,7 @@ str.substring(-7,-13)
 // è identica a slice
 str.substr(-33, 7)
 
-// .replace scambia una stringa con un altra alla sua prima occorenza, è cioè è sensibile alle maiuscole (case sensitive), 
+// .replace scambia una stringa con un altra alla sua prima occorenza, e cioè è sensibile alle maiuscole (case sensitive), 
 bestimina.replace(`dio`,`cristo`)
 
 // per ignorarlo il case sensitive usa la regular expression /i

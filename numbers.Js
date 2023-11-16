@@ -31,4 +31,6 @@ console.log(Math.floor(numb2),Math.ceil(numb4),Math.round(numb5))
 
 tot=numb1*(numb2+numb3) + numb4
 
+
+
 console.log(tot) 

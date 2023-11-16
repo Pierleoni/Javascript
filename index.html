@@ -12,6 +12,7 @@
 <script type="text/javascript" src="array.js"></script>
 <script type="text/javascript" src="statements.js"></script>
 <script type="text/javascript" src="function.js"></script>
+<script type="text/javascript" src="objects.js"></script>
 
 <!-- <script type="text/Javascript" src="prova.js"></script> -->
 
@@ -80,29 +81,28 @@
                     Alcuni punti chiave riguardanti i booleani in Js:
                     1. Valori: come menzionato prima le variabili booleane hanno solo due valori; <b>vero o falso</b>.
                     <br>
-                    2. Operatori di confronto: una variabile booleana viene usata in concomitanza con gli operatori di
-                    confronto per confrontare i valori.
+                    2. Operatori di comparazione: ritornano un valore booleano che è il risutato della comparazione.
                     Ad esempio:
                     <ul type="A">
                         <li>
-                            ===(uguaglianza stretta o strict equality): ritorna a "vero" se i due valori sono uguali e
+                            ===(uguaglianza stretta o strict equality): ritorna "vero" se i due valori sono uguali e
                             hanno lo stesso data type
                         </li>
                         <li>
-                            !== (disuguaglianza stretta o strict inequality ): ritorna a "vero" se i due valori non sono
+                            !== (disuguaglianza stretta o strict inequality ): ritorna "vero" se i due valori non sono
                             uguali e hanno differenti data type
                         </li>
                         <li>
-                            "<" (minore di): ritorna a "vero" se l'operando di siinsitra i minore di quello a destra
+                            "<" (minore di): ritorna "vero" se l'operando di siinsitra i minore di quello a destra
                                 </li>
                         <li>
-                            ">" (maggiore di): ritorna a "vero" se l'operando di sinistra è maggiore di quello a destra
+                            ">" (maggiore di): ritorna "vero" se l'operando di sinistra è maggiore di quello a destra
                         </li>
                         <li>
-                            <= (minore di o uguale a): ritorna a vero se l'operando di sinistra è minore o uguale
+                            <= (minore di o uguale a): ritorna vero se l'operando di sinistra è minore o uguale
                                 dell'operando di destra </li>
                         <li>
-                            >= (maggiore di o uguale a): ritorna a vero se l'operando di sinistra è maggiore di o uguale
+                            >= (maggiore di o uguale a): ritorna vero se l'operando di sinistra è maggiore di o uguale
                             a quello di destra
                         </li>
                     </ul>
@@ -932,7 +932,8 @@
                             </div>
                             N.B. il risultato dell'output può dipendere su dove fai uscire il testo (console, HTML,
                             etc.), quindi l'effetto del form feed dipende dall'ambiente nel quale è visualizzato.
-                            <br>Negli ambienti moderni il carattere di form feed puo comportarsi in maniera simile al carattere di newline. 
+                            <br>Negli ambienti moderni il carattere di form feed puo comportarsi in maniera simile al
+                            carattere di newline.
                         </li>
                     </ul>
                 </li>
@@ -1042,7 +1043,122 @@
                     </div>
                 </li>
                 <br>
-                <li></li>
+                <li>String extraction methods:
+                    <br>in Js ci sono diversi metodi per estrarre parti di stringhe:
+                    <ul type="A">
+                        <li>
+                            '.substring(start index, end index)':
+                            è un metodo usato per estrarre una porzione di una stringa e restituisce l'estrazione della
+                            sottostringa.
+                            Ci sono due parametri nell'argomento;
+                            <br>l'index di inizio e l'index di fine,
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let str = "Hello, World!";
+                                <br>let subStr = str.substring(0, 5); // Returns "Hello"
+                            </div>
+                            Come possiamo vedere dall'esempio il metodo 'substring' viene usato per estrarre i caratteri
+                            dall'index 0 al 4 (l'index 5 non viene incluso nell'estrapolazione), difatti la sotto
+                            stringa che estrappolata sarà tutta la frase "hello".
+                            <br>se si vuole prendere fino alla fine al carattere specificato non si aggiunge il secondo
+                            argomento
+                            <div class="esempio">Es:
+                                <br>let str =`Hello World`
+                                <br>let substring = str.substring(0)
+                                <br>console.log(substring) //Output:'Hello world'
+                            </div>
+                            <br>è importante notare che il metodo 'substring' non modifica la stringa originale, invece
+                            se lo si volesse fare è necessario riassegnare il risultato alla variabile
+                            <div class="esempio">Es:
+                                <br>let str = "Hello, World!";
+                                <br>str = str.substring(0, 5); // Now, str is "Hello"
+                            </div>
+                            <br> è bene sapere anche che nel caso in cui l'indice di inzio sia più grande dell'indice di
+                            fine, il metodo 'substring' cambierà i due indici
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let str = "Hello, World!";
+                                <br>let subStr = str.substring(7, 2); // Returns "llo, "
+                            </div>
+                            <br>come possiamo ben vedere inizia dall'index 2 e finisce all'index 6 perchè il 7 non viene
+                            incluso.
+                            <br>N.B.Se invece volessi inserire numeri negativi come parametri di substring ritorna
+                            stringa
+                            vuota.
+                            <div class="esmepio">Es:
+                                <br>let str =`Hello World`
+                                <br>let substring = str.substring(-7,-13)
+                                <br>console.log(substring) // No Output
+                            </div>
+                        </li>
+                        <br>
+                        <li>'.slice(start index, end index)':
+                            <br>il metodo slice è usato per estrarre una porzione di una stringa e restituire la sotto
+                            stringa estratta. Come per il substring si hanno due paremetri; l'index di inizio e fine.
+                            <br>La stringa originale non è modificata, invece viene restituita una nuova stringa
+                            contenente la porzione specificata.
+                            <div class="esempio"> Es:
+                                <br>let str = "Hello, World!";
+                                <br>let subStr = str.slice(0, 5); // Returns "Hello"
+                            </div>
+                            In questo esempio, il metodo slice è usato per estrarre i caratteri dall'index 0 al 4 (5
+                            escluso), cosicché l'output sarà "hello".
+                            <br>Il metodo 'slice' accetta anche indici negativi; peremttendoti di contare la posizione
+                            dalla fine della stringa.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let str = "Hello, World!";
+                                <br>let subStrEnd = str.slice(-6); // Returns "World!"
+                            </div>
+                            <br>In questo caso il metodo 'slice' estrae gli ultimi 6 caratteri della stringa, partendo
+                            dalla fine.
+                            <br>Come per 'substring', 'slice' non modifica la stringa originale. Se diventa necessario
+                            modificare la stringa sul momento è necessario riassegnare il risultato alla variabile.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let str = "Hello, World!";
+                                <br>str = str.slice(0, 5); // Now, str is "Hello"
+                            </div>
+                            <br>N.B. anche per il metodo 'slice' se si omette il secondo parametro la sottostringa
+                            includerà
+                            i caratteri dall'inizio del index alla fine della stringa.
+                        </li>
+                        <br>
+                        <li>'.substr (start, length)':
+                            <br>è usato per estrarre una sottostringa da una stringa, inizia da un index specifico e si
+                            estende per un certo numero di caratteri.
+                            <br>questo metodo prende due parametri; l'inizio dell'index e la lunghezza della
+                            sottostringa.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let str = "Hello, World!";
+                                <br>let subStr = str.substr(0, 5); // Returns "Hello"
+                            </div>
+                            In questo esempio il metodo 'substr' parte dall'indice 0 e estrae una sottostringa lunga 5
+                            caratteri, per l'appunto 'hello', quindi possiamo notare che il seocndo parametro non è la
+                            l'indice di fine ma la lunghezza della sottostringa.
+                            <br>Come per 'slice' anche 'substr' se gli si mette un indice negativo inizierà a contare
+                            dalla fine della stringa
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let str = "Hello, World!";
+                                <br>let subStrEnd = str.substr(-6); // Returns "World!"
+                            </div>
+                            <br>Come per gli altri metodi elencati qui sopra anche 'substr' non modifica la stringa
+                            originale, se diventa necessario
+                            modificare la stringa sul momento è necessario riassegnare il risultato alla variabile.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let str = "Hello, World!";
+                                <br>str = str.substr(0, 5); // Now, str is "Hello"
+                            </div>
+                        </li>
+                    </ul>
+                    È importante sapere che 'substr' è considerato il metodo meno versatile rispetto a 'slice' e
+                    'substring' e anche per qeusto il meno usato, difatti questi ultimi due sono i metodi più flessibili
+                    e largamente usati in modo particolare 'slice'. Questo perchè 'slice' è per la maggior parte dei
+                    casi il metodo più flessibile e con un comportamento coerente.
+                </li>
                 <br>
                 <li></li>
                 <br>
