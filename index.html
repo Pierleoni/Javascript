@@ -93,8 +93,7 @@
                             uguali e hanno differenti data type
                         </li>
                         <li>
-                            "<" (minore di): ritorna "vero" se l'operando di siinsitra i minore di quello a destra
-                                </li>
+                            "<" (minore di): ritorna "vero" se l'operando di siinsitra i minore di quello a destra </li>
                         <li>
                             ">" (maggiore di): ritorna "vero" se l'operando di sinistra è maggiore di quello a destra
                         </li>
@@ -1160,7 +1159,83 @@
                     casi il metodo più flessibile e con un comportamento coerente.
                 </li>
                 <br>
-                <li></li>
+                <li>Concatenazione delle stringhe:
+                    <br> per concatenare le stringhe ci sono 2 metodi:
+                    <ul type="A">
+                        <li>Usare l'operatore '+':
+                            <br>
+                            <div class="esmepio">Es:
+                                <br>var string1 = "Hello";
+                                <br>var string2 = " World";
+                                <br>var result = string1 + string2;
+                                <br>console.log(result); // Output: Hello World
+                            </div>
+                            <br>Come possiamo vedere nell'esempio l'operatore '+' è usato per concatenare i conetnuti
+                            della 'string1' e 'string2', risultando cosi una nuova stringa.
+                            <br id="plusmulti"><a href="#mp" target="_self">Possiamo concatenare stringhe multiple
+                                usando più operatori '+'.</a>
+                            <br>
+                            <div class="esempio">Es:
+                                <br>var string1 = "Hello";
+                                <br>var string2 = " beautiful";
+                                <br>var string3 = " World";
+                                <br>var result = string1 + string2 + string3;
+                                <br>console.log(result); // Output: Hello beautiful World
+                            </div>
+                        </li>
+                        <li>'.concant()' method:
+                            <br>Questo è l'altro metodo per concatenare le stringhe.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>var string1 = "Hello";
+                                <br>var string2 = " World";
+                                <br>var result = string1.concat(string2);
+                                <br>console.log(result); // Output: Hello World
+                            </div>
+                            <br>Possiamo vedere nell'esempio che il metodo '.concat' è stato usato sulla string1, mentre
+                            la string2 è stata messa tra le parentesi tonde,come argomento.
+                            <br>Quindi questo metodo restituisce una nuova stringa che è la concatenazione delle due
+                            stringhe originali.
+                            <br id="concatmulti"><a href="#mp" target="_self">Come per l'operatore 'Più' anche il metodo
+                                .'concat' consente di concatenare stringhe
+                                multiple, fancedole passare come argomento nel metodo '.concat'.</a>
+                            <br>
+                            <div class="esempio">Es:
+                                <br>var string1 = "Hello";
+                                <br>var string2 = " beautiful";
+                                <br>var string3 = " World";
+                                <br>var result = string1.concat(string2, string3);
+                                <br>console.log(result); // Output: Hello beautiful World
+                            </div>
+                            Quindi possiamo constatare che ad una prima occhiata sia l'operatore 'Più' che il metodo
+                            concat siano simili, ma hanno delle differenze:
+                            <br>inazzitutto la immutabilità, ovvero il metodo 'concat' crea una nuova stringa per
+                            concatenazione delle strignhe estistenti e quelle origininali non vengono cambiate.
+                            Invece l'operatore 'Più' crea una nuova stringa e qeulle origininali non sono modificate.
+                            <br id="mp"><a href="#concatmulti, #plusmulti" target="_self">Le concatenazioni multiple
+                                (gia viste sopra).</a>
+                            <br>Ma la differenza vera e proria è la leggibilità:
+                            <ul>
+                                <li>il metodo '.concat()', per alcuni sviluppatori, è il più leggibile specialmente
+                                    quando si concatenano stringhe multiple.</li>
+                                <li>l'operatore '+' è conciso e familiare, ma la leggibilità potrebbe decrescere quando
+                                    si concatenano più di 2 stringhe </li>
+                            </ul>
+                        </li>
+                        <li>Un altro metodo è il '+=':
+                            <br>fa la stessa cosa dell'operatore '+'.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let str ="this is first sentence. "
+                                <br>let str2 = "this is second sentence."
+                                <br>str+=str2
+                                <br>console.log(str+=str2)
+                            </div>
+                            Come Possiamo vedere l'operatore '+=' è stato usato per concatenare la variabile 'str1' con la
+                            variabile 'str2'. Questo è equivalente a scrivere 'str1=str1 + str2.'
+                        </li>
+                    </ul>
+                </li>
                 <br>
                 <li></li>
                 <br>
