@@ -14,7 +14,7 @@
 <script type="text/javascript" src="function.js"></script>
 <script type="text/javascript" src="objects.js"></script>
 
-<!-- <script type="text/Javascript" src="prova.js"></script> -->
+<script type="text/Javascript" src="prova.js"></script>
 
 <body>
     <div id="bordo">
@@ -209,7 +209,7 @@
                     </ul>
                 </li>
                 <li>
-                    const: le variabili dichiarate con il const sono block-scoped come let
+                    const: le variabili dichiarate con il <br>sono block-scoped come let
                     <ul>
                         <li>
                             la parola chiave const crea variabili che non possono essere ri-assegnate, una volta che la
@@ -1084,7 +1084,7 @@
                             <br>N.B.Se invece volessi inserire numeri negativi come parametri di substring ritorna
                             stringa
                             vuota.
-                            <div class="esmepio">Es:
+                            <div class="esempio">Es:
                                 <br>let str =`Hello World`
                                 <br>let substring = str.substring(-7,-13)
                                 <br>console.log(substring) // No Output
@@ -1231,13 +1231,107 @@
                                 <br>str+=str2
                                 <br>console.log(str+=str2)
                             </div>
-                            Come Possiamo vedere l'operatore '+=' è stato usato per concatenare la variabile 'str1' con la
+                            Come Possiamo vedere l'operatore '+=' è stato usato per concatenare la variabile 'str1' con
+                            la
                             variabile 'str2'. Questo è equivalente a scrivere 'str1=str1 + str2.'
+                            <br>Come per gli altri metodi si possono concatenare molteplici stringhe.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>var string1 = "Hello";
+                                <br>var string2 = " beautiful";
+                                <br>var string3 = " World";
+                                <br>string1 += string2 + string3;
+                                <br>console.log(string1); // Output: Hello beautiful World
+
+                            </div>
                         </li>
                     </ul>
                 </li>
                 <br>
-                <li></li>
+                <li>Interpolazione delle stringhe:
+                    <br>le Interpolazione delle stringhe possono essere fatte usando i cosiddetti 'Template literals',
+                    che furono indrotti dal ECMAscript6(o ES6).
+                    <br>Forniscono un modo più conciso e flessibile per creare delle stringhe che includono variabili o
+                    espressioni. Quindi proveddono a creare stringhe di espressioni incorporate in modo più leggibile e
+                    pratico.
+                    La struttura dei 'Template literals' è la seguente:
+                    <br>- per creare un Template bisogna usare le backsticks(``) come delimitatori, poiche proprio i
+                    template Literal sono inclusi dalle backsticks .
+                    <br>- la sintassi è:
+                    <br>
+                    <div class="esempio"> Es:
+                        <br>let variable = "world";
+                        <br>let templateLiteral = `Hello, ${variable}!`;
+                        <br>console.log(templateLiteral)//Output: Hello world
+                    </div>
+                    In questo esempio possiamo vedere che la variabile 'variable' è sata messa dentro un placeholder
+                    (${} →
+                    i placeholder in js ) dove per la variabile a cui è assegnata la stringa world viene interpolata in
+                    una
+                    nuova stringa.
+                    <div class="info">
+                        <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+                        <p>
+                            il termine placeholder può riferirsi a diverse cose, pertanto dipende dal contesto.
+                            Nel contesto del form <!--modulistica in italiano?--> di Html un placeholder è spesso
+                            associato con il 'placeholder' attribute.
+                            <br>Questo attributo viene usato in un input fields che fornisce un breve suggerimento che
+                            descriva il valore previsto del campo di input.
+                            <br>È tipicamente visualizzato con il colore grigio chiaro e segue spesso l'attributo di
+                            tipizzazione.
+                        <div class="esempio">Es:
+                            <br>--input type="text" placeholder="Enter your name"--
+                        </div>
+                        <br>Come possiamo vedere nel tag input sono stati aggiunti gli attributi di type e placeholder,
+                        "Enter your name" è il placeholder di testo.
+                        <br>In javascript, invece, il temrine placeholder è tipicamente riferito a un valore o contenuto
+                        temporaneo che viene usato come sostituto per il valore/contentuto effetivo che verrà fornito o
+                        generato in un secondo momento.
+                        <ul type="A">
+                            <li>
+                                Template Engines:
+                                <br>quando si lavora con un template engines nei frameworks di web development, i
+                                placeholder sono spesso usati per rappresentare dati dinamici che vengono sostituiti nel
+                                momento di esecuzione.
+                                <br>Per l'istanza, in un template, si potrebbe avere un placeholder come '{{username}}',
+                                è questo verra sostituito con l'usename attuale quando si farà il rendering della
+                                pagina.
+                                <br>[n.d.r Per maggiore chiarezza un template engines in js sono strumenti che aiutano i
+                                developers a generare markup html in modo dinamico utilizzando i template.
+                                <br> Questi strumenti <!--=engines?--> ti permettono di definire i placeholder nel
+                                documento Html e dopo sostituirli con i valori o contentuti attuali durante il momento
+                                di esecuzione.
+                                Tutto ciò è particolarmtente utile quando si ha un contentuto dinamico che necessita di
+                                essere inserito in una pagina web.]
+                            </li>
+                            <br>
+                            <li>String Formatting:
+                                <br>I placeholder possono anche essere usati per la formattazzione delle stringhe per
+                                creare una stringa dinamica
+                                <br>
+                                <div class="esempio">
+                                    Es:
+                                    <br>var firstName = "John";
+                                    <br>var lastName = "Doe";
+                                    <br>var fullName = `${firstName} ${lastName}`;
+                                </div>
+                                Come possiamo vedere da questo esempio ${firstName} e ${lastName} agiscono come
+                                placeholder che verrano sostituiti con i valori attuali quando la stringa è stata
+                                valutata.
+                            </li>
+                            <br>
+                            <li>Dynamic Content Loading:
+                                <br>Quando carichiamo dinamicamente il contenuto in una pagina web, i placeholder
+                                potrebbero essere usati inizialmente per rappresentare il contenuto che verrà inserito.
+                                <br>Così il contentuto diventerà disponibile, e sostuisce il placeholder.
+                                <br>[n.d.r. Per maggiore chiarezza ]
+                            </li>
+                        </ul>
+                        <!-- relative about definition and usage of a placeholder in js -->
+                        </p>
+                    </div>
+                    <!-- relative about Js placeholder -->
+                </li>
                 <br>
                 <li></li>
                 <br>

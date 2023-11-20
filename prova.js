@@ -1,12 +1,12 @@
 
 //tutti i dati in js sono una variabili, pure le funzioni (!!solo su js!!) 
 
-function exampleFunction() {
+/*function exampleFunction() {
     if (1>0) {
         var x = 10;
     }
     console.log(x); // Outputs 10
-}
+}*/
 
 
 /*const PI = 3.14;
@@ -17,9 +17,15 @@ PI = 3.14159; // Error: Assignment to constant variable*/
 var x = 5;*/
 
 
-sayHello(); // Outputs: "Hello, World!"
+/*sayHello(); // Outputs: "Hello, World!"*/
 
 /*function sayHello() {
     console.log("Hello, World!");
 }*/
 
+let name = "marco"
+let age = 25
+
+let string = `Hello, my name is ${name}. I'm ${age} years old`;
+
+console.log(string);
