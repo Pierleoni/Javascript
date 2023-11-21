@@ -1005,8 +1005,7 @@
                         Benchè siano quasi simili in scrittura, esiste una differenza tra i metodi ".charAt()" e
                         ".charCodeAt()":
                         <ol type="1.">
-                            <li>
-                                "charAt(index)":
+                            <li id="charAt"> <a href="#bN" target="_blank">"charAt(index)":</a>
                                 <ul>
                                     <li>
                                         Purpose: Restituisce il carattere allo specifico index in una stringa
@@ -1022,7 +1021,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>"charCodeAt(index)":
+                            <li id="charCodeAt"> <a href="#bN" target="_blank">"charCodeAt(index)":</a>
                                 <ul>
                                     <li>Purpose: Restituisce il valore Unicode (intero) del carattere allo specifico
                                         index in una stringa</li>
@@ -1264,11 +1263,95 @@
                         <br>let templateLiteral = `Hello, ${variable}!`;
                         <br>console.log(templateLiteral)//Output: Hello world
                     </div>
-                    In questo esempio possiamo vedere che la variabile 'variable' è sata messa dentro un placeholder
+                    In questo esempio possiamo vedere che la variabile 'variable' è stata messa dentro un placeholder
                     (${} →
                     i placeholder in js ) dove per la variabile a cui è assegnata la stringa world viene interpolata in
                     una
                     nuova stringa.
+                    <br> I template literals hanno varie funzioni:
+                    <ul type="A">
+                        <li>Expression interpolation:
+                            <br>Ogni espressione, funzione, variabile, etc. valida può essere inclusa dentro un
+                            placeholder '${}' per essere valutata e interpolata in una stringa.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>const x = 5;
+                                <br>const y = 10;
+                                <br>const sum = `The sum of ${x} and ${y} is ${x + y}.`;
+                            </div>
+                        </li>
+                        <br>
+                        <li>Multi-line strings:
+                            <br>I template literals supportano le stringhe multi linea, rendendo facile creare stringhe
+                            che si
+                            estendono su più righe senza la necessita di usare concatenazioni o escape characters.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>const multiLineString = `
+                                <br>This is a multi-line
+                                <br>string using template literals.
+                                <br>It allows for easy string interpolation
+                                <br>and supports line breaks.
+                                <br>`;
+                                <br>console.log(multiLineString);
+                            </div>
+                            In questo esempio le stringhe sono definite tra le backsticks, mentre le linee di
+                            indentazione e le interuzzioni di riga tra i template literal sono preservate nella stringa
+                            risultante.
+                            <br>Prima dell'introduzione dei template literal nel ECMAScript 6 (ES6), creare le stringhe
+                            multi linea in javascript includeva usare l'operatore di concatenazione ('+') o i caratteri
+                            degli escape newline. Per questo i template literal semplificano questo processo e
+                            migliorano la leggibilità del codice.
+                        </li>
+                        <br>
+                        <li>Tagged Templates(Advanced):
+                            <br>i template literal possono essere usati con uno speciale tipo di funzione chiamata "tag
+                            function". Questa funzione permette di manipolazione più avanzata dei template literal.
+                            <br>In sostanza questa funzione riceve i valori letterali di una stringa e le espressioni
+                            valutate come argomenti, permettendo un opportunità per costumizzare il comportamento dei
+                            template literal.
+                            Il tag function è posto prima del template literal ed usa la seguente sintassi:
+                            <br>
+                            <div class="esempio">Es:
+                                <br>function myTagFunction(strings, ...values) {
+                                <br>// Custom logic using the strings and values
+                                <br>// Return the final processed string
+                                <br>}
+                                <br>const result = myTagFunction`Hello, ${name}!`;
+                            </div>
+                            <b>'myTagFunction'</b> è il tag function, riceve un array <b>'strings'</b> contenente la
+                            stringa letteralee una lista di <b>'values'</b> che allora volta contengono le espressioni
+                            valutate.
+                            <br>Per fare un esempio più dettagliato:
+                            <br>
+                            <div class="esempio">Es:
+                                <br>function currencyFormatter(strings, ...values) {
+                                <br>const formattedValues = values.map((value, index) => {
+                                <br>if (typeof value === 'number') {
+                                <br>return `$${value.toFixed(2)}`;
+                                <br>}
+                                <br>return value;
+                                <br>});
+                                <br>return strings.reduce((result, string, index) => {
+                                <br>return result + string + (formattedValues[index] || '');
+                                <br>}, '');
+                                <br>}
+                                <br>const price = 42.5;
+                                <br>const product = 'Book';
+                                <br>const formattedString = currencyFormatter`The price of the ${product} is ${price}.`;
+                                <br>console.log(formattedString);
+                            </div>
+                            In questo esempio <b> 'currencyFormatter' </b> è un tag function che formatta valori
+                            numerici come valuta.
+                            Il template literal inclusde un nome prodotto e un prezzo. Il tag function processa il
+                            template literal, formatta il valore numerico come valuta, e restituisce la stringa finale.
+                            <br>Come possiamo ben vedere il tagged template è una carrateristica molto utile,
+                            specialmente quando si ha a che fare con Requisiti di internazionalizzazione, sicurezza o
+                            formattazione personalizzata. Forniscono un modo per separare i problemi e gestire
+                            l'elaborazione dei template literals in modo modulare e riutilizzabile.
+                        </li>
+                    </ul>
+                    <!-- relative about template literal function -->
                     <div class="info">
                         <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
                         <p>
@@ -1284,10 +1367,12 @@
                         </div>
                         <br>Come possiamo vedere nel tag input sono stati aggiunti gli attributi di type e placeholder,
                         "Enter your name" è il placeholder di testo.
-                        <br>In javascript, invece, il temrine placeholder è tipicamente riferito a un valore o contenuto
+                        <br>In javascript, invece, il termine placeholder è tipicamente riferito a un valore o contenuto
                         temporaneo che viene usato come sostituto per il valore/contentuto effetivo che verrà fornito o
-                        generato in un secondo momento.
-                        <ul type="A">
+                        generato in un secondo momento. Quindi è tipicamente riferito a un valore temporaneo o un testo
+                        che è usato come un tipo di "stand-in" o una rappresentzaione iniziale per un data input o un
+                        elemento di una pagina web.
+                        <ul>
                             <li>
                                 Template Engines:
                                 <br>quando si lavora con un template engines nei frameworks di web development, i
@@ -1318,13 +1403,33 @@
                                 Come possiamo vedere da questo esempio ${firstName} e ${lastName} agiscono come
                                 placeholder che verrano sostituiti con i valori attuali quando la stringa è stata
                                 valutata.
+                                <br>Quindi i placeholder nei template literal sono contenitori dove inserire delle
+                                variabili ed espressioni che verrano sostituite un fase di esecuzione dopo essere
+                                valutati.
+                                <br>I placeholder nei template literal sono racchiusi in '${}'.
+                                <br>
+                                <div class="esempio">
+                                    Es:
+                                    <br>const a = 5;
+                                    <br>const b = 10;
+                                    <br>const result = `The sum of ${a} and ${b} is ${a + b}.`;
+                                    <br>console.log(result); // Outputs: The sum of 5 and 10 is 15.
+                                </div>
+                                Come possiamo notare nell'esempio i placeholder '${a}', '${b}', '${a + b}' valutano le
+                                variabili più le espressione e inseriscono il risultato nella stringa di template.
+                                <br>In sostanza i placeholder nei template literals sono utili per creare stringhe
+                                dinamiche in javascript, specialmente quando si costruiscono stringhe che dipendono da
+                                valori di variabili o espressioni.
                             </li>
                             <br>
                             <li>Dynamic Content Loading:
                                 <br>Quando carichiamo dinamicamente il contenuto in una pagina web, i placeholder
                                 potrebbero essere usati inizialmente per rappresentare il contenuto che verrà inserito.
                                 <br>Così il contentuto diventerà disponibile, e sostuisce il placeholder.
-                                <br>[n.d.r. Per maggiore chiarezza ]
+                                <br>[n.d.r. Per maggiore chiarezza il Dinamic content loading in js sono dei
+                                placeholder(loading spinner o loading skeleton)
+                                che vengono visualizzati mentre il contenuto viene recuperato da un server o caricato
+                                dinamicamente, forniscono un feedback visivo all'utente. ]
                             </li>
                         </ul>
                         <!-- relative about definition and usage of a placeholder in js -->
@@ -1333,9 +1438,106 @@
                     <!-- relative about Js placeholder -->
                 </li>
                 <br>
-                <li></li>
+                <li id="bN">Trovare i caratteri con la bracket notation ([]):
+                    <br>per ottenere un carattere in un indice specifico all'interno della stringa abbiamo visto i due
+                    metodi per eccellenza; ovvero <a href="#charAt" target="_blank">'charAt'</a> e <a
+                        href="#charCodeAt">'charCodeAt'</a>, ma c'è un altro modo per fare ciò ovvero usare le bracket
+                    notation[].
+                    <br>
+                    <div class="esempio"> Es:
+                        <br>let str=`Hello World`
+                        <br>let bracketNot = str[0]
+                        <br>console.log(bracketNot)//Output: `H`
+                    </div>
+                    N.B. Anche in questo caso l'indicizzazione parte da 0.
+                    <br>La differerenza tra il 'charAt', 'charCodeAt' e le bracket notation è:
+                    <ul>
+                        <li> 'charAt': restituisce una stringa che contiene il carattere a uno specifico index nella
+                            stringa originale </li>
+                        <br>
+                        <br>
+                        <div class="esempio">Es:
+                            <br>let str = "Hello";
+                            <br>let character = str.charAt(1); // Returns the character at index 1
+                            <br>console.log(character); // Outputs: e
+                        </div>
+                        <br>
+                        <li> 'charCodeAt': restituisce un numero che rappresenta il valore di Unicode (UTF-16 code unit)
+                            del carattere allo specifico index nella stringa originale </li>
+                        <br>
+                        <br>
+                        <div class="esempio">Es:
+                            <br>let str = "Hello";
+                            let unicodeValue = str.charCodeAt(1); // Returns the Unicode value of the character at index
+                            1
+                            console.log(unicodeValue); // Outputs: 101 (Unicode value for 'e')
+                        </div>
+                        <br>
+                        <li>bracket notation []: se l'index è tra il range valido della stringa, restituisce il
+                            carattere in corrispondeza di tale stringa </li>
+                        <br>
+                        <br>
+                        <div class="esempio">Es:
+                            <br>let str = "Hello";
+                            <br>let character = str[1]; // Returns the character at index 1
+                            <br>console.log(character); // Outputs: e
+                        </div>
+                        <br>Tuttavia, se l'index è al di fuori del range, ritorna 'undefined'
+                        <br>let str = "Hello";
+                        <br>let outOfRange = str[10]; // Index 10 is out of range
+                        <br>console.log(outOfRange); // Outputs: undefined
+                    </ul>
+                    Questo perchè: <b>'string[x]'</b> restituisce il carattere nella posizione x in string, se x è un
+                    numero intero compreso tra 0 e string.length-1, in caso contrario restituisce 'undefined'.
+                    <!-- Da chiarire -->
+                    <br>'.charAt()' è migliore dal punto di vista della compatibilità se la compatibilità IE6/IE7 (IE =
+                    Internet Explorer ) è richiesta.
+                    <br>Le bracket notation sono un modo moderno con il quale lavorare e sono compatibili con IE8+ e
+                    tutti gli altri browser (tutti i microsoft Edge/Firefox/Chrome/Safari 2+/, tutti i sistemi
+                    iOS/Android).
+                    <!-- relative about difference 'charAt', 'charCodeAt' and bracket notation -->
+                </li>
                 <br>
-                <li></li>
+                <li>toUpperCase() and toLowerCase() methods:
+                    <br>Sono due metodi usati per convertire il case di una stringa
+                    <ul type="A">
+                        <li>il '.toUpperCase()' è un metodo usato per convertire tutti i caratteri in maiuscolo in una
+                            stringa.
+                            <br>Non modifica la stringa originale ma restituisce una nuova stringa con i caratteri
+                            convertiti in maiuscolo.
+                            <br>
+                            <div class="esempio">
+                                Es:
+                                <br>let originalString = "Hello, World!";
+                                <br>let uppercaseString = originalString.toUpperCase();
+                                <br>console.log(uppercaseString); // Output: "HELLO, WORLD!"
+                                <br>console.log(originalString); // Output: "Hello, World!" (original string is
+                                unchanged)
+                            </div>
+                        </li>
+                        <br>
+                        <li> '.toLowerCase()':
+                            <br>è un meotodo che converte tutti i caratteri in minuscolo in una stringa.
+                            <br>Come per il '.toUpperCase', non modifica la stringa originale ma retituisce una nuova
+                            stringa con tutti i caratteri convertiti in minuscolo
+                            <br>
+                            <div class="esempio">
+                                Es:
+                                <br>let originalString = "Hello, World!";
+                                <br>let lowercaseString = originalString.toLowerCase();
+                                <br>console.log(lowercaseString); // Output: "hello, world!"
+                                <br>console.log(originalString); // Output: "Hello, World!" (original string is
+                                unchanged)
+                            </div>
+                        </li>
+                        <br>
+                    </ul>
+                    Questi metodi sono utili quando si vuole comparare o manipolare le stringhe senza considerare il
+                    case sensitivity. Bisogna tenere a mente che questi metodi non cambiano la stringa originale:
+                    restituiscono una nuova stringa con il case desiderato.
+                    <br>Se si desidera modificare la stringa originale, è necessario riassegnare il risultato alla
+                    variabile, come illustrato negli esempi.
+                </li>
                 <br>
                 <li></li>
                 <br>
@@ -1344,7 +1546,36 @@
                 <li></li>
                 <br>
             </ol>
-
+            <!-- THIS IS RELATIVE ABOUT STRINGS METHODS -->
+            <h2>L'immutabilità delle stringhe </h2>
+            Le stringhe in javascript, come già riportato più volte, sono immutabili; cioè <mark>una volta create non
+                possono essere modificate</mark>. Ciò non significa che non possono essere cambiate, solo che i singoli
+            caratteri di una stringa letterale non possono essere modificati.
+            <br>Per fare un esempio:
+            <br>
+            <div class="esempio">Es:
+                <br>//string immutability
+                <br>let str = `Vello World`
+                <br>str[0] = `H`
+                <br>console.log(str[0])//Output : TypeError: 0 is read-only (/index.js:37)
+            </div>
+            Come possiamo vedere ci da errore poichè il singolo carattere non può essere cambiato una volta che la
+            stringa è stata creata. Possiamo ancora cambiarlo in "hello world", ma <mark>non possiamo seplicemente
+                cambiare una singola lettera in questo modo.</mark>
+            Per fare ciò esistono due strade :
+            <ul type="I">
+                <li>Andare all'assegnazione del valore della variabile 'str'("vello world") e cambiare la lettera 'v' in
+                    'h' </li>
+                <li>Oppure
+                    <br>
+                    <div class="esempio">Es:
+                        <br>let str = `Vello World`
+                        <br>str = `Hello World`
+                        <br>console.log(str) //Output: `Hello World`
+                    </div>
+                </li>
+            </ul>
+            <!-- Relative about the string immutability -->
             </p>
         </div>
 
