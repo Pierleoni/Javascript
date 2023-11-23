@@ -7,23 +7,23 @@ il parametro può avere un valore predefinito (utilizzndo l'operatore di assegna
 function schiaffiATito(numSchiaffi = 0) {
     switch (numSchiaffi) {
         case 0:
-            console.error(`JE DEVI MENA`);
+            //console.error(`JE DEVI MENA`);
             break;
         case 1:
-            console.log(`Daje de nocche`);
+            //console.log(`Daje de nocche`);
             break;
         case 2:
-            console.log(`Essi eravamo pure in tre te menavamo pure in tre`);
+            //console.log(`Essi eravamo pure in tre te menavamo pure in tre`);
             break;
         case 3:
-            console.log(`te sei come er cane de mustafa `);
+            //console.log(`te sei come er cane de mustafa `);
             break;
         case 4:
-            console.log(`mo t'ammazzo `);
+            //console.log(`mo t'ammazzo `);
             break;
 
         default:
-            console.log(`;)`);
+            //console.log(`;)`);
             break;
     }
 }
@@ -32,7 +32,7 @@ schiaffiATito() //per richiamare una funzione
 schiaffiATito(3) //per richiamare una funzione
 schiaffiATito //per ritornare le istruzioni di una funzione 
 function bestemmia() {
-    console.log(`porco dio cristo maledetto`);
+    //console.log(`porco dio cristo maledetto`);
 }
 bestemmia()
 
@@ -67,27 +67,27 @@ function listen(genere) {
         case generes[2]:
             return music[2][Math.floor(Math.random() * 3)]
         default:
-            genere
+            break;
     }
 }
 //dove vedi una func che ritorna un valore non devi considerare che li c'è una funzione ma un valore come nel caso sottostante
-console.log(listen(genere()));
+//console.log(listen(genere()));
 
 /* una funzione ricorsiva è una funzione che riesegue se stessa all'intenro delle sue istruzioni 
 concettualemte non è troppo diversa da un un for o while loop.*/
 
 let count = 0
-function recursive(stopAt=0) {
-    console.log(count); 
+function giangiacomo(stopAt=0) {
     if (count<stopAt) {
         count++
-        recursive(stopAt)
+        console.log("Numero di volte che la funzione viene richiamata: ",count); 
+        giangiacomo(stopAt)
     }else{
         return;
     }
 }
 
 
-recursive(3)
+giangiacomo(3)
 
 

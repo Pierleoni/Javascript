@@ -10,7 +10,7 @@ let pikachu = {
     xp: 50,
     puntiAzione: 30,
     nome:`Abbath don't fell like dance`,
-    //i metodi sono le funzioni degli oggetti, per definifrle non è troppo diverso la chiave sostituisce il nome della funzione e il valore è il resto della definizione della func 
+    //i metodi sono le funzioni degli oggetti, per definifrle non è troppo diverso la chiave sostituisce il nome della funzione e il valore è il resto della definizione della func.
     elletroshock: function () {
         console.log("Pika Madonna!");
     }
@@ -22,7 +22,9 @@ pikachu.elletroshock()
 //una proprietà puo essere acceduta, creata o modificata anche tramite la square notation, al suo interno pero la chiave della proprieta deve essere scrtta come una stringa 
 
 pikachu[`puntiSaluti`] = 50
-console.log();
+//console.log();
+
+
 
 let lemmyKilmeister = {
     name: `lemmy`,
@@ -43,12 +45,17 @@ motorhead[`genere`]=`I cazzo di Motorhead, poser di merda!`
 motorhead[`bassista`]= lemmyKilmeister
 motorhead[`cantante`] = motorhead.bassista
 motorhead[`suona`]= () => console.log(`OVERKILL`);
-console.log(motorhead.bassista.rig.amps[1]);
+//console.log(motorhead.bassista.rig.amps[1]);
 
 
 
 class Pikachu {
-    constructor(name){
+    /*quando si crea l'istanza di un oggetto alcune proprietà devono essere assegnate quando viene creato, quesot si fa tramite il metodo built-in delgi oggetti constructor.
+    Funziona esattamente come un metodo ma non può avere un nome diveros dal suo. 
+    il cons è la fabbrica che da l'ordine di costruire questo oggetto e quando bisogna inserire i singoli  */
+    constructor(name=`Pikachu`){
+        /* Quando stai lavorando sull'istnaza di un ogetto per riferirti nella classe all'istanza 
+        dell'ogetto cui si riferisce, si utilizza la parola chiave 'this'. */
         this.name= name
     };
     attacca(){
@@ -56,7 +63,8 @@ class Pikachu {
     };
     imparaMossa(mossa){
         this.mosse.push(mossa)
-    }
+    };
+    mosse = [];
     puntiSaluti=100;
     xp= 50;
     puntiAzione= 30;
@@ -67,3 +75,6 @@ class Pikachu {
 }
 
 let stoPikachu= new Pikachu(`Sandro Predappio`)
+//console.log(stoPikachu.name);
+let numaccaso = Math.random()
+

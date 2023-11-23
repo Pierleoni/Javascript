@@ -4,13 +4,13 @@ let str="porco dio cane ladro inculato\npederasta omofobo amico delle guardie"
 let bestimina=`porco dio maledetto dio mannaggia allo sangue di dio`
 // \n manda accappo il testo della stringa 
 let str4= String.raw `Usando la proprietà String.raw è possible visualizzare le escape sequence come \n `
-console.log(str)
-console.log(str4)
+//console.log(str)
+//console.log(str4)
 
 // quelle scritte nelle backticks possono essere formattate con i template literal(${nomeVariabile})
 let str2='madonna'
 let str3= `porca ${str2}`
-console.log(str3)
+//console.log(str3)
 
 // .length è una prorietà delle stringhe che ne rappresenta la lunghezza in caratteri; ad esempio nella prima ho 67 caratteri scritti 
 str.length
@@ -56,4 +56,4 @@ str.toLowerCase()
 //ritorna un array di stringhe composto da tutte le sottostringhe separate dal carattere immesso nell'argomento 
 str.split(` `)
 // trim toglie tutti gli whitespace ad inizio e fine stringa
-console.log(str.trim())
+//console.log(str.trim())
