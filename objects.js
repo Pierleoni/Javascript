@@ -73,7 +73,8 @@ class Pikachu {
         TascaSX : "chiavi",
     }
 }
-
+/* new è una keywords che indica una nuovo oggetto istanza della classe pikachu, in questo 
+quando crei un oggetto ne chiami il constructor aprendo le parentesi tonde e infilandoci eventuali arogmento */
 let stoPikachu= new Pikachu(`Sandro Predappio`)
 //console.log(stoPikachu.name);
 let numaccaso = Math.random()

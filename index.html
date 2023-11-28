@@ -1540,12 +1540,266 @@
                     variabile, come illustrato negli esempi.
                 </li>
                 <br>
-                <li></li>
+                <li>Trovare le sottostringhe:
+                    <br> IN javascript si possono trovare le sottostringhe in una stringa usando diversi metodi
+                    <ul type="A">
+                        <li>'.IndexOf(searchValue[, startIndex]):'
+                            <br> Questo metodo restituisce l'indice della prima occorenza in una specifica sottostringa.
+                            Se la sottostringa non viene trovata, ritorna a -1.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let mainString = "Hello, World!";
+                                <br>let substring = "World";
+                                <br>if (mainString.indexOf(substring) !== -1) {
+                                <br>console.log("Substring found!");
+                                <br>} else {
+                                <br>console.log("Substring not found.");
+                                <br>}
+                            </div>
+                            La sintassi di questo metodo prevede che come argomento vengano indicati
+                            <ul>
+                                <li id="searchValue">'searchValue': il valore da cercare nella stringa</li>
+                                <br>
+                                <li id="startIndex"> 'startIndex'(opzionale): L'index al quale inizia la ricerca. Se
+                                    questo valore viene
+                                    omesso, la ricerca inizia dall'inizio della stringa. </li>
+                                <br>
+                                <br>
+                                <div class="esempio">Es:
+                                    <br>let str = "Hello, World!";
+                                    <br>let indexOfWorld = str.indexOf("World");
+                                    <br>console.log(indexOfWorld); // Output: 7
+                                </div>
+                                Ovviamente si può usare il metodo 'IndexOf' per trovare più occorrenze fornendo un
+                                indice iniziale
+                                <br>
+                                <br>
+                                <div class="esempio">Es:
+                                    <br>let str = "Hello, Hello, World!";
+                                    <br>let indexOfHello = str.indexOf("Hello");
+                                    <br>console.log(indexOfHello); // Output: 0
+                                    <br>// Find the second occurrence starting from index 1
+                                    <br>indexOfHello = str.indexOf("Hello", 1);
+                                    <br>console.log(indexOfHello); // Output: 7
+                                </div>
+                                Come ultima cosa va detto che questo metodo è case-sensitive, quindi nel caso si avesse
+                                il bisogno di fare una ricerca senza maiuscole o minuscole (da d'ora in poi userò la
+                                parola case-insesitive) si possono convertire sia la stringa che il valore di ricerca
+                                utilizzando sia i metodi 'toLowerCase' o 'toUpperCase' prima del metodo 'indexOf'
+                        </li>
+                        <br>
+                        <li>metodo '.includes()':
+                            <br>restituisce un valore booleano che indica se una stringa contiene una sottostringa
+                            specificata.
+                            <br>Più precisamente è usato per controllare se una stringa contiene una specifica
+                            sottostringa o carattere e restituisce un valore booleano indicando se la sottostringa è
+                            stata trovata oppure no.
+                            <br>Anche la sintassi di questo metodo è simile al metodo predendente ('.indexOf()')
+                            <br>
+                            <div class="esempio">Es:
+                                <br>string.includes(searchValue[, startIndex]);
+                            </div>
+                            <ul>
+                                <a href="#searchValue" target="_blank">
+                                    <li>'searchValue'</li>
+                                </a>
+                                <br>
+                                <a href="startIndex" target="_blank">
+                                    <li>'startIndex'(opzionale)</li>
+                                </a>
+                                <br>
+                                <br>
+                                <div class="esempio">Es:
+                                    <br>let str = "Hello, World!";
+                                    <br>if (str.includes("World")) {
+                                    <br>console.log("Substring found!");
+                                    <br>} else {
+                                    <br>console.log("Substring not found.");
+                                    <br>}
+                                </div>
+                            </ul>
+                            <br>In questo esempio il metodo 'includes()' è usato per controllare se la stringa 'Hello
+                            World' contiene la sottostringa 'World'.
+                            <br>Se viene trovata la sottostringa l'output sarà 'Substring found'.
+                            <br>Come per il metodo 'IndexOf()' anche il metodo 'includes()' è case-sensitive.
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let str = "Hello, World!";
+                                <br>if (str.includes("world")) {
+                                <br>console.log("Substring found!");
+                                <br>} else {
+                                <br>console.log("Substring not found.");
+                                <br>}
+                            </div>
+                            <br>Difatti nell'esempio la sottostringa 'world' non viene trovata poichè è diversa da
+                            'World'
+                            <br>Si può anche usare il metodo 'includes()' con un starting index
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let str = "Hello, Hello, World!";
+                                <br>if (str.includes("Hello", 1)) {
+                                <br>console.log("Substring found!");
+                                <br>} else {
+                                <br>console.log("Substring not found.");
+                                <br>}
+                            </div>
+                            <br>In questo esempio, inizia a cercare "Hello" dall'indice 1 e, poiché trova una seconda
+                            occorrenza, l'output sarà "Substring found!".
+                            Quindi in sostanza Il metodo 'includes()' è un modo pratico per eseguire semplici controlli
+                            delle sottostringhe senza bisogno delle informazioni sull'indice restituite da metodi come
+                            'indexOf()'.
+                        </li>
+                        <br>
+                        <li>Usare espressioni regolari:
+                            <br>In javascript si possono usare espressioni regolari per trovare le sottostringhe usando
+                            i metodi 'test()' o 'match()'
+                            <ul type="A">
+                                <li>Il metodo 'test()':
+                                    <br>il metodo 'test()' è un metodo RegExp(='Regular Expression') che verifica la
+                                    presenza di una corrispondenza
+                                    in una stringa. Restituisce 'true' se un match è stato trovato o 'false' in caso
+                                    contrario
+                                    <br>
+                                    <div class="esempio">Es:
+                                        <br>let str = "Hello, World!";
+                                        <br>let substringPattern = /World/;
+                                        <br>if (substringPattern.test(str)) {
+                                        <br>console.log("Substring found!");
+                                        <br>} else {
+                                        <br>console.log("Substring not found.");
+                                        <br>}
+                                    </div>
+                                    <br>In questo esempio l'espressione regolare '/World/' è usata per verificare se la
+                                    stringa contiene la sottostringa 'World'. Se la verifica ha avuto successo, stampa
+                                    'Substring Found!'.
+                                </li>
+                                <br>
+                                <li>Il metodo 'match()':
+                                    <br> Questo metodo recupera il risultato della corrispondenza di una stringa con
+                                    un'espressione regolare.
+                                    <br>Se la corrispondenza è stata trovata, restituisce un array contenente la stringa
+                                    corrispondente e tutti i gruppi catturati
+                                    <br>
+                                    <div class="esempio">Es:
+                                        <br>let str = "Hello, World!";
+                                        <br>let substringPattern = /World/;
+                                        <br>let matchResult = str.match(substringPattern);
+                                        <br>if (matchResult) {
+                                        <br>console.log("Substring found: " + matchResult[0]);
+                                        <br>} else {
+                                        <br>console.log("Substring not found.");
+                                        <br>}
+                                    </div>
+                                    <br>In questo esempio l'espressione regolare '/World/' è usata con im emetodo
+                                    'match()'.Se una corrsipondenza è stata trovata, stampa la sottostringa
+                                    corrispondente
+                                </li>
+                                <br>Le espressioni regolari offrono potenti funzionalità di corrispondenza dei modelli e
+                                possono essere personalizzate per ricerche di sottostringhe più complesse.
+                            </ul>
+                            <!--Tue 28/11/23 10:49: relative about test and match method -->
+                        </li>
+                        <br>
+                        <li>'lastOfIndex(substring)': Restituisce l'indice dell'ultima occorrenza di una sottostringa
+                        </li>
+                        <br>
+                    </ul>
+                    <!-- Tue 28/11/23 10:49: relative about to find substrings -->
+                </li>
                 <br>
-                <li></li>
+                <li>Replacing a substring:
+                    <br>il metodo 'replace()' scambia una stringa con un altra alla sua prima occorenza, cioè è
+                    sensibile
+                    alle maiuscole (case sensitive).
+                    <br>
+                    <div class="esempio">Es:
+                        <br>let originalString = "Hello, World!";
+                        <br>let substringToReplace = "World";
+                        <br>let replacementString = "Universe";
+                        <br>let newString = originalString.replace(substringToReplace, replacementString);
+                        <br>console.log(newString);
+                    </div>
+                    <br>In questo esempio il metodo 'replace' è chiamato su 'originalString' con 2 argomenti: il
+                    'substringToReplace' e il 'replacementString'. Il metodo restituisce una nuova stringa dove la prima
+                    occorenza della 'substringToReplace' è swcambiata con 'replacementString'.
+                    <br>Anche qui si possono usare espressioni regolari come
+                    <ul type="A">
+                        <li>'/g':
+                            <br>ogni volta che trova il primo argomento lo sostituisce con il secondo argomento
+                            <br>
+                            <div class="esempio">Es:
+                                <br>let originalString = "Hello, World! World is amazing.";
+                                <br>let substringToReplace = /World/g;
+                                <br>let replacementString = "Universe";
+                                <br>let newString = originalString.replace(substringToReplace, replacementString);
+                                <br>console.log(newString);
+                            </div>
+                            <br>In questo esempio, l'espressione regolare /World/g viene utilizzata per sostituire tutte
+                            le occorrenze di "World" nella stringa con "Universe". Il flag g è global scope, il che
+                            significa che sostituirà tutte le occorrenze, non solo la prima.
+                        </li>
+                        <br>
+                        <li>'/i':
+                            <br>ignora il case sensitive.
+                        </li>
+                        <br>
+                    </ul>
+                </li>
                 <br>
-                <li></li>
+                <li>Splittare le stringhe:
+                    <br>il metodo 'split()' ritorna un array di stringhe composto da tutte le sottostringhe separate dal
+                    carattere immesso nell'argomento.
+                    <br>Per fare un esempio:
+                    <br>
+                    <div class="esempio">Es:
+                        <br>let originalString = "apple,orange,banana";
+                        <br>// Split the string using a comma as the delimiter
+                        <br>let arrayOfStrings = originalString.split(',');
+                        <br>console.log(arrayOfStrings);
+                    </div>
+                    <br>in questo esempio, il metodo 'split' è chiamato su 'originalString', e le virgolotte sono messe
+                    tra le parestesi tonde come argomento. Il risultato è quindi un array dei tre elementi ('apple',
+                    'orange', 'banana').
+                    <br>Posso usare anche delimitatori diversi come ad esempio:
+                    <br>
+                    <div class="esempio">Es:
+                        <br>let originalString = "apple;orange;banana";
+                        <br>// Split the string using a semicolon as the delimiter
+                        <br>let arrayOfStrings = originalString.split(';');
+                        <br>console.log(arrayOfStrings);
+                    </div>
+                    <br>In questo caso la stringa è splittata usando il punto e virogla come delimitatore.
+                    <br>Se si vuole splittare una stringa in un carattere individuale, si può usare una stringa vuota
+                    come delimitatore.
+                    <br>
+                    <div class="esempio">Es:
+                        <br>let originalString = "hello";
+                        <br>// Split the string into an array of characters
+                        <br>let arrayOfCharacters = originalString.split('');
+                        <br>console.log(arrayOfCharacters);
+                    </div>
+                    <br>In questo caso l'output sarà un array dei caratteri che compongono la parola 'hello'.
+                </li>
                 <br>
+                <li>il metodo 'trim()':
+                    <br>è usato per rimuovere gli spazi bianchi(spazi, schede, interruzioni di riga) da entrambe le
+                    estremità di una stringa.
+                    <br>
+                    <div class="esempio">Es:
+                        <br>let stringWithWhitespace = " Hello, World! ";
+                        <br>// Using trim to remove leading and trailing whitespace
+                        <br>let trimmedString = stringWithWhitespace.trim();
+                        <br>console.log(trimmedString);
+                    </div>
+                    <br>In questo esempio il metodo 'trim' è chiamato per rimuovere gli spazi bianchi dalla stringa.
+                    è bene notare che il metodo 'trim' non modifica la stringa originale, restituisce una nuova stringa
+                    con gli spazi vuoti iniziali e finali rimossi.
+                    <br>Nel caso si vilesse eliminare gli spazi bianchi solo a destra (fine stringa) o sinistra (inizio
+                    stringa) si possono usare rispettivamente 'trimStart'(o 'trimLeft') e 'trimEnd'(o 'trimRight').
+                    Tuttavia questi metodi non sono così ampiamente supportati come 'trim', quindi generalemente è più
+                    sicuro usare 'trim' per la compatibilità cross-browser. 
+                    <br>Nel work flow moderno si usano anche i metodi 'String.prototype.trimStart' e 'String.prototype.trimEnd'.
+                </li>
             </ol>
             <!-- THIS IS RELATIVE ABOUT STRINGS METHODS -->
             <h2>L'immutabilità delle stringhe </h2>
@@ -1579,8 +1833,10 @@
             <!-- Relative about the string immutability -->
             </p>
         </div>
+        <!-- Tue 28/11/23 12:48: Relative about all text-->
 
     </div>
+    <!-- Tue 28/11/23 12:48: relative about text bound -->
 </body>
 
 </html>
