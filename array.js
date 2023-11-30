@@ -78,7 +78,7 @@ skibbidToilet.flat()
 //spread operator si può utilizzare al posto di concat, quello che fa e aprire il contentuto dell'array e metterlo come elementi separati all'intenro di dove è stato posizionato
 /*ESERCIZIO PER LE FUNZIONI: RICREARE IL METODO FLAT CON GLI SPREAD OPERATOR  */
 
-let arrSpalmato = [...arrConatenato, ...skibbidTioilet]
+//let arrSpalmato = [...arrConatenato, ...skibbidTioilet]
 
 //lo splice si usa per immettere nuovi elementi all'interno dell'array; 
 //il primo argomento indica la posizione in cui inserirli, 
@@ -111,3 +111,13 @@ le modifiche avverrano nell'ordine in cui sono scritti i metodi.*/
 
 
 //console.log(skibbidTioilet.flat().sort(function(a, b){return a-b}));
+
+/*se si vuole eseguire una qualsiasi operazione per ogni elementi dell'array si utilizza il metodo .map()
+Nel metodo map si usa un arrow function dove si passa per arogmento il singiolo elemento dell'array da modificare 
+e dopo la diciharazzione a freccia l'operazione da effettuare */
+let a = [0, 12, 22 , 55, 389]
+let aMappato=a.map((x)=>
+x*2)
+console.log(`primo array: ${a}`,`secondo array ${aMappato}`);
+
+

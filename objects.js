@@ -78,4 +78,4 @@ quando crei un oggetto ne chiami il constructor aprendo le parentesi tonde e inf
 let stoPikachu= new Pikachu(`Sandro Predappio`)
 //console.log(stoPikachu.name);
 let numaccaso = Math.random()
-
+//VEDERE LE PROMISES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
