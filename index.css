@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --bgc: rgb(31, 90, 99); 
+    --grey: rgb(83, 84, 85);
+    --ctx: #fff;
+    --white: #eef;
+    --rdGrbg: radial-gradient(farthest-side at 50% , var(--bgc),#75);
+    --linGrsx: linear-gradient(to left, var(--grey), var(--white));
+    --linGrrx: linear-gradient(to right, var(--white), var(--grey));
+}
+
+html{
+    font-family: "Assistant", sans-serif; 
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: var(--bgc);
+    color: var(--ctx);
+    border: 1px solid var(--white);
+    
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--grey);
+    font-weight: 700;
+}
+
+a:link{
+    color: #00f;
+    text-decoration: none ;
+}
+
+a:visited{
+    color: #dff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #00f;
+    text-decoration:underline;
+}
+
+a:active{
+    text-decoration: underline;
+}
+
+#bordo{
+    margin: 1rem;
+    padding: 1rem;
+    background-image: var(--rdGrbg);
+    border-radius: 10px;
+}

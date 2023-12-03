@@ -19,7 +19,6 @@ str.length
 
 // per accedere al carattere tramite numerazione si utilizza  il metodo charAt(), il secondo ritorna allo unicode del carattere 
 str.charAt(0)
-str.    
 
 // i metodi per estrare parti di stringhe si possono utilizzare 3 metodi:
 // slice(inizio, fine), substring(inizio, fine), substr(inizio, durata)
