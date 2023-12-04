@@ -4,11 +4,13 @@
 :root{
     --bgc: rgb(31, 90, 99); 
     --grey: rgb(83, 84, 85);
-    --ctx: #fff;
-    --white: #eef;
-    --rdGrbg: radial-gradient(farthest-side at 50% , var(--bgc),#75);
-    --linGrsx: linear-gradient(to left, var(--grey), var(--white));
-    --linGrrx: linear-gradient(to right, var(--white), var(--grey));
+    --ctx: #000;
+    --darkblue:rgb(31, 90, 99);
+    --lightgrey: rgba(251, 251, 255, 0.179);
+    --lightdark: rgba(46, 43, 43, 0.49); 
+    --rdGrbg: radial-gradient(farthest-side at 50% , var(--bgc),#678, var(--lightgrey), #145 );
+    --fdlx: linear-gradient(to left,  rgba(170, 187, 204, 0.5),var(--darkblue));
+    --fdrx: linear-gradient(to right, var(--white), var(--grey));
 }
 
 html{
@@ -26,7 +28,10 @@ body{
     background-color: var(--bgc);
     color: var(--ctx);
     border: 1px solid var(--white);
-    
+    background-image: var(--rdGrbg);
+    display: flex;
+    align-items: left;
+    justify-content: left;
 }
 
 
@@ -36,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--grey);
+    color: var(--ctx);
     font-weight: 700;
 }
 
@@ -46,7 +51,7 @@ a:link{
 }
 
 a:visited{
-    color: #dff;
+    color: #007;
     text-decoration: none;
 }
 
@@ -62,6 +67,63 @@ a:active{
 #bordo{
     margin: 1rem;
     padding: 1rem;
-    background-image: var(--rdGrbg);
+    border: 1px dotted black;
     border-radius: 10px;
+    /* background-image: var(--rdGrbg); */
+}
+
+.ph{
+    margin: 1rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+
+/* per allineare una foto al centro del paragrafo richiamare le proprietà 
+"display: block" e "margin: 0 auto", all'interno della classe assegnata a quell'immagine */
+.phcode{
+    border: 8px;
+    border-radius: 10px;
+    box-shadow: 10px 10px var(--lightdark);
+    width: -5px;
+    height: -3px;
+    /* display: block;
+    margin: 0 auto; */
+}
+
+/* per allineare una foto, all'interno di un div, in alto a destra 
+bisogna richiamare la proprietà "position: relative" nel classe assegnata a quel div 
+→ in seguito richiamare la classe assegnata all'immagine e dargli le prorpietà
+"position: absolute", "top:0" e "right:0"  */
+.info{
+    background: var(--fdlx);
+    margin: 1rem;
+    padding: 0.5rem;
+    color: #000;
+    position: relative;
+    border: 2px solid var(--darkblue) ;
+    border-radius: 5px;
+    
+}
+
+.photo2{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.esempio{
+    background-image: var(--fdrx);
+    border: 2px solid black;
+
+    position: relative;
+}
+
+button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
 }

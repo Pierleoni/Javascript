@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
 <script type="text/javascript" src="objects.js"></script>
 <script type="text/javascript" src="objects2.js"></script>
 
-<script type="text/Javascript" src="prova.js"></script>
+<script type="text/Javascript" src="dom.js"></script>
 
 <body>
     <div id="bordo">
@@ -29,7 +29,9 @@
                 src
                 per linkare il foglio o i fogli di Javascript.
                 <br>
-                <img  class="phcode" src="/Media/Photo/Linking Js .png" height="100px" width="400px" alt="Linking Js" class="photo1">
+                <br>
+                <img class="phcode" src="/Media/Photo/Linking Js .png" height="100px" width="400px" alt="Linking Js">
+                <br>
                 <br>In questo caso ci sono linkati 3 file di Js ognuno dei quali fa 3 cose ben distinte tra loro.
                 <br>In seguito andare sul nostro browser (Chrome, Firefox, Opera, etc.) e aprire la console (ctrl +
                 shift +
@@ -54,8 +56,9 @@
             ctrl + ù,
             mentre per i commenti multi-line devo scrivere /* ad inizio commento e */ a fine commento].
             <br>
-            <img class="phcode" src="/Media/Photo/Esempio commenti Js.png" height="160px" width="600px" alt="Esempio commenti Js"
-                class="photo1">
+            <br>
+            <img class="phcode" src="/Media/Photo/Esempio commenti Js.png" height="160px" width="600px"
+                alt="Esempio commenti Js">
             <br>
             <small>Questo è un esempio di in-line comment e multi-line comment</small>
             <br>
@@ -117,9 +120,16 @@
                             || (logical OR): ritorna vero se almeno uno degli operandi è vero
                         </li>
                         <li>
-                            ! (logical NOT): ritorna il valore booleano opposto del operando (<div class="esempio">Es:
-                            </div> "!true" è "false"
-                            viceversa "!false" è "true")
+                            ! (logical NOT): ritorna il valore booleano opposto del operando (
+                            <div class="code-container">
+                                <pre>
+
+                                        <code id="esempio">Es:
+                                    <br>"!true" è "false"
+                                    <br>viceversa "!false" è "true"</code> )
+                                    </pre>
+                                <button onclick="copyToClipboard()"> Copy To Clipboard</button>
+                            </div>
                         </li>
                     </ul>
                     <!-- Tue 28/11/23 13:05: Relative about logical Operators  -->
@@ -136,11 +146,11 @@
                     <br>Tuttavia ci sono diversi metodi per manipolare una stringa, creandone delle nuove basate su
                     quella originale.
                     <br>
-                    <div class="esempio">Es: </div>
+                    <div>Es: </div>
                     <br>
-                    <img class="phcode" src="/Media/Photo/Manipulate original string to create new onepng.png" height="200px"
-                        width="500px" alt="" class="photo1">
-
+                    <img class="phcode" src="/Media/Photo/Manipulate original string to create new onepng.png"
+                        height="200px" width="500px" alt="">
+                    <br>
                 </li>
                 <li>symbol :
                     <br> è un valore primitivo immutabile che è unico a differneza degli altri dati primitivi (strings,
@@ -236,7 +246,7 @@
         che il valore della variabile cambierà <br> mentre var è raramente usato di questi tempi, a causa del suo
         comportamento e dei problemi potenziali legati al hoisting e scope.
         <div class="info">
-            <img  src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="" class="photo2">
+            <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="" class="photo2">
             <h2>Hoisting</h2>
             <p>
                 L'hoisting un meccanismo di Js che permette alla variabile e funzione dichiarate di essere spostate
@@ -260,7 +270,7 @@
                     </li>
                 </ul>
                 <br>
-                <img class="phcode" src="/Media/Photo/Hoisting Variables.png" height="30%" width="40%" alt="" class="photo1">
+                <img class="phcode" src="/Media/Photo/Hoisting Variables.png" height="30%" width="40%" alt="">
                 <br> <br>
                 <li>
                     Hoisting funzione:
@@ -270,7 +280,7 @@
                         scope(contente l'ambito di aplicazione), e possono essere chiamate prima della loro attuale
                         dichiarazione nel codice. </li>
                     <br>
-                    <img class="phcode" src="/Media/Photo/Hoisting function.png" height="40%" width="60%" alt="" class="photo1">
+                    <img class="phcode" src="/Media/Photo/Hoisting function.png" height="40%" width="60%" alt="">
                 </ul>
             </ol>
             <mark>è Importante notare che l'hoisting è un comportamento specifico delle dichiarazioni di variabili e
@@ -282,8 +292,8 @@
         <p>
             C'è una differenza tra dichiarare una variabile ed assegnarla:
             <br> <br>
-            <img class="phcode" src="/Media/Photo/declare and assign a variables.png" height="200px" width="300px" alt=""
-                class="photo1">
+            <img class="phcode" src="/Media/Photo/declare and assign a variables.png" height="200px" width="300px"
+                alt="">
             <br>A riga 4 sto dichiarando la variabile mentre a riga 7 la sto assegnando, per quanto riguarda la
             seconda variabile, "var b", il segno dell'uguale è l'operatore di assegnazione. Questo siginifica che 2
             viene assegnato a b e non controlla se b = 2, mentre come già detto sopra se vogliamo controllare se b è
@@ -311,8 +321,8 @@
                     <br> Ciò è utile per fornire un feedback e un informazione riguardo a cosa sta facendo il
                     codice.
                     <br>
-                    <div class="esempio">Es: </div> <br>
-                    <img class="phcode" src="/Media/Photo/console.log(message).png" alt="" class="photo1">
+                    <div>Es: </div> <br>
+                    <img class="phcode" src="/Media/Photo/console.log(message).png" alt="">
                 </li>
                 <li>
                     Variabili e valori di logging:
@@ -320,20 +330,20 @@
                     il loro stato corrente.
                     <br>Ciò è molto utile per il debugging e per capire il comportamento del codice.
                     <br>
-                    <div class="esempio">Es: </div>
+                    <div>Es: </div>
                     <br>
-                    <img class="phcode" src="/Media/Photo/console.log(variabili e valori di logging).png" height="100px" width="400px"
-                        alt="" class="photo1">
+                    <img class="phcode" src="/Media/Photo/console.log(variabili e valori di logging).png" height="100px"
+                        width="400px" alt="">
                 </li>
                 <li>
                     L'ispezioni di oggetti:
                     <br>si possonono loggare le proprietà e i valori degli oggetti e arrays, rendendo più facile
                     ispezionare il loro contentuto
                     <br>
-                    <div class="esempio">Es: </div>
+                    <div>Es: </div>
                     <br>
-                    <img class="phcode" src="/Media/Photo/l'ispezioni di oggetti del console.log.png" height="100px" width="490px"
-                        alt="" class="photo1">
+                    <img class="phcode" src="/Media/Photo/l'ispezioni di oggetti del console.log.png" height="100px"
+                        width="490px" alt="">
                 </li>
                 <li>
                     Errori di logging:
@@ -343,10 +353,10 @@
                     un'eccezzione), e altre informationi rilevanti per aiutare la diagnosi e per ovviare ai
                     problemi.
                     <br>
-                    <div class="esempio">Es: </div>
+                    <div>Es: </div>
                     <br>
-                    <img class="phcode" src="/Media/Photo/Console.log(Errori di logging).png" height="100px" width="490px" alt=""
-                        class="photo1">
+                    <img class="phcode" src="/Media/Photo/Console.log(Errori di logging).png" height="100px"
+                        width="490px" alt="">
                 </li>
                 <li>
                     Interagire con la console:
@@ -365,20 +375,20 @@
                     </ul>
                     Questi tre metodi sono utili per distinguere differenti tipi di output.
                     <br>
-                    <div class="esempio">Es: </div>
+                    <div>Es: </div>
                     <br>
-                    <img class="phcode" src="/Media/Photo/console.log(interagire con la console).png" height="100px" width="490px"
-                        alt="" class="photo1">
+                    <img class="phcode" src="/Media/Photo/console.log(interagire con la console).png" height="100px"
+                        width="490px" alt="">
                 </li>
                 <li>
                     Logging Condizionale:
                     <br>si può condizionalmente loggare messaggi basati su certe codinzioni o flags. <br>
                     Ciò è utile per selettivamente abilitare o disabilitare l'output del debug.
                     <br>
-                    <div class="esempio">Es: </div>
+                    <div>Es: </div>
                     <br>
-                    <img class="phcode" src="/Media/Photo/console.log(logging condizionale).png" height="100px" width="490px" alt=""
-                        class="photo1">
+                    <img class="phcode" src="/Media/Photo/console.log(logging condizionale).png" height="100px"
+                        width="490px" alt="">
                 </li>
             </ol>
             </p>
@@ -396,13 +406,13 @@
             inizializzate
             <br>
             <br>
-            <img class="phcode" src="/Media/Photo/declare uninitialized Variables.png" height="150px" width="200px" alt=""
-                class="photo1">
+            <img class="phcode" src="/Media/Photo/declare uninitialized Variables.png" height="150px" width="200px"
+                alt="">
             <br>adesso devo inizializzare e per fare ciò scrivo l'operatore di assegnazione su ciascuna variabile
             assegnando dei valori
             <br>
             <br>
-            <img class="phcode" src="/Media/Photo/uninitialized variables.png" height="400px" width="200px" alt="" class="photo1">
+            <img class="phcode" src="/Media/Photo/uninitialized variables.png" height="400px" width="200px" alt="">
             <br>una volta inizializzate, dalla riga 14 alla 16 ho assegnato dei vlaori aggiuntivi a tutti e tre;
             cioè a =4 + 1 = 5, b = 5 + 5 = 10 c = "I am" + "string" = "I am string".
             <br>[n.d.r. Ricorda che le variabili in js sono case sensivity,cioè:
@@ -411,7 +421,14 @@
             <br> se provassimo al logare l'asseganzione della variabile su console ci darebbe errore perchè non
             definità per js poichè entrambi le variabili sono scritte in modo diverso. Si consiglia di usare il
             camelCase(
-        <div class="esempio">Es: </div> pippoSolo)]
+        <div class="code-container">
+            <pre>
+                        <code id="esempio"> Es: 
+                            pippoSolo)]
+                        </code> 
+                    </pre>
+            <button onclick="copyToClipboard()">Copy To Clipboard</button>
+        </div>
         </p>
         <br>
         <h2 id="numb"> <a href="#number" target="_self">Numbers</a> </h2>
@@ -420,79 +437,98 @@
             aritmetico.
             <br>
             Le diverse caratteristiche dei numeri in Js sono le seguenti:
+            <br>
         <ol type="1.">
             <li>
                 Number Data Type:
                 <ul>
                     <li>Si possono fare le diverse operazioni aritmetiche</li>
+                    <br>
                     <li>Javascript ha un singolo data type numerico,
                         detto per l'appunto <b>"Number"</b></li>
+                    <br>
                     <li>I numeri possono avere valori interi (integers) o con la virgola (floating point)</li>
                     <br>
-                    <br><img class="phcode" src="/Media/Photo/Numeri interi e decimali.png" height="40%" width="40%" alt=""
-                        class="photo1">
+                    <br><img class="phcode" src="/Media/Photo/Numeri interi e decimali.png" height="40%" width="40%"
+                        alt="">
                 </ul>
             </li>
+            <br>
             <li>
                 Operazioni aritmetiche:
                 <ul>
-                    <li>Si possono fare le diverse operazioni aritmetiche</li>
-                    <br><img class="phcode" src="/Media/Photo/operazioni aritmetiche js.png" height="40%" width="40%" class="photo1"
+                    <li>Si possono fare le diverse operazioni aritmetiche:</li>
+                    <br>
+                    <br><img class="phcode" src="/Media/Photo/operazioni aritmetiche js.png" height="40%" width="40%"
                         alt="operazioni aritmetiche">
                 </ul>
             </li>
+            <br>
             <li>Incrementare i numeri
                 <ul>
                     <li>posso incrementare i numeri in 2 modi; </li>
-                    <br><img class="phcode" src="/Media/Photo/incrementare numeri js.png" height="10%" width="20%" alt=""
-                        class="photo1">
+                    <br>
+                    <br><img class="phcode" src="/Media/Photo/incrementare numeri js.png" height="10%" width="20%"
+                        alt="">
                     <br> come possiamo vedere con questo metodo ho incrementato il valore della mia variabile di +1
-                    valore, <br>
+                    valore,
+                    <br>
+                    <br>
                     <li>il secondo metodo è;</li>
-                    <br><img class="phcode" src="/Media/Photo/incrementare numeri in js 2.png" height="10%" width="20%" alt=""
-                        class="photo1">
+                    <br><img class="phcode" src="/Media/Photo/incrementare numeri in js 2.png" height="10%" width="20%"
+                        alt="">
                 </ul>
-                N.B. se volessi incrementare il valore della variabile numerica di 2 valori o più
-                <br><img class="phcode" src="/Media/Photo/Incrementare numeri js 3.png" height="10%" width="20%" alt="" class="photo1">
+                <br>
+                N.B. se volessi incrementare il valore della variabile numerica di 2 valori o più:
+                <br>
+                <br><img class="phcode" src="/Media/Photo/Incrementare numeri js 3.png" height="10%" width="20%" alt="">
             </li>
             <li>Decrementare i numeri:
                 <br>
                 L'operazione da fare è l'inversa della incrementazione, cioè;
-                <br><img class="phcode" src="/Media/Photo/Decrementare i numeri js.png" height="10%" width="20%" alt="" class="photo1">
-
+                <br>
+                <br><img class="phcode" src="/Media/Photo/Decrementare i numeri js.png" height="10%" width="20%" alt="">
+                <br>
                 N.B.Se volessi sempre decrementare i numeri di 2 o più valori l'operazione è la stessa della
                 incrementazione, ma con il segno meno
             </li>
+            <br>
             <li>trovare il resto (modulo):
                 <br>Per trovare il resto (detto modulo) della divisione di 2 numeri bisogna usare l'operatore di
                 resto (%);
-                <br><img class="phcode" src="/Media/Photo/Remainder.png" height="20%" width="20%" alt="" class="photo1">
+                <br>
+                <br><img class="phcode" src="/Media/Photo/Remainder.png" height="20%" width="20%" alt="">
                 <br>L'operatore di resto viene spesso utilizzato per determinare se un numero è pari o dispari, se
                 vuoi
                 dividere un numero per 2 e il resto è 0 allora siginfica che il numero è pari
             </li>
+            <br>
             <li>
                 Assegnazione composta con aggiunta aumentata:
                 <br>Se volessimo aggiungere un valore ad una variabile numerica dovremmo riscrivere let numb1=3,
                 numb1=numb1 + 7;
-                <br> tuttavia essendo una operazione molto comune esiste una scorciatoia per fare ciò
-                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con aggiunta aumentata.png" height="20%" width="20%"
-                    alt="">
+                <br> tuttavia essendo una operazione molto comune esiste una scorciatoia per fare ciò:
+                <br>
+                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con aggiunta aumentata.png" height="20%"
+                    width="20%" alt="">
             </li>
             <li>Assegnazione composta con sottrazione aumentata:
                 <br>se la scorciatoia += aumenta il valore, -= fa la cosa inversa
-                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con sottrazione aumentata.png" height="20%" width="20%"
-                    alt="">
+                <br>
+                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con sottrazione aumentata.png"
+                    height="20%" width="20%" alt="">
             </li>
             <li>Assegnazione composta con moltiplicazione aumentata:
                 <br>lo shortcut *= moltiplica i valori di una variabile
-                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con moltiplicazione aumentata.png" height="20%"
-                    width="20%" alt="">
+                <br>
+                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con moltiplicazione aumentata.png"
+                    height="20%" width="20%" alt="">
             </li>
             <li>Assegnazione composta con divisione aumentata:
                 <br>lo shortcut /= divide i valori di una variabile
-                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con divisione aumentata.png" height="20%" width="20%"
-                    alt="">
+                <br>
+                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con divisione aumentata.png"
+                    height="20%" width="20%" alt="">
             </li>
             <li>Math object:
                 <br>Javascript provede un oggetto Math che contiene una varieta di funzioni e costanti
@@ -569,8 +605,6 @@
                         <br><img class="phcode" src="/Media/Photo/Math.min.png" height="30%" width="30%" alt="">
                     </li>
                     <br>
-                    <li></li>
-                    <br>
                 </ul>
             </li>
             <li>Nan (Not a Number):
@@ -583,18 +617,43 @@
                     <li>
                         Operazioni matematiche non definite o non rappresentabili:
                         <br>
-                        <div class="esempio">Es: </div> let division = 10 / "abc"; è NaN
+                        <br>
+                        <div class="code-container">
+                            <pre>
+                                <code id="esempio">Es: 
+                                    <br><span style=color:blueviolet>let division</span> = <span style="color:darkgreen">10</span> / <span style="color:rgba(255, 140, 0, 0.688)">"abc"</span>; è NaN
+                                </code> 
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy To Clipboard</button>
+                        </div>
                     </li>
                     <br>
                     <li>
                         Operazioni matematiche con valori non definiti:
                         <br>
-                        <div class="esempio">Es: </div> Let square root = Math.sqrt(-1); è NaN
+                        <br>
+                        <div class="code-container">
+                            <pre>
+                                <code id="esempio">Es: 
+                                    <br> <span style="color: blueviolet;">Let square root</span> = <span style="color: darkgreen;">Math.sqrt(-1)</span>; è NaN
+                                </code> 
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy To Clipboard</button>
+                        </div>
                     </li>
                     <br>
                     <li>Usare NaN esplicitamente:
                         <br>
-                        <div class="esempio">Es: </div> Let numb=NaN;
+                        <br>
+                        <div class="code-container">
+                            <pre>
+
+                                <code id="esempio">Es: 
+                                    <br> <span style="color: blueviolet;">Let numb</span> = <span style="color: darkgreen;">NaN</span>;
+                                </code> 
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy To Clipboard</button>
+                        </div>
                     </li>
                     <br>Per controllare se il valore è NaN si possono usare 2 funzion:
                     <ul type="I">
@@ -603,7 +662,16 @@
                             argomento a diventare un numero prima
                             di effettuare il controllo.
                             <br>
-                            <div class="esempio">Es: </div> isNaN("Hello"); è vero, <br> isNaN(123); è falso
+                            <br>
+                            <div class="code-container">
+                                <pre>
+                                    <code id="esempio">Es: 
+                                        <br> <span style="color: blueviolet;">isNaN("Hello")</span>;  <span style="color: white;">è vero</span>, 
+                                        <br> <span style="color: blueviolet;">isNaN(123)</span> <span style="color: white;">; è falso</span>
+                                    </code> 
+                                </pre>
+                                <button onclick="copyToClipboard()">Copy To Clipboard</button>
+                            </div>
                         </li>
                         <br>
                         <li>
@@ -622,25 +690,47 @@
                 <ul type="A">
                     <li>divisioni dello zero:
                         <br>
-                        <div class="esempio">Es: </div> Let division= 1/0; è infinito
+                        <br>
+                        <div class="code-container">
+                            <pre>
+                                <code id="esempio">Es: 
+                                    <br> <span style="color: blueviolet;">Let division</span> <span style="color: white;">=</span> <span style="color: darkgreen;">1/0</span> <span style="color: white;">; è infinito</span>
+                                </code> 
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy To Clipboard</button>
+                        </div>
                     </li>
                     <br>
                     <li>Moltiplicare o dividere un numero finito per l'infinito positivo o negativo:
                         <br>
-                        <div class="esempio">Es: </div> console.log(5 * Infinity); // Infinity
-                        console.log(-10 / Infinity); // -0
+                        <br>
+                        <div class="code-container">
+                            <pre>
+
+                                <code id="esempio">Es: 
+                                    <br>console.log(5 * Infinity); // Infinity
+                                    <br>console.log(-10 / Infinity); // -0
+                                </code> 
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy To Clipboard</button>
+                        </div>
                     </li>
                     <br>
                     <li>Operazioni matematiche che vanno oltre il range rappresentabile:
                         <br>
-                        <div class="esempio">Es: </div> console.log(Math.pow(10, 1000)); // Infinity
+                        <code id="esempio">Es: 
+                            <br>console.log(Math.pow(10, 1000)); // Infinity
+                        </code>
                     </li>
                 </ul>
                 <br> Si puo fare un check per "infinity" o "-infinity" usando la funzione "isFinite()":
                 <br>
-                <div class="esempio">Es: </div>isFinite(positiveInfinity); // false
-                isFinite(negativeInfinity); // false
-                isFinite(5); // true
+                <code id="esempio">Es: 
+                    <br>isFinite(positiveInfinity); // false
+                    <br>isFinite(negativeInfinity); // false
+                    <br>isFinite(5); // true
+                </code>
+                <br>
                 <br>Da notare che "isFinite" diventa falso sia per "infinity" e "-infinity".
                 Tutto Questo può essere utile nel caso in cui io voglia prevenire comportamenti non intenzionali nel
                 codice, a causa di operazioni che danno come risultato l'infinito.
@@ -656,15 +746,18 @@
                         <br>"ParseInt()" e "ParseFloat()" sono due funzioni che vengono usata per convertire,
                         rispettivamente, le stringhe in numeri interi o con la virgola.
                         <br>
-                        <div class="esempio">Es: </div>
-                        <br>let numericString = "123";<br>
-                        let numericValue = parseInt(numericString);<br>
-                        console.log(numericValue); // 123
-                        <br>
-                        <br>
-                        let floatString = "3.14";<br>
-                        let floatValue = parseFloat(floatString);<br>
-                        console.log(floatValue); // 3.14
+                        <code id="esempio">Es: 
+
+                            <br>let numericString = "123";
+                            <br>
+                            let numericValue = parseInt(numericString);
+                            <br>
+                            console.log(numericValue); // 123
+                            <br>
+                            <br>let floatString = "3.14";<br>
+                            <br>let floatValue = parseFloat(floatString);<br>
+                            <br>console.log(floatValue); // 3.14
+                        </code>
 
                     </li>
                     <br>
@@ -672,18 +765,19 @@
                         <br>il metodo JSON.Parse() viene usato per analizzare (parsing) a stringa JSON e convertirla
                         in un oggetto di JS.
                         <br>
-                        <div class="esempio">Es: </div>
-                        <br>let jsonString = '{"name": "John", "age": 30}';<br>
-                        let parsedObject = JSON.parse(jsonString);<br>
-                        console.log(parsedObject.name); // John
+                        <code id="esempio">Es: 
+
+                            <br>let jsonString = '{"name": "John", "age": 30}';<br>
+                            <br>let parsedObject = JSON.parse(jsonString);<br>
+                            <br>console.log(parsedObject.name); // John
+                        </code>
                         <br>
                         <br>
                         <div class="info">
-                            <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+                            <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt=""
+                                class="photo2">
                             <h3>Parsing</h3>
-                            <br>
-                            <p>
-                                Il termine Parsing in inglese sta per "interpretare/analizzare",
+                            <p>Il termine Parsing in inglese sta per "interpretare/analizzare",
                                 <br><mark>è spesso riferito al processo di analisi o interpretazione dei dati, in
                                     modo particolare quando si tratta di strighe o di testo. </mark>
                             </p>
@@ -696,7 +790,7 @@
                                 <br>per convertire un numero in una stringa bisogna usare il metodo "toString()" o
                                 mediante la concatenazione di una stringa vuota.
                                 <br>
-                                <div class="esempio">Es: </div>
+                                <div id="esempio">Es: </div>
                                 <br>let number = 42;
                                 <br>let stringNumber = number.toString();
                                 <br>console.log(stringNumber); // "42"
@@ -708,7 +802,7 @@
                                 contesti (ad esempio negli statements condizionali).
                                 <br>Si può usare la funzione "Boolean()" per la conversione esplicita.
                                 <br>
-                                <div class="esempio">Es: </div>
+                                <div id="esempio">Es: </div>
                                 <br>let truthyValue = "Hello";
                                 <br>let booleanValue = Boolean(truthyValue);
                                 <br>console.log(booleanValue); // true
@@ -719,7 +813,7 @@
                                 <br>è possibile convertire oggetti simili e iterabili(ad esempio stringhe o
                                 NodeLists) in arrays, usando "Array.from" o lo spread generator "..."
                                 <br>
-                                <div class="esempio">Es: </div>
+                                <div id="esempio">Es: </div>
                                 <br>let iterableString = "hello";
                                 <br>let charArray = Array.from(iterableString);
                                 <br>console.log(charArray); // ["h", "e", "l", "l", "o"]
@@ -742,7 +836,7 @@
                     <li>
                         Usare il metodo to.String:
                         <br>
-                        <div class="esempio">Es: </div>
+                        <div id="esempio">Es: </div>
                         <br>let myNumber = 42;
                         <br>let myString = myNumber.toString();
                         <br>console.log(typeof myNumber); // Output: number
@@ -752,7 +846,7 @@
                     <li>
                         Concatenazione con una stringa vuota:
                         <br>
-                        <div class="esempio">Es: </div>
+                        <div id="esempio">Es: </div>
                         <br>let myNumber = 123;
                         <br>let myString = '' + myNumber;
                         <br>console.log(typeof myNumber); // Output: number
@@ -760,7 +854,7 @@
                     </li>
                     <li>Usare la funzione "String()":
                         <br>
-                        <div class="esempio">Es: </div>
+                        <div id="esempio">Es: </div>
                         <br>let myNumber = 3.14;
                         <br>let myString = String(myNumber);
                         <br>console.log(typeof myNumber); // Output: number
@@ -777,7 +871,7 @@
                     <li>toFixed():
                         <br>Formatta un numero usando la notazione del punto fisso.
                         <br>
-                        <div class="esempio">Es: </div>
+                        <div id="esempio">Es: </div>
                         <br>let myNumber = 3.14159;
                         <br>let formattedNumber = myNumber.toFixed(2); // Rounds to 2 decimal places
                         <br>console.log(formattedNumber); // Output: "3.14"
@@ -785,7 +879,7 @@
                     <li>toPrecision:
                         <br>Formatta il numero con una precisione specificata.
                         <br>
-                        <div class="esempio">Es: </div>
+                        <div id="esempio">Es: </div>
                         <br>let myNumber = 123.456789;
                         <br>let formattedNumber = myNumber.toPrecision(5); // Total digits including integer and
                         decimal parts
@@ -794,7 +888,7 @@
                     <li>toExponential():
                         <br>Converte un numero in notazione esponenziale.
                         <br>
-                        <div class="esempio">Es: </div>
+                        <div id="esempio">Es: </div>
                         <br>let myNumber = 12345;
                         <br>let exponentialNumber = myNumber.toExponential(2); // 2 decimal places in exponential
                         notation
@@ -821,14 +915,14 @@
                 <br>Dichiare una variabile (Es: let str) poi con l'operatore di assegnazione si assegna un valore a
                 quella stringa.
                 <br>
-                <div class="esempio">Es: </div>
+                <div id="esempio">Es: </div>
                 <br>let str =`Hello World`
             </li>
             <br>
             <li>Caratteri di fuga:
                 <br>Tutto ciò che è contenuto nelle virgolette viene cosiderata una stringa nel codice di Js, se
                 scrivessi dei caratteri al di fuori delle virgolette non verebbero considerati:
-                <div class="esempio">Es:
+                <div id="esempio">Es:
                     <br>let str = "I am" double quoted"string"double quotes""
                 </div>
                 <br>Per ovviare a questo problema c'è una cosa chiamata carattere di fuga:
@@ -838,7 +932,7 @@
                 <ul type="A">
                     <li>Newline (\n):
                         è comunemente usato per inserire una nuova linea o mandare accapo una stringa.
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>var myString = "This is the first line.\nThis is the second line.";
                             <br>console.log(myString); //Output is : This is the first line.
                             <br>This is the second line.
@@ -850,7 +944,7 @@
                         è usato per muovere il cursore all'inizio della linea senza farlo avvanzare alla prossima
                         linea.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>var myString = "This is some text.\rThis text will overwrite the previous line.";
                             <br>console.log(myString);
                             <br>This is some text.
@@ -865,7 +959,7 @@
                     <li>tab character(\t):
                         è usato per creare spazi bianchi orizzontali, tipicamente equivalenti a un certo numero di
                         spazi.
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>var myString = "This is some text.\tThis text is indented with a tab.";
                             <br>console.log(myString);
                             <br>This is some text. This text is indented with a tab.
@@ -878,7 +972,7 @@
                     <li>backspace character(\b):
                         è usato per muovere il cursore di una posizione; cioè cancellando il carattere a quella
                         posizione
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>var myString = "Hello\b World!";
                             <br>console.log(myString);
                             <br>Hel World!
@@ -894,13 +988,13 @@
                         <br>è usato per evitare una virgoletta andnado così andando indicare che non sara più la
                         fine di una stringa (funziona sia con le virgolette singole che doppie).
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let mystr = "I am \"double quote\"string\"double quotes"
                             <br>console.log(mystr)//Output: I am "double quote"string"double quotes
                         </div>
                         Un altra cosa che posso fare è che se volessi aggiungere le backslash nella mia stringa devo
                         per forza metterne due perche la prima va ad indicare l'escape character.
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>var myString = "This is a backslash: \\";
                             <br>console.log(myString);
                             <br>This is a backslash: \
@@ -913,7 +1007,7 @@
                         <br>serve per includere una virgoletta singola in una stringa che a sua volta è già inclusa
                         in delle virgolette singole.
                         <br>
-                        <div class="Esempio">Es:
+                        <div id="esempio">Es:
                             <br>var myString = 'This is a single quote: \'';
                             <br>console.log(myString);
                             <br>This is a single quote: '
@@ -923,7 +1017,7 @@
                     <li>Double quotes escape character ('\"'):
                         <br>stessa cosa delle Single Quotes escape character ma con le viroglette doppie
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>var myString = "This is a double quote: \"";
                             <br>console.log(myString);
                             <br>This is a double quote: "
@@ -933,7 +1027,7 @@
                     <li>Form feed (\f):
                         <br>è usato per far avanzare il cursore alla prossima pagina o linea su alcuni sistemi.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>console.log("This is a text with a form feed character\fNext line of text.");
                             <br>This is a text with a form feed character
                             <br>Next line of text.
@@ -949,7 +1043,7 @@
             <li>Lenght:
                 <br>Restituisce la lunghezza di una stringa.
                 <br>
-                <div class="esempio">Es: </div>
+                <div id="esempio">Es: </div>
                 <br><img src="/Media/Photo/string.length.png" height="200px" width="600px" alt="">
                 <br><small>Note: i caratteri presenti nella mia stringa in totale sono di 41 caratteri</small>
                 <br>
@@ -971,11 +1065,11 @@
                 <br>l'indice di questa numerazione parte da 0 ovvero per accedere al primo carattere si scrive 0,
                 per il secondo 1, per il terzo 2,etc.
                 <br>
-                <div class="esempio">Es: </div> let str = 'Hello, World!';
+                <div id="esempio">Es: </div> let str = 'Hello, World!';
                 <br>console.log(str[0]); // Outputs 'H'
                 <br>Un altro metodo è il "charAt()":
                 <br>
-                <div class="esempio">Es: </div>
+                <div id="esempio">Es: </div>
                 <br>let myString = "Hello, World!";
                 <br>let firstCharacter = myString.charAt(0);
                 <br>console.log(firstCharacter); // Output: H.
@@ -984,13 +1078,13 @@
                 <br>
                 <br>
                 <div class="info">
-                    <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+                    <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="" class="photo2">
                     <h3>Il metodo .charCodeAt</h3>
                     <p>
                         questo metodo in Js è usato per prendere il valore Unicode dei caratteri a uno specifico
                         index nelle stringhe:
                         <br>
-                    <div class="esempio">Es</div>:
+                    <div id="esempio">Es</div>:
                     <br>let myString = "Hello, World!";
                     <br>let charCode = myString.charCodeAt(0);
                     <br>console.log(charCode); // Output: 72
@@ -1000,12 +1094,12 @@
                     il valore di Unicode del carattere all'index 1, e cosi via.
                     <br>
                     <div class="Tips">
-                        <img src="/Media/Photo/EF.jpg" height="80px" width="70px" alt="">
+                        <img src="/Media/Photo/EF.jpg" height="80px" width="70px" alt="" class="photo3">
                         <h4>Tips & Tricks</h4>
                         <p>Se volessi dare i valori Unicode per tutti i caratteri in una stringa, li posso loopare
                             attraverso la stringa stessa:
                             <br>
-                        <div class="esempio">Es: </div>
+                        <div id="esempio">Es: </div>
                         <br>let myString = "Hello, World!";
                         <br>for (let i = 0; i < myString.length; i++) { <br>console.log(myString.charCodeAt(i));
                             }
@@ -1023,7 +1117,7 @@
                                     Return type: Restituisce una stringa contenente il carattere
                                 </li>
                                 <li>
-                                    <div class="esempio">Es: </div>
+                                    <div id="esempio">Es: </div>
                                     <br>let myString = "Hello, World!";
                                     <br>let character = myString.charAt(0);
                                     <br>console.log(character); // Output: H
@@ -1036,7 +1130,7 @@
                                     index in una stringa</li>
                                 <li>Return Type: Rstituisce un integer che rappresenta il vlaore Unicode </li>
                                 <li>
-                                    <div class="esempio">Es: </div>
+                                    <div id="esempio">Es: </div>
                                     <br>let myString = "Hello, World!";
                                     <br>let charCode = myString.charCodeAt(0);
                                     <br>console.log(charCode); // Output: 72 (Unicode value for 'H')
@@ -1060,7 +1154,7 @@
                         Ci sono due parametri nell'argomento;
                         <br>l'index di inizio e l'index di fine,
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str = "Hello, World!";
                             <br>let subStr = str.substring(0, 5); // Returns "Hello"
                         </div>
@@ -1069,21 +1163,21 @@
                         stringa che estrappolata sarà tutta la frase "hello".
                         <br>se si vuole prendere fino alla fine al carattere specificato non si aggiunge il secondo
                         argomento
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str =`Hello World`
                             <br>let substring = str.substring(0)
                             <br>console.log(substring) //Output:'Hello world'
                         </div>
                         <br>è importante notare che il metodo 'substring' non modifica la stringa originale, invece
                         se lo si volesse fare è necessario riassegnare il risultato alla variabile
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str = "Hello, World!";
                             <br>str = str.substring(0, 5); // Now, str is "Hello"
                         </div>
                         <br> è bene sapere anche che nel caso in cui l'indice di inzio sia più grande dell'indice di
                         fine, il metodo 'substring' cambierà i due indici
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str = "Hello, World!";
                             <br>let subStr = str.substring(7, 2); // Returns "llo, "
                         </div>
@@ -1092,7 +1186,7 @@
                         <br>N.B.Se invece volessi inserire numeri negativi come parametri di substring ritorna
                         stringa
                         vuota.
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str =`Hello World`
                             <br>let substring = str.substring(-7,-13)
                             <br>console.log(substring) // No Output
@@ -1104,7 +1198,7 @@
                         stringa estratta. Come per il substring si hanno due paremetri; l'index di inizio e fine.
                         <br>La stringa originale non è modificata, invece viene restituita una nuova stringa
                         contenente la porzione specificata.
-                        <div class="esempio"> Es:
+                        <div id="esempio"> Es:
                             <br>let str = "Hello, World!";
                             <br>let subStr = str.slice(0, 5); // Returns "Hello"
                         </div>
@@ -1113,7 +1207,7 @@
                         <br>Il metodo 'slice' accetta anche indici negativi; peremttendoti di contare la posizione
                         dalla fine della stringa.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str = "Hello, World!";
                             <br>let subStrEnd = str.slice(-6); // Returns "World!"
                         </div>
@@ -1122,7 +1216,7 @@
                         <br>Come per 'substring', 'slice' non modifica la stringa originale. Se diventa necessario
                         modificare la stringa sul momento è necessario riassegnare il risultato alla variabile.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str = "Hello, World!";
                             <br>str = str.slice(0, 5); // Now, str is "Hello"
                         </div>
@@ -1137,7 +1231,7 @@
                         <br>questo metodo prende due parametri; l'inizio dell'index e la lunghezza della
                         sottostringa.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str = "Hello, World!";
                             <br>let subStr = str.substr(0, 5); // Returns "Hello"
                         </div>
@@ -1147,7 +1241,7 @@
                         <br>Come per 'slice' anche 'substr' se gli si mette un indice negativo inizierà a contare
                         dalla fine della stringa
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str = "Hello, World!";
                             <br>let subStrEnd = str.substr(-6); // Returns "World!"
                         </div>
@@ -1155,7 +1249,7 @@
                         originale, se diventa necessario
                         modificare la stringa sul momento è necessario riassegnare il risultato alla variabile.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str = "Hello, World!";
                             <br>str = str.substr(0, 5); // Now, str is "Hello"
                         </div>
@@ -1183,7 +1277,7 @@
                         <br id="plusmulti"><a href="#mp" target="_self">Possiamo concatenare stringhe multiple
                             usando più operatori '+'.</a>
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>var string1 = "Hello";
                             <br>var string2 = " beautiful";
                             <br>var string3 = " World";
@@ -1194,7 +1288,7 @@
                     <li>'.concant()' method:
                         <br>Questo è l'altro metodo per concatenare le stringhe.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>var string1 = "Hello";
                             <br>var string2 = " World";
                             <br>var result = string1.concat(string2);
@@ -1208,7 +1302,7 @@
                             .'concat' consente di concatenare stringhe
                             multiple, fancedole passare come argomento nel metodo '.concat'.</a>
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>var string1 = "Hello";
                             <br>var string2 = " beautiful";
                             <br>var string3 = " World";
@@ -1233,7 +1327,7 @@
                     <li>Un altro metodo è il '+=':
                         <br>fa la stessa cosa dell'operatore '+'.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str ="this is first sentence. "
                             <br>let str2 = "this is second sentence."
                             <br>str+=str2
@@ -1244,7 +1338,7 @@
                         variabile 'str2'. Questo è equivalente a scrivere 'str1=str1 + str2.'
                         <br>Come per gli altri metodi si possono concatenare molteplici stringhe.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>var string1 = "Hello";
                             <br>var string2 = " beautiful";
                             <br>var string3 = " World";
@@ -1267,7 +1361,7 @@
                 template Literal sono inclusi dalle backsticks .
                 <br>- la sintassi è:
                 <br>
-                <div class="esempio"> Es:
+                <div id="esempio"> Es:
                     <br>let variable = "world";
                     <br>let templateLiteral = `Hello, ${variable}!`;
                     <br>console.log(templateLiteral)//Output: Hello world
@@ -1283,7 +1377,7 @@
                         <br>Ogni espressione, funzione, variabile, etc. valida può essere inclusa dentro un
                         placeholder '${}' per essere valutata e interpolata in una stringa.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>const x = 5;
                             <br>const y = 10;
                             <br>const sum = `The sum of ${x} and ${y} is ${x + y}.`;
@@ -1295,7 +1389,7 @@
                         che si
                         estendono su più righe senza la necessita di usare concatenazioni o escape characters.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>const multiLineString = `
                             <br>This is a multi-line
                             <br>string using template literals.
@@ -1321,7 +1415,7 @@
                         template literal.
                         Il tag function è posto prima del template literal ed usa la seguente sintassi:
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>function myTagFunction(strings, ...values) {
                             <br>// Custom logic using the strings and values
                             <br>// Return the final processed string
@@ -1333,7 +1427,7 @@
                         valutate.
                         <br>Per fare un esempio più dettagliato:
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>function currencyFormatter(strings, ...values) {
                             <br>const formattedValues = values.map((value, index) => {
                             <br>if (typeof value === 'number') {
@@ -1362,7 +1456,7 @@
                 </ul>
                 <!-- relative about template literal function -->
                 <div class="info">
-                    <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+                    <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="" class="photo2">
                     <p>
                         il termine placeholder può riferirsi a diverse cose, pertanto dipende dal contesto.
                         Nel contesto del form <!--modulistica in italiano?--> di Html un placeholder è spesso
@@ -1371,7 +1465,7 @@
                         descriva il valore previsto del campo di input.
                         <br>È tipicamente visualizzato con il colore grigio chiaro e segue spesso l'attributo di
                         tipizzazione.
-                    <div class="esempio">Es:
+                    <div id="esempio">Es:
                         <br>--input type="text" placeholder="Enter your name"--
                     </div>
                     <br>Come possiamo vedere nel tag input sono stati aggiunti gli attributi di type e placeholder,
@@ -1403,7 +1497,7 @@
                             <br>I placeholder possono anche essere usati per la formattazzione delle stringhe per
                             creare una stringa dinamica
                             <br>
-                            <div class="esempio">
+                            <div id="esempio">
                                 Es:
                                 <br>var firstName = "John";
                                 <br>var lastName = "Doe";
@@ -1417,7 +1511,7 @@
                             valutati.
                             <br>I placeholder nei template literal sono racchiusi in '${}'.
                             <br>
-                            <div class="esempio">
+                            <div id="esempio">
                                 Es:
                                 <br>const a = 5;
                                 <br>const b = 10;
@@ -1453,7 +1547,7 @@
                     href="#charCodeAt">'charCodeAt'</a>, ma c'è un altro modo per fare ciò ovvero usare le bracket
                 notation[].
                 <br>
-                <div class="esempio"> Es:
+                <div id="esempio"> Es:
                     <br>let str=`Hello World`
                     <br>let bracketNot = str[0]
                     <br>console.log(bracketNot)//Output: `H`
@@ -1465,7 +1559,7 @@
                         stringa originale </li>
                     <br>
                     <br>
-                    <div class="esempio">Es:
+                    <div id="esempio">Es:
                         <br>let str = "Hello";
                         <br>let character = str.charAt(1); // Returns the character at index 1
                         <br>console.log(character); // Outputs: e
@@ -1475,7 +1569,7 @@
                         del carattere allo specifico index nella stringa originale </li>
                     <br>
                     <br>
-                    <div class="esempio">Es:
+                    <div id="esempio">Es:
                         <br>let str = "Hello";
                         let unicodeValue = str.charCodeAt(1); // Returns the Unicode value of the character at index
                         1
@@ -1486,7 +1580,7 @@
                         carattere in corrispondeza di tale stringa </li>
                     <br>
                     <br>
-                    <div class="esempio">Es:
+                    <div id="esempio">Es:
                         <br>let str = "Hello";
                         <br>let character = str[1]; // Returns the character at index 1
                         <br>console.log(character); // Outputs: e
@@ -1515,7 +1609,7 @@
                         <br>Non modifica la stringa originale ma restituisce una nuova stringa con i caratteri
                         convertiti in maiuscolo.
                         <br>
-                        <div class="esempio">
+                        <div id="esempio">
                             Es:
                             <br>let originalString = "Hello, World!";
                             <br>let uppercaseString = originalString.toUpperCase();
@@ -1530,7 +1624,7 @@
                         <br>Come per il '.toUpperCase', non modifica la stringa originale ma retituisce una nuova
                         stringa con tutti i caratteri convertiti in minuscolo
                         <br>
-                        <div class="esempio">
+                        <div id="esempio">
                             Es:
                             <br>let originalString = "Hello, World!";
                             <br>let lowercaseString = originalString.toLowerCase();
@@ -1555,7 +1649,7 @@
                         <br> Questo metodo restituisce l'indice della prima occorenza in una specifica sottostringa.
                         Se la sottostringa non viene trovata, ritorna a -1.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let mainString = "Hello, World!";
                             <br>let substring = "World";
                             <br>if (mainString.indexOf(substring) !== -1) {
@@ -1573,7 +1667,7 @@
                                 omesso, la ricerca inizia dall'inizio della stringa. </li>
                             <br>
                             <br>
-                            <div class="esempio">Es:
+                            <div id="esempio">Es:
                                 <br>let str = "Hello, World!";
                                 <br>let indexOfWorld = str.indexOf("World");
                                 <br>console.log(indexOfWorld); // Output: 7
@@ -1582,7 +1676,7 @@
                             indice iniziale
                             <br>
                             <br>
-                            <div class="esempio">Es:
+                            <div id="esempio">Es:
                                 <br>let str = "Hello, Hello, World!";
                                 <br>let indexOfHello = str.indexOf("Hello");
                                 <br>console.log(indexOfHello); // Output: 0
@@ -1604,7 +1698,7 @@
                         stata trovata oppure no.
                         <br>Anche la sintassi di questo metodo è simile al metodo predendente ('.indexOf()')
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>string.includes(searchValue[, startIndex]);
                         </div>
                         <ul>
@@ -1617,7 +1711,7 @@
                             </a>
                             <br>
                             <br>
-                            <div class="esempio">Es:
+                            <div id="esempio">Es:
                                 <br>let str = "Hello, World!";
                                 <br>if (str.includes("World")) {
                                 <br>console.log("Substring found!");
@@ -1631,7 +1725,7 @@
                         <br>Se viene trovata la sottostringa l'output sarà 'Substring found'.
                         <br>Come per il metodo 'IndexOf()' anche il metodo 'includes()' è case-sensitive.
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str = "Hello, World!";
                             <br>if (str.includes("world")) {
                             <br>console.log("Substring found!");
@@ -1643,7 +1737,7 @@
                         'World'
                         <br>Si può anche usare il metodo 'includes()' con un starting index
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let str = "Hello, Hello, World!";
                             <br>if (str.includes("Hello", 1)) {
                             <br>console.log("Substring found!");
@@ -1668,7 +1762,7 @@
                                 in una stringa. Restituisce 'true' se un match è stato trovato o 'false' in caso
                                 contrario
                                 <br>
-                                <div class="esempio">Es:
+                                <div id="esempio">Es:
                                     <br>let str = "Hello, World!";
                                     <br>let substringPattern = /World/;
                                     <br>if (substringPattern.test(str)) {
@@ -1688,7 +1782,7 @@
                                 <br>Se la corrispondenza è stata trovata, restituisce un array contenente la stringa
                                 corrispondente e tutti i gruppi catturati
                                 <br>
-                                <div class="esempio">Es:
+                                <div id="esempio">Es:
                                     <br>let str = "Hello, World!";
                                     <br>let substringPattern = /World/;
                                     <br>let matchResult = str.match(substringPattern);
@@ -1720,7 +1814,7 @@
                 sensibile
                 alle maiuscole (case sensitive).
                 <br>
-                <div class="esempio">Es:
+                <div id="esempio">Es:
                     <br>let originalString = "Hello, World!";
                     <br>let substringToReplace = "World";
                     <br>let replacementString = "Universe";
@@ -1735,7 +1829,7 @@
                     <li>'/g':
                         <br>ogni volta che trova il primo argomento lo sostituisce con il secondo argomento
                         <br>
-                        <div class="esempio">Es:
+                        <div id="esempio">Es:
                             <br>let originalString = "Hello, World! World is amazing.";
                             <br>let substringToReplace = /World/g;
                             <br>let replacementString = "Universe";
@@ -1759,7 +1853,7 @@
                 carattere immesso nell'argomento.
                 <br>Per fare un esempio:
                 <br>
-                <div class="esempio">Es:
+                <div id="esempio">Es:
                     <br>let originalString = "apple,orange,banana";
                     <br>// Split the string using a comma as the delimiter
                     <br>let arrayOfStrings = originalString.split(',');
@@ -1770,7 +1864,7 @@
                 'orange', 'banana').
                 <br>Posso usare anche delimitatori diversi come ad esempio:
                 <br>
-                <div class="esempio">Es:
+                <div id="esempio">Es:
                     <br>let originalString = "apple;orange;banana";
                     <br>// Split the string using a semicolon as the delimiter
                     <br>let arrayOfStrings = originalString.split(';');
@@ -1780,7 +1874,7 @@
                 <br>Se si vuole splittare una stringa in un carattere individuale, si può usare una stringa vuota
                 come delimitatore.
                 <br>
-                <div class="esempio">Es:
+                <div id="esempio">Es:
                     <br>let originalString = "hello";
                     <br>// Split the string into an array of characters
                     <br>let arrayOfCharacters = originalString.split('');
@@ -1793,7 +1887,7 @@
                 <br>è usato per rimuovere gli spazi bianchi(spazi, schede, interruzioni di riga) da entrambe le
                 estremità di una stringa.
                 <br>
-                <div class="esempio">Es:
+                <div id="esempio">Es:
                     <br>let stringWithWhitespace = " Hello, World! ";
                     <br>// Using trim to remove leading and trailing whitespace
                     <br>let trimmedString = stringWithWhitespace.trim();
@@ -1817,7 +1911,7 @@
         caratteri di una stringa letterale non possono essere modificati.
         <br>Per fare un esempio:
         <br>
-        <div class="esempio">Es:
+        <div id="esempio">Es:
             <br>//string immutability
             <br>let str = `Vello World`
             <br>str[0] = `H`
@@ -1832,7 +1926,7 @@
                 'h' </li>
             <li>Oppure
                 <br>
-                <div class="esempio">Es:
+                <div id="esempio">Es:
                     <br>let str = `Vello World`
                     <br>str = `Hello World`
                     <br>console.log(str) //Output: `Hello World`
@@ -1867,7 +1961,7 @@
         <!-- Thu 30/11/23  10:49: relative about arrays code characteristics-->
         <br>
         <div class="info">
-            <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
+            <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="" class="photo2">
             <h3>Differenze tra shallow copies e deep copies</h3>
             <p>
                 In Javascript, quando si lavora con gli array o gli oggetti, è importante compredere i concetti di
@@ -1887,7 +1981,7 @@
                             spread('...') </b> sono metodi comunemente usati per creare shallow copies di array.</li>
                     <br>
                     <br>
-                    <div class="esempio">Es:
+                    <div id="esempio">Es:
                         <br>const originalArray = [1, 2, [3, 4]];
                         <br>// Shallow copy using slice()
                         <br>const shallowCopy = originalArray.slice();
@@ -1902,9 +1996,9 @@
                 <li>Deep copy</li>
                 <ul>
                     <li>Una deep copy crea una copia completamente indipendente dell'array originale, o dell'oggetto,
-                        insieme a tutti i suoi oggetti o array nidificati.  </li>
+                        insieme a tutti i suoi oggetti o array nidificati. </li>
                     <br>
-                    <li>Modifiche apportate alla struttura copiata non influenzeranno l'originale e viceversa.  </li>
+                    <li>Modifiche apportate alla struttura copiata non influenzeranno l'originale e viceversa. </li>
                     <br>
                     <li></li>
                     <br>
