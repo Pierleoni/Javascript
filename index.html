@@ -124,11 +124,11 @@
                             <div class="code-container">
                                 <pre>
 
-                                        <code id="esempio">Es:
+                                        <code id="esempioCodiceBooleane">Es:
                                     <br>"!true" è "false"
                                     <br>viceversa "!false" è "true"</code> )
-                                    </pre>
-                                <button onclick="copyToClipboard()"> Copy To Clipboard</button>
+                                </pre>
+                                <button onclick="copyToClipboard(`esempioCodiceBooleane`)"> Copy Code</button>
                             </div>
                         </li>
                     </ul>
@@ -146,7 +146,7 @@
                     <br>Tuttavia ci sono diversi metodi per manipolare una stringa, creandone delle nuove basate su
                     quella originale.
                     <br>
-                    <div>Es: </div>
+                    <div></div>
                     <br>
                     <img class="phcode" src="/Media/Photo/Manipulate original string to create new onepng.png"
                         height="200px" width="500px" alt="">
@@ -321,7 +321,7 @@
                     <br> Ciò è utile per fornire un feedback e un informazione riguardo a cosa sta facendo il
                     codice.
                     <br>
-                    <div>Es: </div> <br>
+                    <div></div> <br>
                     <img class="phcode" src="/Media/Photo/console.log(message).png" alt="">
                 </li>
                 <li>
@@ -330,7 +330,7 @@
                     il loro stato corrente.
                     <br>Ciò è molto utile per il debugging e per capire il comportamento del codice.
                     <br>
-                    <div>Es: </div>
+                    <div></div>
                     <br>
                     <img class="phcode" src="/Media/Photo/console.log(variabili e valori di logging).png" height="100px"
                         width="400px" alt="">
@@ -340,7 +340,7 @@
                     <br>si possonono loggare le proprietà e i valori degli oggetti e arrays, rendendo più facile
                     ispezionare il loro contentuto
                     <br>
-                    <div>Es: </div>
+                    <div></div>
                     <br>
                     <img class="phcode" src="/Media/Photo/l'ispezioni di oggetti del console.log.png" height="100px"
                         width="490px" alt="">
@@ -353,7 +353,7 @@
                     un'eccezzione), e altre informationi rilevanti per aiutare la diagnosi e per ovviare ai
                     problemi.
                     <br>
-                    <div>Es: </div>
+                    <div></div>
                     <br>
                     <img class="phcode" src="/Media/Photo/Console.log(Errori di logging).png" height="100px"
                         width="490px" alt="">
@@ -375,7 +375,7 @@
                     </ul>
                     Questi tre metodi sono utili per distinguere differenti tipi di output.
                     <br>
-                    <div>Es: </div>
+                    <div></div>
                     <br>
                     <img class="phcode" src="/Media/Photo/console.log(interagire con la console).png" height="100px"
                         width="490px" alt="">
@@ -385,7 +385,7 @@
                     <br>si può condizionalmente loggare messaggi basati su certe codinzioni o flags. <br>
                     Ciò è utile per selettivamente abilitare o disabilitare l'output del debug.
                     <br>
-                    <div>Es: </div>
+                    <div></div>
                     <br>
                     <img class="phcode" src="/Media/Photo/console.log(logging condizionale).png" height="100px"
                         width="490px" alt="">
@@ -420,484 +420,553 @@
             <br> dopodichè assegniamo un valore riscrivendola PIPPOSOLO = 120;
             <br> se provassimo al logare l'asseganzione della variabile su console ci darebbe errore perchè non
             definità per js poichè entrambi le variabili sono scritte in modo diverso. Si consiglia di usare il
-            camelCase(
-        <div class="code-container">
-            <pre>
-                        <code id="esempio"> Es: 
-                            pippoSolo)]
-                        </code> 
-                    </pre>
-            <button onclick="copyToClipboard()">Copy To Clipboard</button>
-        </div>
-        </p>
-        <br>
-        <h2 id="numb"> <a href="#number" target="_self">Numbers</a> </h2>
-        <p>Come già detto sopra i numeri sono dati primitivi fondamentali per rappresentare i valori numerici in
-            Javascript, hanno varie funzionalità e caratteristiche e possono essere usati sempre nell'ambito
-            aritmetico.
+            camelCase
+            <br>Es: pippoSolo
+            </p>
             <br>
-            Le diverse caratteristiche dei numeri in Js sono le seguenti:
-            <br>
-        <ol type="1.">
-            <li>
-                Number Data Type:
-                <ul>
-                    <li>Si possono fare le diverse operazioni aritmetiche</li>
-                    <br>
-                    <li>Javascript ha un singolo data type numerico,
-                        detto per l'appunto <b>"Number"</b></li>
-                    <br>
-                    <li>I numeri possono avere valori interi (integers) o con la virgola (floating point)</li>
-                    <br>
-                    <br><img class="phcode" src="/Media/Photo/Numeri interi e decimali.png" height="40%" width="40%"
-                        alt="">
-                </ul>
-            </li>
-            <br>
-            <li>
-                Operazioni aritmetiche:
-                <ul>
-                    <li>Si possono fare le diverse operazioni aritmetiche:</li>
-                    <br>
-                    <br><img class="phcode" src="/Media/Photo/operazioni aritmetiche js.png" height="40%" width="40%"
-                        alt="operazioni aritmetiche">
-                </ul>
-            </li>
-            <br>
-            <li>Incrementare i numeri
-                <ul>
-                    <li>posso incrementare i numeri in 2 modi; </li>
-                    <br>
-                    <br><img class="phcode" src="/Media/Photo/incrementare numeri js.png" height="10%" width="20%"
-                        alt="">
-                    <br> come possiamo vedere con questo metodo ho incrementato il valore della mia variabile di +1
-                    valore,
-                    <br>
-                    <br>
-                    <li>il secondo metodo è;</li>
-                    <br><img class="phcode" src="/Media/Photo/incrementare numeri in js 2.png" height="10%" width="20%"
-                        alt="">
-                </ul>
+            <h2 id="numb"> <a href="#number" target="_self">Numbers</a> </h2>
+            <p>Come già detto sopra i numeri sono dati primitivi fondamentali per rappresentare i valori numerici in
+                Javascript, hanno varie funzionalità e caratteristiche e possono essere usati sempre nell'ambito
+                aritmetico.
                 <br>
-                N.B. se volessi incrementare il valore della variabile numerica di 2 valori o più:
+                Le diverse caratteristiche dei numeri in Js sono le seguenti:
                 <br>
-                <br><img class="phcode" src="/Media/Photo/Incrementare numeri js 3.png" height="10%" width="20%" alt="">
-            </li>
-            <li>Decrementare i numeri:
+            <ol type="1.">
+                <li>
+                    Number Data Type:
+                    <ul>
+                        <li>Si possono fare le diverse operazioni aritmetiche</li>
+                        <br>
+                        <li>Javascript ha un singolo data type numerico,
+                            detto per l'appunto <b>"Number"</b></li>
+                        <br>
+                        <li>I numeri possono avere valori interi (integers) o con la virgola (floating point)</li>
+                        <br>
+                        <br><img class="phcode" src="/Media/Photo/Numeri interi e decimali.png" height="40%" width="40%"
+                            alt="">
+                    </ul>
+                </li>
                 <br>
-                L'operazione da fare è l'inversa della incrementazione, cioè;
+                <li>
+                    Operazioni aritmetiche:
+                    <ul>
+                        <li>Si possono fare le diverse operazioni aritmetiche:</li>
+                        <br>
+                        <br><img class="phcode" src="/Media/Photo/operazioni aritmetiche js.png" height="40%" width="40%"
+                            alt="operazioni aritmetiche">
+                    </ul>
+                </li>
                 <br>
-                <br><img class="phcode" src="/Media/Photo/Decrementare i numeri js.png" height="10%" width="20%" alt="">
+                <li>Incrementare i numeri
+                    <ul>
+                        <li>posso incrementare i numeri in 2 modi; </li>
+                        <br>
+                        <br><img class="phcode" src="/Media/Photo/incrementare numeri js.png" height="10%" width="20%"
+                            alt="">
+                        <br> come possiamo vedere con questo metodo ho incrementato il valore della mia variabile di +1
+                        valore,
+                        <br>
+                        <br>
+                        <li>il secondo metodo è;</li>
+                        <br><img class="phcode" src="/Media/Photo/incrementare numeri in js 2.png" height="10%" width="20%"
+                            alt="">
+                    </ul>
+                    <br>
+                    N.B. se volessi incrementare il valore della variabile numerica di 2 valori o più:
+                    <br>
+                    <br><img class="phcode" src="/Media/Photo/Incrementare numeri js 3.png" height="10%" width="20%" alt="">
+                </li>
+                <li>Decrementare i numeri:
+                    <br>
+                    L'operazione da fare è l'inversa della incrementazione, cioè;
+                    <br>
+                    <br><img class="phcode" src="/Media/Photo/Decrementare i numeri js.png" height="10%" width="20%" alt="">
+                    <br>
+                    N.B.Se volessi sempre decrementare i numeri di 2 o più valori l'operazione è la stessa della
+                    incrementazione, ma con il segno meno
+                </li>
                 <br>
-                N.B.Se volessi sempre decrementare i numeri di 2 o più valori l'operazione è la stessa della
-                incrementazione, ma con il segno meno
-            </li>
-            <br>
-            <li>trovare il resto (modulo):
-                <br>Per trovare il resto (detto modulo) della divisione di 2 numeri bisogna usare l'operatore di
-                resto (%);
+                <li>trovare il resto (modulo):
+                    <br>Per trovare il resto (detto modulo) della divisione di 2 numeri bisogna usare l'operatore di
+                    resto (%);
+                    <br>
+                    <br><img class="phcode" src="/Media/Photo/Remainder.png" height="20%" width="20%" alt="">
+                    <br>L'operatore di resto viene spesso utilizzato per determinare se un numero è pari o dispari, se
+                    vuoi
+                    dividere un numero per 2 e il resto è 0 allora siginfica che il numero è pari
+                </li>
                 <br>
-                <br><img class="phcode" src="/Media/Photo/Remainder.png" height="20%" width="20%" alt="">
-                <br>L'operatore di resto viene spesso utilizzato per determinare se un numero è pari o dispari, se
-                vuoi
-                dividere un numero per 2 e il resto è 0 allora siginfica che il numero è pari
-            </li>
-            <br>
-            <li>
-                Assegnazione composta con aggiunta aumentata:
-                <br>Se volessimo aggiungere un valore ad una variabile numerica dovremmo riscrivere let numb1=3,
-                numb1=numb1 + 7;
-                <br> tuttavia essendo una operazione molto comune esiste una scorciatoia per fare ciò:
-                <br>
-                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con aggiunta aumentata.png" height="20%"
-                    width="20%" alt="">
-            </li>
-            <li>Assegnazione composta con sottrazione aumentata:
-                <br>se la scorciatoia += aumenta il valore, -= fa la cosa inversa
-                <br>
-                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con sottrazione aumentata.png"
-                    height="20%" width="20%" alt="">
-            </li>
-            <li>Assegnazione composta con moltiplicazione aumentata:
-                <br>lo shortcut *= moltiplica i valori di una variabile
-                <br>
-                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con moltiplicazione aumentata.png"
-                    height="20%" width="20%" alt="">
-            </li>
-            <li>Assegnazione composta con divisione aumentata:
-                <br>lo shortcut /= divide i valori di una variabile
-                <br>
-                <br><img class="phcode" src="/Media/Photo/Assegnazione composta con divisione aumentata.png"
-                    height="20%" width="20%" alt="">
-            </li>
-            <li>Math object:
-                <br>Javascript provede un oggetto Math che contiene una varieta di funzioni e costanti
-                matematiche,<br>
-                queste funzioni permettono di eseguire varie operazioni matematiche nel codice di Js. <br>
-                I metodi più usati sono
-                <ul type="A">
-                    <li>Math.PI:
-                        <br>ritorna la costante matematica π (pi o pi greco).
-                        <br>
-                        <br><img class="phcode" src="/Media/Photo/Math.PI.png" height="20%" width="20%" alt="">
-                    </li>
+                <li>
+                    Assegnazione composta con aggiunta aumentata:
+                    <br>Se volessimo aggiungere un valore ad una variabile numerica dovremmo riscrivere let numb1=3,
+                    numb1=numb1 + 7;
+                    <br> tuttavia essendo una operazione molto comune esiste una scorciatoia per fare ciò:
                     <br>
-                    <li>
-                        Math.round(x):
-                        <br>arrotonda il numero per eccesso o per difetto in base al numero dopo la virgola
-                        <br>
-                        <br><img class="phcode" src="/Media/Photo/Math Round.png" height="30%" width="40%" alt="">
-                        <br>N.B. dal valore dopo la virgola .5 math round arrotonda per eccesso sotto il .5
-                        arrotonda per difetto
-                    </li>
+                    <br><img class="phcode" src="/Media/Photo/Assegnazione composta con aggiunta aumentata.png" height="20%"
+                        width="20%" alt="">
+                </li>
+                <li>Assegnazione composta con sottrazione aumentata:
+                    <br>se la scorciatoia += aumenta il valore, -= fa la cosa inversa
                     <br>
-                    <li>Math.floor:
-                        <br>arrotonda per difetto
-                        <br>
-                        <br><img class="phcode" src="/Media/Photo/Math.floor.png" height="30%" width="30%" alt="">
-                    </li>
+                    <br><img class="phcode" src="/Media/Photo/Assegnazione composta con sottrazione aumentata.png"
+                        height="20%" width="20%" alt="">
+                </li>
+                <li>Assegnazione composta con moltiplicazione aumentata:
+                    <br>lo shortcut *= moltiplica i valori di una variabile
                     <br>
-                    <li>Math.ceil(x):
-                        <br>arrotonda per eccesso
-                        <br>
-                        <br><img class="phcode" src="/Media/Photo/Math.ceil.png" height="30%" width="30%" alt="">
-                    </li>
+                    <br><img class="phcode" src="/Media/Photo/Assegnazione composta con moltiplicazione aumentata.png"
+                        height="20%" width="20%" alt="">
+                </li>
+                <li>Assegnazione composta con divisione aumentata:
+                    <br>lo shortcut /= divide i valori di una variabile
                     <br>
-                    <li> Math.random(x):
-                        <br>Ritorna a un pseudo numero casuale con la virgola compreso tra 0(inclusivo) e 1
-                        (esclusivo).
-                        <br>
-                        <br><img class="phcode" src="/Media/Photo/Math.random.png" height="30%" width="30%" alt="">
-                        <br>N.B. ogni volta che fai correre questa proprietà crea in modo randomico un numero con la
-                        virgola diverso
-                    </li>
-                    <br>
-                    <li>Math.sqrt(x)
-                        <br>fa la radice quadrata di un numero
-                        <br>
-                        <br><img class="phcode" src="/Media/Photo/Math.sqrt.png" height="30%" width="30%" alt="">
-                    </li>
-                    <br>
-                    <li>
-                        Math.pow(x,y):
-                        <br>Ti permette di fare le potenze; il primo numero (x) è il numero che va elevato, il
-                        secondo numero (y) è la potenza
-                        <br>
-                        <br><img class="phcode" src="/Media/Photo/Math.pow.png" height="40%" width="50%" alt="">
-                    </li>
-                    <br>
-                    <li>Math.sin(x), Math.cos(x), Math.tan(x):
-                        <br>permette di fare rispettivamente il seno, il coseno e la tangente di un angolo in
-                        radianti.
-                        <br>
-                        <br><img class="phcode" src="/Media/Photo/Math.sin.png" height="50%" width="40%" alt="">
-                    </li>
-                    <br>
-                    <li>Math max(x, y, ...):
-                        <br>Restituisce il numero più grande tra quelli forniti
-                        <br>
-                        <br><img class="phcode" src="/Media/Photo/Math.max.png" height="30%" width="30%" alt="">
-                    </li>
-                    <br>
-                    <li>Math.min (x,y,...):
-                        <br>Restituisce il numero più piccolo tra quelli forniti
-                        <br>
-                        <br><img class="phcode" src="/Media/Photo/Math.min.png" height="30%" width="30%" alt="">
-                    </li>
-                    <br>
-                </ul>
-            </li>
-            <li>Nan (Not a Number):
-                <br>NaN sta per "not a number", è un valore speciale che rappesenta un non rappresentabile o non
-                definito valore numerico. <br>NaN è spesso il risultato di un operazione che include dei valori
-                numerici
-                non definto o non numerico.
-                <br>Gli scenari più comuni quando si usa NaN sono:
-                <ul type="A">
-                    <li>
-                        Operazioni matematiche non definite o non rappresentabili:
-                        <br>
-                        <br>
-                        <div class="code-container">
-                            <pre>
-                                <code id="esempio">Es: 
-                                    <br><span style=color:blueviolet>let division</span> = <span style="color:darkgreen">10</span> / <span style="color:rgba(255, 140, 0, 0.688)">"abc"</span>; è NaN
-                                </code> 
-                            </pre>
-                            <button onclick="copyToClipboard()">Copy To Clipboard</button>
-                        </div>
-                    </li>
-                    <br>
-                    <li>
-                        Operazioni matematiche con valori non definiti:
-                        <br>
-                        <br>
-                        <div class="code-container">
-                            <pre>
-                                <code id="esempio">Es: 
-                                    <br> <span style="color: blueviolet;">Let square root</span> = <span style="color: darkgreen;">Math.sqrt(-1)</span>; è NaN
-                                </code> 
-                            </pre>
-                            <button onclick="copyToClipboard()">Copy To Clipboard</button>
-                        </div>
-                    </li>
-                    <br>
-                    <li>Usare NaN esplicitamente:
-                        <br>
-                        <br>
-                        <div class="code-container">
-                            <pre>
-
-                                <code id="esempio">Es: 
-                                    <br> <span style="color: blueviolet;">Let numb</span> = <span style="color: darkgreen;">NaN</span>;
-                                </code> 
-                            </pre>
-                            <button onclick="copyToClipboard()">Copy To Clipboard</button>
-                        </div>
-                    </li>
-                    <br>Per controllare se il valore è NaN si possono usare 2 funzion:
-                    <ul type="I">
-                        <li>isNaN():
-                            Tuttavia bisogna stare attenti poichè isNaN ha alcune stranezze; costringe il suo
-                            argomento a diventare un numero prima
-                            di effettuare il controllo.
+                    <br><img class="phcode" src="/Media/Photo/Assegnazione composta con divisione aumentata.png"
+                        height="20%" width="20%" alt="">
+                </li>
+                <li>Math object:
+                    <br>Javascript provede un oggetto Math che contiene una varieta di funzioni e costanti
+                    matematiche,<br>
+                    queste funzioni permettono di eseguire varie operazioni matematiche nel codice di Js. <br>
+                    I metodi più usati sono
+                    <ul type="A">
+                        <li>Math.PI:
+                            <br>ritorna la costante matematica π (pi o pi greco).
                             <br>
+                            <br><img class="phcode" src="/Media/Photo/Math.PI.png" height="20%" width="20%" alt="">
+                        </li>
+                        <br>
+                        <li>
+                            Math.round(x):
+                            <br>arrotonda il numero per eccesso o per difetto in base al numero dopo la virgola
                             <br>
+                            <br><img class="phcode" src="/Media/Photo/Math Round.png" height="30%" width="40%" alt="">
+                            <br>N.B. dal valore dopo la virgola .5 math round arrotonda per eccesso sotto il .5
+                            arrotonda per difetto
+                        </li>
+                        <br>
+                        <li>Math.floor:
+                            <br>arrotonda per difetto
+                            <br>
+                            <br><img class="phcode" src="/Media/Photo/Math.floor.png" height="30%" width="30%" alt="">
+                        </li>
+                        <br>
+                        <li>Math.ceil(x):
+                            <br>arrotonda per eccesso
+                            <br>
+                            <br><img class="phcode" src="/Media/Photo/Math.ceil.png" height="30%" width="30%" alt="">
+                        </li>
+                        <br>
+                        <li> Math.random(x):
+                            <br>Ritorna a un pseudo numero casuale con la virgola compreso tra 0(inclusivo) e 1
+                            (esclusivo).
+                            <br>
+                            <br><img class="phcode" src="/Media/Photo/Math.random.png" height="30%" width="30%" alt="">
+                            <br>N.B. ogni volta che fai correre questa proprietà crea in modo randomico un numero con la
+                            virgola diverso
+                        </li>
+                        <br>
+                        <li>Math.sqrt(x)
+                            <br>fa la radice quadrata di un numero
+                            <br>
+                            <br><img class="phcode" src="/Media/Photo/Math.sqrt.png" height="30%" width="30%" alt="">
+                        </li>
+                        <br>
+                        <li>
+                            Math.pow(x,y):
+                            <br>Ti permette di fare le potenze; il primo numero (x) è il numero che va elevato, il
+                            secondo numero (y) è la potenza
+                            <br>
+                            <br><img class="phcode" src="/Media/Photo/Math.pow.png" height="40%" width="50%" alt="">
+                        </li>
+                        <br>
+                        <li>Math.sin(x), Math.cos(x), Math.tan(x):
+                            <br>permette di fare rispettivamente il seno, il coseno e la tangente di un angolo in
+                            radianti.
+                            <br>
+                            <br><img class="phcode" src="/Media/Photo/Math.sin.png" height="50%" width="40%" alt="">
+                        </li>
+                        <br>
+                        <li>Math max(x, y, ...):
+                            <br>Restituisce il numero più grande tra quelli forniti
+                            <br>
+                            <br><img class="phcode" src="/Media/Photo/Math.max.png" height="30%" width="30%" alt="">
+                        </li>
+                        <br>
+                        <li>Math.min (x,y,...):
+                            <br>Restituisce il numero più piccolo tra quelli forniti
+                            <br>
+                            <br><img class="phcode" src="/Media/Photo/Math.min.png" height="30%" width="30%" alt="">
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+                <li>Nan (Not a Number):
+                    <br>NaN sta per "not a number", è un valore speciale che rappesenta un non rappresentabile o non
+                    definito valore numerico. <br>NaN è spesso il risultato di un operazione che include dei valori
+                    numerici
+                    non definto o non numerico.
+                    <br>Gli scenari più comuni quando si usa NaN sono:
+                    <ul type="A">
+                        <li>
+                            Operazioni matematiche non definite o non rappresentabili:
+                            <br>Es:
                             <div class="code-container">
                                 <pre>
-                                    <code id="esempio">Es: 
-                                        <br> <span style="color: blueviolet;">isNaN("Hello")</span>;  <span style="color: white;">è vero</span>, 
-                                        <br> <span style="color: blueviolet;">isNaN(123)</span> <span style="color: white;">; è falso</span>
+                                    <code id="esempioCodiceNan">
+                                        <br> let division  =  10 / "abc" è NaN; 
                                     </code> 
                                 </pre>
-                                <button onclick="copyToClipboard()">Copy To Clipboard</button>
+                                <button onclick="copyToClipboard(`esempioCodiceNan`)">Copy Code</button>
                             </div>
                         </li>
                         <br>
                         <li>
-                            Number.isNaN():
-                            <br>è il metodo più affidabile poichè non attua coercizioni
+                            Operazioni matematiche con valori non definiti:
+                            <br>Es:
+                            <div class="code-container">
+                                <pre>
+                                    <code id="esempioCodicesqrt">
+                                        <br> Let square root =  Math.sqrt(-1) ; è NaN
+                                    </code> 
+                                </pre>
+                                <button onclick="copyToClipboard(`esempioCodicesqrt`)">Copy Code</button>
+                            </div>
+                        </li>
+                        <br>
+                        <li>Usare NaN esplicitamente:
+                            <br>Es:
+                            <div class="code-container">
+                                <pre>
+                                    <code id="esempioCodiceNan2">
+                                        <br>  Let numb  = "NaN";
+                                    </code> 
+                                </pre>
+                                <button onclick="copyToClipboard(`esempioCodiceNan2`)">Copy Code</button>
+                            </div>
+                        </li>
+                        <br>Per controllare se il valore è NaN si possono usare 2 funzion:
+                        <ul type="I">
+                            <li>isNaN():
+                                Tuttavia bisogna stare attenti poichè isNaN ha alcune stranezze; costringe il suo
+                                argomento a diventare un numero prima
+                                di effettuare il controllo.
+                                <br>Es:
+                                <div class="code-container">
+                                    <pre>
+                                        <code id="esempioCodiceBoolNaN">
+                                            <br> isNaN("Hello") ;  è vero, 
+                                            <br> isNaN(123) ; è falso
+                                        </code> 
+                                    </pre>
+                                    <button onclick="copyToClipboard(`esempioCodiceBoolNaN`)">Copy Code</button>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                Number.isNaN():
+                                <br>è il metodo più affidabile poichè non attua coercizioni
+                            </li>
+                        </ul>
+                    </ul>
+                    <br>
+                </li>
+                <li>Infinity and -Infinity:
+                    <br>rappresentano, rispettivamente, l'infinito poisitivo e negativo. Questi sono valori speciali che
+                    rappesentano l'infinito matematico, in questo caso spesso sono i risultati delle operazioni che
+                    vanno oltre il range dei valori rappresentabili in Js.
+                    Gli scenari più comuni sono:
+                    <ul type="A">
+                        <li>divisioni dello zero:
+                            <br>Es:
+                            <div class="code-container">
+                                <pre>
+                                    <code id="esempioCodiceInfinity">
+                                        <br> Let division = 1/0; è infinito
+                                    </code> 
+                                </pre>
+                                <button onclick="copyToClipboard(`esempioCodiceInfinity`)">Copy Code</button>
+                            </div>
+                        </li>
+                        <br>
+                        <li>Moltiplicare o dividere un numero finito per l'infinito positivo o negativo:
+                            <br>Es:
+                            <div class="code-container">
+                                <pre>
+                                    <code id="esempioCodiceMultInf">
+                                        <br>console.log(5 * Infinity); // Infinity
+                                        <br>console.log(-10 / Infinity); // -0
+                                    </code> 
+                                </pre>
+                                <button onclick="copyToClipboard('esempioCodiceMultInf')">Copy Code</button>
+                            </div>
+                        </li>
+                        <br>
+                        <li>Operazioni matematiche che vanno oltre il range rappresentabile:
+                            <br>Es:
+                            <br>
+                            <div class="code-container">
+                                <pre>
+                                    <code id="esempioPowMathInf">
+                                        <br>console.log(Math.pow(10, 1000)); // Infinity
+                                    </code>
+                                </pre>
+                                <button onclick="copyToClipboard('esempioPowMathInf')">Copy Code</button>
+                            </div>
                         </li>
                     </ul>
-                </ul>
-                <br>
-            </li>
-            <li>Infinity and -Infinity:
-                <br>rappresentano, rispettivamente, l'infinito poisitivo e negativo. Questi sono valori speciali che
-                rappesentano l'infinito matematico, in questo caso spesso sono i risultati delle operazioni che
-                vanno oltre il range dei valori rappresentabili in Js.
-                Gli scenari più comuni sono:
-                <ul type="A">
-                    <li>divisioni dello zero:
-                        <br>
-                        <br>
-                        <div class="code-container">
-                            <pre>
-                                <code id="esempio">Es: 
-                                    <br> <span style="color: blueviolet;">Let division</span> <span style="color: white;">=</span> <span style="color: darkgreen;">1/0</span> <span style="color: white;">; è infinito</span>
-                                </code> 
-                            </pre>
-                            <button onclick="copyToClipboard()">Copy To Clipboard</button>
-                        </div>
-                    </li>
+                    <br> Si puo fare un check per "infinity" o "-infinity" usando la funzione "isFinite()":
+                    <br>Es:
                     <br>
-                    <li>Moltiplicare o dividere un numero finito per l'infinito positivo o negativo:
-                        <br>
-                        <br>
-                        <div class="code-container">
-                            <pre>
-
-                                <code id="esempio">Es: 
-                                    <br>console.log(5 * Infinity); // Infinity
-                                    <br>console.log(-10 / Infinity); // -0
-                                </code> 
-                            </pre>
-                            <button onclick="copyToClipboard()">Copy To Clipboard</button>
-                        </div>
-                    </li>
+                    <div class="code-container">
+                        <pre>
+                            <code id="esempioCheckInf">
+                                <br>isFinite(positiveInfinity); // false
+                                <br>isFinite(negativeInfinity); // false
+                                <br>isFinite(5); // true
+                            </code>
+                        </pre>
+                        <button onclick="copyToClipboard('esempioCheckInf')">Copy Code</button>
+                    </div>
                     <br>
-                    <li>Operazioni matematiche che vanno oltre il range rappresentabile:
-                        <br>
-                        <code id="esempio">Es: 
-                            <br>console.log(Math.pow(10, 1000)); // Infinity
-                        </code>
-                    </li>
-                </ul>
-                <br> Si puo fare un check per "infinity" o "-infinity" usando la funzione "isFinite()":
-                <br>
-                <code id="esempio">Es: 
-                    <br>isFinite(positiveInfinity); // false
-                    <br>isFinite(negativeInfinity); // false
-                    <br>isFinite(5); // true
-                </code>
-                <br>
-                <br>Da notare che "isFinite" diventa falso sia per "infinity" e "-infinity".
-                Tutto Questo può essere utile nel caso in cui io voglia prevenire comportamenti non intenzionali nel
-                codice, a causa di operazioni che danno come risultato l'infinito.
-            </li>
-            <li>
-                Parse & Convert :
-                <br>i termini "parse" e "convert" sono spesso usati nel contesto della lavorazione dei dati;
-                specialmente quando si tratta di stringhe o numeri.
-                Per quanto riguarda il parsing abbiamo due caratteristiche:
-                <ul type="A">
-                    <li>
-                        Parse strings to number:
-                        <br>"ParseInt()" e "ParseFloat()" sono due funzioni che vengono usata per convertire,
-                        rispettivamente, le stringhe in numeri interi o con la virgola.
-                        <br>
-                        <code id="esempio">Es: 
-
-                            <br>let numericString = "123";
+                    <br>Da notare che "isFinite" diventa falso sia per "infinity" e "-infinity".
+                    Tutto Questo può essere utile nel caso in cui io voglia prevenire comportamenti non intenzionali nel
+                    codice, a causa di operazioni che danno come risultato l'infinito.
+                </li>
+                <li>
+                    Parse & Convert :
+                    <br>i termini "parse" e "convert" sono spesso usati nel contesto della lavorazione dei dati;
+                    specialmente quando si tratta di stringhe o numeri.
+                    Per quanto riguarda il parsing abbiamo due caratteristiche:
+                    <ul type="A">
+                        <li>
+                            Parse strings to number:
+                            <br>"ParseInt()" e "ParseFloat()" sono due funzioni che vengono usata per convertire,
+                            rispettivamente, le stringhe in numeri interi o con la virgola.
+                            <br>Es:
                             <br>
-                            let numericValue = parseInt(numericString);
-                            <br>
-                            console.log(numericValue); // 123
-                            <br>
-                            <br>let floatString = "3.14";<br>
-                            <br>let floatValue = parseFloat(floatString);<br>
-                            <br>console.log(floatValue); // 3.14
-                        </code>
+                            <div class="code-container">
+                                <pre>
+                                    <code id="exCoParse">
+                                        <br>let numericString = "123";
+                                        <br>let numericValue = parseInt(numericString);
+                                        <br>console.log(numericValue); // 123
+                                        <br>let floatString = "3.14";<br>
+                                        <br>let floatValue = parseFloat(floatString);<br>
+                                        <br>console.log(floatValue); // 3.14
+                                    </code>
+                                </pre>
+                                <button onclick="copyToClipboard('exCoParse')">Copy Code</button>
+                            </div>
 
-                    </li>
-                    <br>
-                    <li>JSON Parsing:
-                        <br>il metodo JSON.Parse() viene usato per analizzare (parsing) a stringa JSON e convertirla
-                        in un oggetto di JS.
+                        </li>
                         <br>
-                        <code id="esempio">Es: 
-
-                            <br>let jsonString = '{"name": "John", "age": 30}';<br>
-                            <br>let parsedObject = JSON.parse(jsonString);<br>
-                            <br>console.log(parsedObject.name); // John
-                        </code>
-                        <br>
-                        <br>
-                        <div class="info">
-                            <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt=""
-                                class="photo2">
-                            <h3>Parsing</h3>
-                            <p>Il termine Parsing in inglese sta per "interpretare/analizzare",
-                                <br><mark>è spesso riferito al processo di analisi o interpretazione dei dati, in
-                                    modo particolare quando si tratta di strighe o di testo. </mark>
-                            </p>
-                        </div>
-                        <br>
-                        <ul type="A">
-                            Invece per quanto riguarda la conversione in Js abbiamo 3 metodi:
-                            <li>
-                                Convertire i numeri alle stringhe:
-                                <br>per convertire un numero in una stringa bisogna usare il metodo "toString()" o
-                                mediante la concatenazione di una stringa vuota.
+                        <li>JSON Parsing:
+                            <br>il metodo JSON.Parse() viene usato per analizzare (parsing) a stringa JSON e convertirla
+                            in un oggetto di JS.
+                            <br>Es:
+                            <br>
+                            <div class="code-container">
+                                <pre>
+                                    <code id="exCoJSON">
+                                        <br>let jsonString = '{"name": "John", "age": 30}';<br>
+                                        <br>let parsedObject = JSON.parse(jsonString);<br>
+                                        <br>console.log(parsedObject.name); // John
+                                    </code>
+                                </pre>
+                                <button onclick="copyToClipboard('exCoJSON')">Copy Code</button>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="info">
+                                <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt=""
+                                    class="photo2">
+                                <h3>Parsing</h3>
+                                <p>Il termine Parsing in inglese sta per "interpretare/analizzare",
+                                    <br><mark>è spesso riferito al processo di analisi o interpretazione dei dati, in
+                                        modo particolare quando si tratta di strighe o di testo. </mark>
+                                </p>
+                            </div>
+                            <br>
+                            <ul type="A">
+                                Invece per quanto riguarda la conversione in Js abbiamo 3 metodi:
                                 <br>
-                                <div id="esempio">Es: </div>
-                                <br>let number = 42;
-                                <br>let stringNumber = number.toString();
-                                <br>console.log(stringNumber); // "42"
-                            </li>
-                            <br>
-                            <li>
-                                Convertire in Booleano:
-                                <br>I valori in Js possono essere implicitamente convertiti in booleani in certi
-                                contesti (ad esempio negli statements condizionali).
-                                <br>Si può usare la funzione "Boolean()" per la conversione esplicita.
                                 <br>
-                                <div id="esempio">Es: </div>
-                                <br>let truthyValue = "Hello";
-                                <br>let booleanValue = Boolean(truthyValue);
-                                <br>console.log(booleanValue); // true
-                            </li>
-                            <br>
-                            <li>
-                                Convertire in un array:
-                                <br>è possibile convertire oggetti simili e iterabili(ad esempio stringhe o
-                                NodeLists) in arrays, usando "Array.from" o lo spread generator "..."
+                                <li>
+                                    Convertire i numeri alle stringhe:
+                                    <br>per convertire un numero in una stringa bisogna usare il metodo "toString()" o
+                                    mediante la concatenazione di una stringa vuota.
+                                    <br>Es:
+                                    <br>
+                                    <div class="code-container">
+                                        <pre>
+                                            <code id="exCoConvNumb">
+                                                <br>let number = 42;
+                                                <br>let stringNumber = number.toString();
+                                                <br>console.log(stringNumber); // "42"
+
+                                            </code>
+                                        </pre>
+                                        <button onclick="copyToClipboard('exCoConvNumb')">Copy Code</button>
+                                    </div>
+                                </li>
                                 <br>
-                                <div id="esempio">Es: </div>
-                                <br>let iterableString = "hello";
-                                <br>let charArray = Array.from(iterableString);
-                                <br>console.log(charArray); // ["h", "e", "l", "l", "o"]
-                            </li>
-                            <br>
-                        </ul>
-                    </li>
+                                <li>
+                                    Convertire in Booleano:
+                                    <br>I valori in Js possono essere implicitamente convertiti in booleani in certi
+                                    contesti (ad esempio negli statements condizionali).
+                                    <br>Si può usare la funzione "Boolean()" per la conversione esplicita.
+                                    <br>Es:
+                                    <div class="code-container">
+                                        <pre>
+                                            <code id="exCoConvBoo">
+                                                <br>let truthyValue = "Hello";
+                                                <br>let booleanValue = Boolean(truthyValue);
+                                                <br>console.log(booleanValue); // true
+                                            </code>
+                                        </pre>
+                                        <button onclick="copyToClipboard('exCoConvBoo')">Copy Code</button>
+                                    </div>
+                                </li>
+                                <br>
+                                <li>
+                                    Convertire in un array:
+                                    <br>è possibile convertire oggetti simili e iterabili(ad esempio stringhe o
+                                    NodeLists) in arrays, usando "Array.from" o lo spread generator "..."
+                                    <br>Es:
+                                    <div class="code-container">
+                                        <pre>
+                                            <code id="exCoConvStr">
+                                                <br>let iterableString = "hello";
+                                                <br>let charArray = Array.from(iterableString);
+                                                <br>console.log(charArray); // ["h", "e", "l", "l", "o"]
+                                            </code>
+                                        </pre>
+                                        <button onclick="copyToClipboard('exCoConvStr')">Copy Code</button>
+                                    </div>
+                                </li>
+                                <br>
+                            </ul>
+                        </li>
+                        <br>
+                    </ul>
+                    La differenza tra parse e convert è che: il convert converte i tipi di dati o rappresentazioni;
+                    quindi nel pratico quando converti un numero cambia il numero.
+                    <br>Mentre il parse cambia l'azione; cioè crea una copia leggibile in un altro modo per il numero.
+                </li>
+                <br>
+                <li>
+                    Number to string conversion:
+                    <br>ti permette di convertire un numero in una stringa.
+                    <br>I metodi più usati sono:
                     <br>
-                </ul>
-                La differenza tra parse e convert è che: il convert converte i tipi di dati o rappresentazioni;
-                quindi nel pratico quando converti un numero cambia il numero.
-                <br>Mentre il parse cambia l'azione; cioè crea una copia leggibile in un altro modo per il numero.
-            </li>
-            <br>
-            <li>
-                Number to string conversion:
-                <br>ti permette di convertire un numero in una stringa.
-                <br>I metodi più usati sono:
-                <ul type="A">
-                    <li>
-                        Usare il metodo to.String:
-                        <br>
-                        <div id="esempio">Es: </div>
-                        <br>let myNumber = 42;
-                        <br>let myString = myNumber.toString();
-                        <br>console.log(typeof myNumber); // Output: number
-                        <br>console.log(typeof myString); // Output: string
-                    </li>
                     <br>
-                    <li>
-                        Concatenazione con una stringa vuota:
+                    <ul type="A">
+                        <li>
+                            Usare il metodo to.String:
+                            <br>Es:
+                            <div class="code-container">
+                                <pre>
+                                    <code id="exCoMethStr">
+                                        <br>let myNumber = 42;
+                                        <br>let myString = myNumber.toString();
+                                        <br>console.log(typeof myNumber); // Output: number
+                                        <br>console.log(typeof myString); // Output: string
+
+                                    </code>
+                                </pre>
+                                <button onclick="copyToClipboard('exCoMethStr')">Copy Code</button>
+                            </div>
+                        </li>
                         <br>
-                        <div id="esempio">Es: </div>
-                        <br>let myNumber = 123;
-                        <br>let myString = '' + myNumber;
-                        <br>console.log(typeof myNumber); // Output: number
-                        <br>console.log(typeof myString); // Output: string
-                    </li>
-                    <li>Usare la funzione "String()":
-                        <br>
-                        <div id="esempio">Es: </div>
-                        <br>let myNumber = 3.14;
-                        <br>let myString = String(myNumber);
-                        <br>console.log(typeof myNumber); // Output: number
-                        <br>console.log(typeof myString); // Output: string
-                    </li>
-                    <br>Tutti questi metodi convertirano i numeri alla loro rappresentazione come stringa. Sono
-                    tutti validi, bisogna solo scegliere quello che troviamo piu leggibile o conveniente per il
-                    nostro utilizzo in un caso specifico.
-                </ul>
-            </li>
-            <br>
-            <li>Number Methods:
-                <ul type="A">
-                    <li>toFixed():
-                        <br>Formatta un numero usando la notazione del punto fisso.
-                        <br>
-                        <div id="esempio">Es: </div>
-                        <br>let myNumber = 3.14159;
-                        <br>let formattedNumber = myNumber.toFixed(2); // Rounds to 2 decimal places
-                        <br>console.log(formattedNumber); // Output: "3.14"
-                    </li>
-                    <li>toPrecision:
-                        <br>Formatta il numero con una precisione specificata.
-                        <br>
-                        <div id="esempio">Es: </div>
-                        <br>let myNumber = 123.456789;
-                        <br>let formattedNumber = myNumber.toPrecision(5); // Total digits including integer and
-                        decimal parts
-                        <br>console.log(formattedNumber); // Output: "123.46"
-                    </li>
-                    <li>toExponential():
-                        <br>Converte un numero in notazione esponenziale.
-                        <br>
-                        <div id="esempio">Es: </div>
-                        <br>let myNumber = 12345;
-                        <br>let exponentialNumber = myNumber.toExponential(2); // 2 decimal places in exponential
-                        notation
-                        <br>console.log(exponentialNumber); // Output: "1.23e+4"
-                    </li>
-                </ul>
-            </li>
-            <br>
-        </ol>
+                        <li>
+                            Concatenazione con una stringa vuota:
+                            <br>Es:
+                            <div class="code-container">
+                                <pre>
+                                    <code id="exConcStr">
+                                        <br>let myNumber = 123;
+                                        <br>let myString = '' + myNumber;
+                                        <br>console.log(typeof myNumber); // Output: number
+                                        <br>console.log(typeof myString); // Output: string
+                                    </code>
+                                </pre>
+                                <button onclick="copyToClipboard('exConcStr')">Copy Code</button>
+                            </div>
+                        </li>
+                        <li>Usare la funzione "String()":
+                            <br>Es:
+                            <div class="code-container">
+                                <pre>
+                                    <code id="exCoStrConv">
+                                        <br>let myNumber = 3.14;
+                                        <br>let myString = String(myNumber);
+                                        <br>console.log(typeof myNumber); // Output: number
+                                        <br>console.log(typeof myString); // Output: string
+                                    </code>
+                                </pre>
+                                <button onclick="copyToClipboard('exCoStrConv')">Copy Code</button>
+                            </div>
+                        </li>
+                        <br>Tutti questi metodi convertirano i numeri alla loro rappresentazione come stringa. Sono
+                        tutti validi, bisogna solo scegliere quello che troviamo piu leggibile o conveniente per il
+                        nostro utilizzo in un caso specifico.
+                    </ul>
+                </li>
+                <br>
+                <li>Number Methods:
+                    <br>
+                    <br>
+                    <ul type="A">
+                        <li>toFixed():
+                            <br>Formatta un numero usando la notazione del punto fisso.
+                            <br>Es:
+                            <div class="code-container">
+                                <pre>
+                                    <code id="toFixedCod">
+                                        <br>let myNumber = 3.14159;
+                                        <br>let formattedNumber = myNumber.toFixed(2); // Rounds to 2 decimal places
+                                        <br>console.log(formattedNumber); // Output: "3.14"
+                                    </code>
+                                </pre>
+                                <button onclick="copyToClipboard('toFixedCod')">Copy Code</button>
+                            </div>
+                        </li>
+                        <li>toPrecision:
+                            <br>Formatta il numero con una precisione specificata.
+                            <br>Es:
+                            <div class="code-container">
+                                <pre>
+                                    <code id="exCoToPrecision">
+
+                                        <br>let myNumber = 123.456789;
+                                        <br>let formattedNumber = myNumber.toPrecision(5); // Total digits including integer and
+                                        decimal parts
+                                        <br>console.log(formattedNumber); // Output: "123.46"
+                                    </code>
+                                </pre>
+                                <button onclick="copyToClipboard('exCoToPrecision')">Copy Code</button>
+                            </div>
+                        </li>
+                        <li>toExponential():
+                            <br>Converte un numero in notazione esponenziale.
+                            <br>Es:
+                            <div class="code-container">
+                                <pre>
+                                    <code id="exCoToExp">
+
+                                        <br>let myNumber = 12345;
+                                        <br>let exponentialNumber = myNumber.toExponential(2); // 2 decimal places in exponential
+                                        notation
+                                        <br>console.log(exponentialNumber); // Output: "1.23e+4"
+                                    </code>
+                                </pre>
+                                <button onclick="copyToClipboard('exCoToExp')">Copy Code</button>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <br>
+            </ol>
         </p>
         <h2 id="str"> <a href="#strings" target="_self">Strings</a></h2>
         <p>
@@ -912,19 +981,32 @@
             <br>I metodi sono vari e numerosi, qui ci sono quelli più comuni:
         <ol type="1.">
             <li>Dichiarare la stringa:
-                <br>Dichiare una variabile (Es: let str) poi con l'operatore di assegnazione si assegna un valore a
+                <br>Dichiare una variabile (let str) poi con l'operatore di assegnazione si assegna un valore a
                 quella stringa.
-                <br>
-                <div id="esempio">Es: </div>
-                <br>let str =`Hello World`
+                <br>Es:
+                <div class="code-container">
+                    <pre>
+                        <code id="exDeclStr">
+                            <br>let str =`Hello World`
+                        </code>
+                    </pre>
+                    <button onclick="copyToClipboard('exDeclStr')">Copy Code</button>
+                </div>
             </li>
             <br>
             <li>Caratteri di fuga:
                 <br>Tutto ciò che è contenuto nelle virgolette viene cosiderata una stringa nel codice di Js, se
                 scrivessi dei caratteri al di fuori delle virgolette non verebbero considerati:
-                <div id="esempio">Es:
-                    <br>let str = "I am" double quoted"string"double quotes""
+                <br>Es:
+                <div class="code-container">
+                    <pre>
+                        <code id="exCoEscCh">
+                            <br>let str = "I am" double quoted"string"double quotes""
+                        </code>
+                    </pre>
+                    <button onclick="copyToClipboard('exCoEscCh')">Copy Code</button>
                 </div>
+                <br>
                 <br>Per ovviare a questo problema c'è una cosa chiamata carattere di fuga:
                 <br>è usato per rappresentare caratteri che non sono facilmente tipizzati o visibili, questo
                 carattere è rappresetato da un backslash "\".
@@ -932,23 +1014,34 @@
                 <ul type="A">
                     <li>Newline (\n):
                         è comunemente usato per inserire una nuova linea o mandare accapo una stringa.
-                        <div id="esempio">Es:
-                            <br>var myString = "This is the first line.\nThis is the second line.";
-                            <br>console.log(myString); //Output is : This is the first line.
-                            <br>This is the second line.
-                            <br>
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="NewLineCod">
+                                    <br>var myString = "This is the first line.\nThis is the second line.";
+                                    <br>console.log(myString); //Output is : This is the first line.
+                                    <br>This is the second line.
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard('NewLineCod')">Copy Code</button>
                         </div>
+                        <br>
                     </li>
                     <br>
                     <li>Carriege return(\r):
                         è usato per muovere il cursore all'inizio della linea senza farlo avvanzare alla prossima
                         linea.
-                        <br>
-                        <div id="esempio">Es:
-                            <br>var myString = "This is some text.\rThis text will overwrite the previous line.";
-                            <br>console.log(myString);
-                            <br>This is some text.
-                            <br>This text will overwrite the previous line.
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="return">
+                                    <br>var myString = "This is some text.\rThis text will overwrite the previous line.";
+                                    <br>console.log(myString);
+                                    <br>This is some text.
+                                    <br>This text will overwrite the previous line.
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy Code</button>
                         </div>
                         Quindi il carriage return cuasa la sovrascrittura della seconda parte della stringa sulla
                         stessa linea. Tuttavia il carriage return, in tempi moderni, è il meno usato ma lo si
@@ -959,10 +1052,16 @@
                     <li>tab character(\t):
                         è usato per creare spazi bianchi orizzontali, tipicamente equivalenti a un certo numero di
                         spazi.
-                        <div id="esempio">Es:
-                            <br>var myString = "This is some text.\tThis text is indented with a tab.";
-                            <br>console.log(myString);
-                            <br>This is some text. This text is indented with a tab.
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="tabCharCod">
+                                    <br>var myString = "This is some text.\tThis text is indented with a tab.";
+                                    <br>console.log(myString);
+                                    <br>This is some text. This text is indented with a tab.
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard()"> Copy Code</button>
                         </div>
                         In questo esempio il tab character è usato tra le due parti di una stringa, creando cosi un
                         effetto di indentazione. Ciò può tornare utile quando si vuole formattare l'output o
@@ -972,10 +1071,16 @@
                     <li>backspace character(\b):
                         è usato per muovere il cursore di una posizione; cioè cancellando il carattere a quella
                         posizione
-                        <div id="esempio">Es:
-                            <br>var myString = "Hello\b World!";
-                            <br>console.log(myString);
-                            <br>Hel World!
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="backCharCod">
+                                    <br>var myString = "Hello\b World!";
+                                    <br>console.log(myString);
+                                    <br>Hel World!
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy Code</button>
                         </div>
                         Nell'esempio lo space character causa una sovrascrittura dei caratteri 'o' ed 'l' in
                         'Hello', cosi che l'output risulti "Hel World". Tuttavia il carattere di backspace non è
@@ -987,50 +1092,77 @@
                     <li>backslash (\):
                         <br>è usato per evitare una virgoletta andnado così andando indicare che non sara più la
                         fine di una stringa (funziona sia con le virgolette singole che doppie).
-                        <br>
-                        <div id="esempio">Es:
-                            <br>let mystr = "I am \"double quote\"string\"double quotes"
-                            <br>console.log(mystr)//Output: I am "double quote"string"double quotes
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="bsCharCod">
+                                    <br>let mystr = "I am \"double quote\"string\"double quotes"
+                                    <br>console.log(mystr)//Output: I am "double quote"string"double quotes
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy Code</button>
                         </div>
                         Un altra cosa che posso fare è che se volessi aggiungere le backslash nella mia stringa devo
                         per forza metterne due perche la prima va ad indicare l'escape character.
-                        <div id="esempio">Es:
-                            <br>var myString = "This is a backslash: \\";
-                            <br>console.log(myString);
-                            <br>This is a backslash: \
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="bsCharCod2">
+                                    <br>var myString = "This is a backslash: \\";
+                                    <br>console.log(myString);
+                                    <br>This is a backslash: \
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy Code</button>
                         </div>
                         questo è particolarmtente Importante quando si ha a che fare con percorsi file o espressioni
                         regolari dove le backslashes sono usate come caratteri speciali e hanno bisogno di
                         "scappare"
                     </li>
+                    <br>
                     <li>Single Quotes escape character ('\'):
                         <br>serve per includere una virgoletta singola in una stringa che a sua volta è già inclusa
                         in delle virgolette singole.
-                        <br>
-                        <div id="esempio">Es:
-                            <br>var myString = 'This is a single quote: \'';
-                            <br>console.log(myString);
-                            <br>This is a single quote: '
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="sQEscCharCod">
+                                    <br>var myString = 'This is a single quote: \'';
+                                    <br>console.log(myString);
+                                    <br>This is a single quote: '
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard()"> Copy Code</button>
                         </div>
                     </li>
                     <br>
                     <li>Double quotes escape character ('\"'):
                         <br>stessa cosa delle Single Quotes escape character ma con le viroglette doppie
-                        <br>
-                        <div id="esempio">Es:
-                            <br>var myString = "This is a double quote: \"";
-                            <br>console.log(myString);
-                            <br>This is a double quote: "
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="dQEscCharCod">
+                                    <br>var myString = "This is a double quote: \"";
+                                    <br>console.log(myString);
+                                    <br>This is a double quote: "
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy Code</button>
                         </div>
                     </li>
                     <br>
                     <li>Form feed (\f):
                         <br>è usato per far avanzare il cursore alla prossima pagina o linea su alcuni sistemi.
-                        <br>
-                        <div id="esempio">Es:
-                            <br>console.log("This is a text with a form feed character\fNext line of text.");
-                            <br>This is a text with a form feed character
-                            <br>Next line of text.
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="fFCharCod">
+                                    <br>console.log("This is a text with a form feed character\fNext line of text.");
+                                    <br>This is a text with a form feed character
+                                    <br>Next line of text.
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy Code</button>
                         </div>
                         N.B. il risultato dell'output può dipendere su dove fai uscire il testo (console, HTML,
                         etc.), quindi l'effetto del form feed dipende dall'ambiente nel quale è visualizzato.
@@ -1043,7 +1175,6 @@
             <li>Lenght:
                 <br>Restituisce la lunghezza di una stringa.
                 <br>
-                <div id="esempio">Es: </div>
                 <br><img src="/Media/Photo/string.length.png" height="200px" width="600px" alt="">
                 <br><small>Note: i caratteri presenti nella mia stringa in totale sono di 41 caratteri</small>
                 <br>
@@ -1065,15 +1196,28 @@
                 <br>l'indice di questa numerazione parte da 0 ovvero per accedere al primo carattere si scrive 0,
                 per il secondo 1, per il terzo 2,etc.
                 <br>
-                <div id="esempio">Es: </div> let str = 'Hello, World!';
-                <br>console.log(str[0]); // Outputs 'H'
+                <div class="code-container">
+                    <pre>
+                        <code id="strSqrCod">
+                            <br>let str = 'Hello, World!';
+                            <br>console.log(str[0]); // Outputs 'H'
+                        </code>
+                    </pre>
+                    <button onclick="copyToClipboard()">Copy Code</button>
+                </div>
                 <br>Un altro metodo è il "charAt()":
                 <br>
-                <div id="esempio">Es: </div>
-                <br>let myString = "Hello, World!";
-                <br>let firstCharacter = myString.charAt(0);
-                <br>console.log(firstCharacter); // Output: H.
-                <br>N.B. tra i due non c'è differenza, l'unica cosa è che le parentesi quadre sono più concise e per
+                <div class="code-container">
+                    <pre>
+                    <code id="charAtCod">
+                        <br>let myString = "Hello, World!";
+                        <br>let firstCharacter = myString.charAt(0);
+                        <br>console.log(firstCharacter); // Output: H.
+                    </code>
+                </pre>
+                    <button onclick="copyToClipboard()">Copy Code</button>
+                </div>
+                <br>N.B. tra i due non c'è differenza, eccetto che le parentesi quadre sono più concise e per
                 questo sono il metodo preferito nel moderno Js.
                 <br>
                 <br>
@@ -1083,11 +1227,17 @@
                     <p>
                         questo metodo in Js è usato per prendere il valore Unicode dei caratteri a uno specifico
                         index nelle stringhe:
-                        <br>
-                    <div id="esempio">Es</div>:
-                    <br>let myString = "Hello, World!";
-                    <br>let charCode = myString.charCodeAt(0);
-                    <br>console.log(charCode); // Output: 72
+                        <br>Es:
+                    <div class="code-container">
+                        <pre>
+                            <code id="charCodeAtCod">
+                                <br>let myString = "Hello, World!";
+                                <br>let charCode = myString.charCodeAt(0);
+                                <br>console.log(charCode); // Output: 72
+                            </code>
+                        </pre>
+                        <button onclick="copyToClipboard()">Copy Code</button>
+                    </div>
                     <br>Come possiamo vedere nell'esempio viene riportato come output il valore Unicode del
                     carattere all'index 0, che è "H", ma nell'Unicode il valore per "H" è 72.
                     <br>Anche questo metodo parte dallo zero, quindi "myString.charCodeAt(1)" ti potrebbe dare
@@ -1099,11 +1249,17 @@
                         <p>Se volessi dare i valori Unicode per tutti i caratteri in una stringa, li posso loopare
                             attraverso la stringa stessa:
                             <br>
-                        <div id="esempio">Es: </div>
-                        <br>let myString = "Hello, World!";
-                        <br>for (let i = 0; i < myString.length; i++) { <br>console.log(myString.charCodeAt(i));
-                            }
-                            </p>
+                        <div class="code-container">
+                            <pre>
+                                <code id="UniCod">
+                                    <br>let myString = "Hello, World!";
+                                    <br>for (let i = 0; i < myString.length; i++) { <br>console.log(myString.charCodeAt(i));
+                                    }
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard()">Copy Code</button>
+                        </div>
+                        </p>
                     </div>
                     Benchè siano quasi simili in scrittura, esiste una differenza tra i metodi ".charAt()" e
                     ".charCodeAt()":
@@ -1117,10 +1273,17 @@
                                     Return type: Restituisce una stringa contenente il carattere
                                 </li>
                                 <li>
-                                    <div id="esempio">Es: </div>
-                                    <br>let myString = "Hello, World!";
-                                    <br>let character = myString.charAt(0);
-                                    <br>console.log(character); // Output: H
+                                    <div class="code-container">
+                                        <pre>
+                                            <code id="exRetTypeCod">
+
+                                                <br>let myString = "Hello, World!";
+                                                <br>let character = myString.charAt(0);
+                                                <br>console.log(character); // Output: H
+                                            </code>
+                                        </pre>
+                                        <button onclick="copyToClipboard()"></button>
+                                </div>
                                 </li>
                             </ul>
                         </li>
@@ -1130,7 +1293,7 @@
                                     index in una stringa</li>
                                 <li>Return Type: Rstituisce un integer che rappresenta il vlaore Unicode </li>
                                 <li>
-                                    <div id="esempio">Es: </div>
+                                    <div id="esempio"></div>
                                     <br>let myString = "Hello, World!";
                                     <br>let charCode = myString.charCodeAt(0);
                                     <br>console.log(charCode); // Output: 72 (Unicode value for 'H')
