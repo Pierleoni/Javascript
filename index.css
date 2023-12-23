@@ -112,6 +112,23 @@ bisogna richiamare la proprietà "position: relative" nel classe assegnata a que
     right: 0;
 }
 
+
+/* per allineare un immagine al centro del paragrafo: 
+inserire il pararagrafo all'interno di un div → assegnare una classe al div → richiamare la classe del div nel foglio di stile
+→ usare la prorietà text-align: center; → richiamare la classe assegnata al tag <img> 
+→ usare le prorietà display: inline-block;(assicura che l'immagine è tratta come un blocco e puo avere dei margini) e  margin: 0 auto; (centra l'immagine orizzontalmente)  */
+.domStructure-paragraph { 
+    text-align: center;
+}
+
+.dom {
+    display: inline-block; 
+    margin: 0 auto; 
+    box-shadow:10px 10px var(--lightdark);
+}
+
+
+
 .code-container{
     position: relative;
     background-color: #000;
