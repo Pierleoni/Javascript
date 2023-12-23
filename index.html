@@ -1041,7 +1041,7 @@
                                     <br>This text will overwrite the previous line.
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard()">Copy Code</button>
+                            <button onclick="copyToClipboard(`return`)">Copy Code</button>
                         </div>
                         Quindi il carriage return cuasa la sovrascrittura della seconda parte della stringa sulla
                         stessa linea. Tuttavia il carriage return, in tempi moderni, è il meno usato ma lo si
@@ -1061,7 +1061,7 @@
                                     <br>This is some text. This text is indented with a tab.
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard()"> Copy Code</button>
+                            <button onclick="copyToClipboard(`tabCharCod`)"> Copy Code</button>
                         </div>
                         In questo esempio il tab character è usato tra le due parti di una stringa, creando cosi un
                         effetto di indentazione. Ciò può tornare utile quando si vuole formattare l'output o
@@ -1080,7 +1080,7 @@
                                     <br>Hel World!
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard()">Copy Code</button>
+                            <button onclick="copyToClipboard(`backCharCod`)">Copy Code</button>
                         </div>
                         Nell'esempio lo space character causa una sovrascrittura dei caratteri 'o' ed 'l' in
                         'Hello', cosi che l'output risulti "Hel World". Tuttavia il carattere di backspace non è
@@ -1100,7 +1100,7 @@
                                     <br>console.log(mystr)//Output: I am "double quote"string"double quotes
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard()">Copy Code</button>
+                            <button onclick="copyToClipboard(`bsCharCod`)">Copy Code</button>
                         </div>
                         Un altra cosa che posso fare è che se volessi aggiungere le backslash nella mia stringa devo
                         per forza metterne due perche la prima va ad indicare l'escape character.
@@ -1113,7 +1113,7 @@
                                     <br>This is a backslash: \
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard()">Copy Code</button>
+                            <button onclick="copyToClipboard(`bsCharCod2`)">Copy Code</button>
                         </div>
                         questo è particolarmtente Importante quando si ha a che fare con percorsi file o espressioni
                         regolari dove le backslashes sono usate come caratteri speciali e hanno bisogno di
@@ -1132,7 +1132,7 @@
                                     <br>This is a single quote: '
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard()"> Copy Code</button>
+                            <button onclick="copyToClipboard(`sQEscCharCod`)"> Copy Code</button>
                         </div>
                     </li>
                     <br>
@@ -1147,7 +1147,7 @@
                                     <br>This is a double quote: "
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard()">Copy Code</button>
+                            <button onclick="copyToClipboard(`dQEscCharCod`)">Copy Code</button>
                         </div>
                     </li>
                     <br>
@@ -1162,7 +1162,7 @@
                                     <br>Next line of text.
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard()">Copy Code</button>
+                            <button onclick="copyToClipboard(`fFCharCod`)">Copy Code</button>
                         </div>
                         N.B. il risultato dell'output può dipendere su dove fai uscire il testo (console, HTML,
                         etc.), quindi l'effetto del form feed dipende dall'ambiente nel quale è visualizzato.
@@ -1203,7 +1203,7 @@
                             <br>console.log(str[0]); // Outputs 'H'
                         </code>
                     </pre>
-                    <button onclick="copyToClipboard()">Copy Code</button>
+                    <button onclick="copyToClipboard(`strSqrCod`)">Copy Code</button>
                 </div>
                 <br>Un altro metodo è il "charAt()":
                 <br>
@@ -1215,7 +1215,7 @@
                         <br>console.log(firstCharacter); // Output: H.
                     </code>
                 </pre>
-                    <button onclick="copyToClipboard()">Copy Code</button>
+                    <button onclick="copyToClipboard(`charAtCod`)">Copy Code</button>
                 </div>
                 <br>N.B. tra i due non c'è differenza, eccetto che le parentesi quadre sono più concise e per
                 questo sono il metodo preferito nel moderno Js.
@@ -1236,7 +1236,7 @@
                                 <br>console.log(charCode); // Output: 72
                             </code>
                         </pre>
-                        <button onclick="copyToClipboard()">Copy Code</button>
+                        <button onclick="copyToClipboard(`charCodeAtCod`)">Copy Code</button>
                     </div>
                     <br>Come possiamo vedere nell'esempio viene riportato come output il valore Unicode del
                     carattere all'index 0, che è "H", ma nell'Unicode il valore per "H" è 72.
@@ -1257,7 +1257,7 @@
                                     }
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard()">Copy Code</button>
+                            <button onclick="copyToClipboard(`UniCod`)">Copy Code</button>
                         </div>
                         </p>
                     </div>
@@ -1272,32 +1272,33 @@
                                 <li>
                                     Return type: Restituisce una stringa contenente il carattere
                                 </li>
-                                <li>
-                                    <div class="code-container">
-                                        <pre>
-                                            <code id="exRetTypeCod">
-
-                                                <br>let myString = "Hello, World!";
-                                                <br>let character = myString.charAt(0);
-                                                <br>console.log(character); // Output: H
-                                            </code>
-                                        </pre>
-                                        <button onclick="copyToClipboard()"></button>
-                                    </div>
-                                </li>
                             </ul>
+                            <div class="code-container">
+                                <pre>
+                                    <code id="exRetTypeCod">
+                                        <br>let myString = "Hello, World!";
+                                        <br>let character = myString.charAt(0);
+                                        <br>console.log(character); // Output: H
+                                    </code>
+                                </pre>
+                                <button onclick="copyToClipboard(`exRetTypeCod`)">Copy Code</button>
+                            </div>
                         </li>
                         <li id="charCodeAt"> <a href="#bN" target="_blank">"charCodeAt(index)":</a>
                             <ul>
                                 <li>Purpose: Restituisce il valore Unicode (intero) del carattere allo specifico
                                     index in una stringa</li>
-                                <li>Return Type: Rstituisce un integer che rappresenta il vlaore Unicode </li>
-                                <li>
-                                    <div id="charCodeAtCod"></div>
-                                    <br>let myString = "Hello, World!";
-                                    <br>let charCode = myString.charCodeAt(0);
-                                    <br>console.log(charCode); // Output: 72 (Unicode value for 'H')
-                                </li>
+                                <li>Return Type: Restituisce un integer che rappresenta il valore Unicode </li>
+                                    <div class="code-container">
+                                        <pre>
+                                            <code id="charCodeAtCod">
+                                                <br>let myString = "Hello, World!";
+                                                <br>let charCode = myString.charCodeAt(0);
+                                                <br>console.log(charCode); // Output: 72 (Unicode value for 'H')
+                                            </code>
+                                        </pre>
+                                        <button onclick="copyToClipboard(`charCodeAtCod`)">Copy Code</button>
+                                    </div>
                             </ul>
                         </li>
                     </ol>
@@ -1317,42 +1318,76 @@
                         Ci sono due parametri nell'argomento;
                         <br>l'index di inizio e l'index di fine,
                         <br>
-                        <div id="substrinCod">Es:
-                            <br>let str = "Hello, World!";
-                            <br>let subStr = str.substring(0, 5); // Returns "Hello"
+                        Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="substrinCod">
+                                    <br>let str = "Hello, World!";
+                                    <br>let subStr = str.substring(0, 5); // Returns "Hello"
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard(`substrinCod`)">Copy Code</button>
                         </div>
+                        <br>
                         Come possiamo vedere dall'esempio il metodo 'substring' viene usato per estrarre i caratteri
                         dall'index 0 al 4 (l'index 5 non viene incluso nell'estrapolazione), difatti la sotto
                         stringa che estrappolata sarà tutta la frase "hello".
                         <br>se si vuole prendere fino alla fine al carattere specificato non si aggiunge il secondo
                         argomento
-                        <div id="esempio">Es:
-                            <br>let str =`Hello World`
-                            <br>let substring = str.substring(0)
-                            <br>console.log(substring) //Output:'Hello world'
+                        <br>
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="substrinCod2">
+                                    <br>let str =`Hello World`
+                                    <br>let substring = str.substring(0)
+                                    <br>console.log(substring) //Output:'Hello world'
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard(`substrinCod2`)">Copy Code</button>
                         </div>
                         <br>è importante notare che il metodo 'substring' non modifica la stringa originale, invece
                         se lo si volesse fare è necessario riassegnare il risultato alla variabile
-                        <div id="esempio">Es:
-                            <br>let str = "Hello, World!";
-                            <br>str = str.substring(0, 5); // Now, str is "Hello"
+                        <br>
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="substrinCod3">
+                                    <br>let str = "Hello, World!";
+                                    <br>str = str.substring(0, 5); // Now, str is "Hello"
+                                </code>
+                            </pre>
+                            <button onclick="copyToClipboard(`substrinCod3`)">Copy Code</button>
                         </div>
                         <br> è bene sapere anche che nel caso in cui l'indice di inzio sia più grande dell'indice di
                         fine, il metodo 'substring' cambierà i due indici
                         <br>
-                        <div id="esempio">Es:
-                            <br>let str = "Hello, World!";
-                            <br>let subStr = str.substring(7, 2); // Returns "llo, "
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="substrinCod4">
+                                    <br>let str = "Hello, World!";
+                                    <br>let subStr = str.substring(7, 2); // Returns "llo, "
+                                </code>
+                                <button onclick="copyToClipboard(`substrinCod4`)">Copy Code</button>
+                            </pre>
                         </div>
-                        <br>come possiamo ben vedere inizia dall'index 2 e finisce all'index 6 perchè il 7 non viene
+                        <br>Come possiamo ben vedere inizia dall'index 2 e finisce all'index 6 perchè il 7 non viene
                         incluso.
                         <br>N.B.Se invece volessi inserire numeri negativi come parametri di substring ritorna
                         stringa
                         vuota.
-                        <div id="esempio">Es:
-                            <br>let str =`Hello World`
-                            <br>let substring = str.substring(-7,-13)
-                            <br>console.log(substring) // No Output
+                        <br>
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="exNegSubstrinCode">
+                                    <br>let str =`Hello World`
+                                    <br>let substring = str.substring(-7,-13)
+                                    <br>console.log(substring) // No Output
+                                </code>
+                                <button onclick="copyToClipboard(`exNegSubstrinCode`)">Copy Code</button>
+                            </pre>
                         </div>
                     </li>
                     <br>
@@ -1361,27 +1396,47 @@
                         stringa estratta. Come per il substring si hanno due paremetri; l'index di inizio e fine.
                         <br>La stringa originale non è modificata, invece viene restituita una nuova stringa
                         contenente la porzione specificata.
-                        <div id="esempio"> Es:
-                            <br>let str = "Hello, World!";
-                            <br>let subStr = str.slice(0, 5); // Returns "Hello"
+                        <br>
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="exSliceMethCod">
+                                    <br>let str = "Hello, World!";
+                                    <br>let subStr = str.slice(0, 5); // Returns "Hello"
+                                </code>
+                                <button onclick="copyToClipboard(`exSliceMethCod`)">Copy Code</button>
+                            </pre>
                         </div>
+                        <br>
                         In questo esempio, il metodo slice è usato per estrarre i caratteri dall'index 0 al 4 (5
                         escluso), cosicché l'output sarà "hello".
-                        <br>Il metodo 'slice' accetta anche indici negativi; peremttendoti di contare la posizione
+                        <br>Il metodo 'slice' accetta anche indici negativi; permettendoti di contare la posizione
                         dalla fine della stringa.
                         <br>
-                        <div id="esempio">Es:
-                            <br>let str = "Hello, World!";
-                            <br>let subStrEnd = str.slice(-6); // Returns "World!"
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="sliceCod">
+                                    <br>let str = "Hello, World!";
+                                    <br>let subStrEnd = str.slice(-6); // Returns "World!"
+                                </code>
+                                <button onclick="copyToClipboard('sliceCod')">Copy Code</button>
+                            </pre>
                         </div>
                         <br>In questo caso il metodo 'slice' estrae gli ultimi 6 caratteri della stringa, partendo
                         dalla fine.
                         <br>Come per 'substring', 'slice' non modifica la stringa originale. Se diventa necessario
                         modificare la stringa sul momento è necessario riassegnare il risultato alla variabile.
                         <br>
-                        <div id="esempio">Es:
-                            <br>let str = "Hello, World!";
-                            <br>str = str.slice(0, 5); // Now, str is "Hello"
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="sliceCod2">
+                                    <br>let str = "Hello, World!";
+                                    <br>str = str.slice(0, 5); // Now, str is "Hello"
+                                </code>
+                                <button onclick="copyToClipboard('sliceCod2')">Copy Code</button>
+                            </pre>
                         </div>
                         <br>N.B. anche per il metodo 'slice' se si omette il secondo parametro la sottostringa
                         includerà
@@ -1394,27 +1449,46 @@
                         <br>questo metodo prende due parametri; l'inizio dell'index e la lunghezza della
                         sottostringa.
                         <br>
-                        <div id="esempio">Es:
-                            <br>let str = "Hello, World!";
-                            <br>let subStr = str.substr(0, 5); // Returns "Hello"
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="substrCod">
+                                    <br>let str = "Hello, World!";
+                                    <br>let subStr = str.substr(0, 5); // Returns "Hello"
+                                </code>
+                                <button onclick="copyToClipboard('substrCod')">Copy Code</button>
+                            </pre>
                         </div>
-                        In questo esempio il metodo 'substr' parte dall'indice 0 e estrae una sottostringa lunga 5
-                        caratteri, per l'appunto 'hello', quindi possiamo notare che il seocndo parametro non è la
+                        <br>
+                        In questo esempio il metodo 'substr' parte dall'indice 0 ed estrae una sottostringa lunga 5
+                        caratteri, per l'appunto 'hello', quindi possiamo notare che il secondo parametro non è la
                         l'indice di fine ma la lunghezza della sottostringa.
                         <br>Come per 'slice' anche 'substr' se gli si mette un indice negativo inizierà a contare
                         dalla fine della stringa
                         <br>
-                        <div id="esempio">Es:
-                            <br>let str = "Hello, World!";
-                            <br>let subStrEnd = str.substr(-6); // Returns "World!"
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="substrNegCod">
+                                    <br>let str = "Hello, World!";
+                                    <br>let subStrEnd = str.substr(-6); // Returns "World!"
+                                </code>
+                                <button onclick="copyToClipboard('substrNegCod')">Copy Code</button>
+                            </pre>
                         </div>
                         <br>Come per gli altri metodi elencati qui sopra anche 'substr' non modifica la stringa
                         originale, se diventa necessario
                         modificare la stringa sul momento è necessario riassegnare il risultato alla variabile.
                         <br>
-                        <div id="esempio">Es:
-                            <br>let str = "Hello, World!";
-                            <br>str = str.substr(0, 5); // Now, str is "Hello"
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="substrCod2">
+                                    <br>let str = "Hello, World!";
+                                    <br>str = str.substr(0, 5); // Now, str is "Hello"
+                                </code>
+                                <button onclick="copyToClipboard('substrCod2')">Copy Code</button>
+                            </pre>
                         </div>
                     </li>
                 </ul>
@@ -2190,6 +2264,7 @@
         elementi, gli attributi e il testo. JavaScript può manipolare questa struttura ad albero, permettendo ai
         developers
         di alterare dinamicamente il contenuto e e l'apparenza di un sito web.
+        <br><mark>Quindi in sostanza è un interfaccia tra javascript e il browser </mark>
         <br>Quindi può essere pensato come una mappa di un sito web: mostra dove si trova tutto su un sito web,
         esattamente come una mappa che mostra le strade e gli edifici di una città, per questo i programmmatori possono
         usare il DOM per trovare parti diverse di un sito web e cambiare le loro proprietà.
@@ -2204,10 +2279,28 @@
         muovere il mouse o fare clic su un pulsante.
         <br>Quindi in finale il DOM è una mappa che mostra dove si trovano gli elementi (strade, edifici, etc.) e
         Javascript è come se fosse una bachetta magica che può cambiare questi elementi sulla mappa.
+        <br>Ergo con l'aiuto del DOM, si può scrivere con il linguaggio javascript per creare, modificare e cancellare
+        elementi HTML, settare gli stili, classi e attributi ed ascoltare e rispondere agli eventi.
+        <br>In pratica il DOM tree è generato da un documento HTML, con il quale in seguito si può interagire 
         <h3>La Struttura del DOM</h3>
         <br>Immaginiamo che il DOM sia un libro dove ogni pagina è una parte diversa del sito web e il DOM tree è come
-        se fosse i contenuti di quel libro. Ciò mostra tutti le parti diverse del sito web e come sono organizzate.
-        <br>Ogni parte del sito web è chiamata 
+        un sommario di questo libro che mostra tutti le parti diverse del sito web e come sono organizzate.
+        <br>Ogni parte del sito web è detta "elemento" e questi elementi sono combinati in una struttura ad albero:
+        <br>la punta dell'albero è chiamata "root" (radice) e rappesenta l'intero sito web, da lì l'albero si ramifica
+        in diverse sezioni come ad esempio;
+        <br>le headings, i paragrafi, le immagini e altri elementi che costituiscono l'intero sito web.
+        <br>
+        <div class="domStructure-paragraph">
+            <br><img src="/Media/Photo/Dom Tree Structure.png" class="dom" height="400rem" width="500rem" alt="">
+            <br><small>Illustrazione del DOM Tree</small>
+        </div>
+        <!-- Su 10/11/23 12.46: relative about align imagine in the center of this part -->
+        <br>Esattamente come il sommario di un libro aiuta il lettore a trovare i paragrafi specifici di quel libro, il
+        DOM tree aiuta il computer a trovare elementi specifici sul sito web. Inoltre permette ai developers di accedere
+        e cambiare questi elementi, rendendo così il sito web interattivo.
+        <br>In sostanza quindi il DOM tree rappresenta la struttura di un sito web in un modo che i computer possano
+        capire. I developers lo usano per accedere e manipolare elementi diversi in quella struttura per creare una
+        pagina web dinamica.
         </p>
         <!-- Sat 09/12/2023 15.01: relative about dom js  -->
     </div>
