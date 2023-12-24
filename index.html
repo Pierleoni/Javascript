@@ -7,6 +7,8 @@
     <title>Javascript</title>
 </head>
 <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha384-l5fZSOdzoUkZVrE+5I8I9IEfcXpV/COa5N5a7RUouQOwX1cFgT1J3z+DT4yl94eY" crossorigin="anonymous">
 <script type="text/Javascript" src="variabili.js"></script>
 <script type="text/Javascript" src="numbers.Js"></script>
 <script type="text/Javascript" src="strings.js"></script>
@@ -121,14 +123,17 @@
                         </li>
                         <li>
                             ! (logical NOT): ritorna il valore booleano opposto del operando (
+                            <br>
+                            <br>Es:
                             <div class="code-container">
                                 <pre>
-
-                                    <code id="esempioCodiceBooleane">Es:
-                                <br>"!true" è "false"
-                                <br>viceversa "!false" è "true"</code> )
-                            </pre>
-                                <button onclick="copyToClipboard(`esempioCodiceBooleane`)"> Copy Code</button>
+                                    
+                                    <code id="esempioCodiceBooleane">
+                                        <br>"!true" è "false"
+                                        <br>viceversa "!false" è "true"</code> 
+                                    </pre>
+                                    <button  class="copyButton" onclick="copyToClipboard(`esempioCodiceBooleane`)"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"> </button>
                             </div>
                         </li>
                     </ul>
@@ -616,7 +621,8 @@
                                     <br> let division  =  10 / "abc" è NaN; 
                                 </code> 
                             </pre>
-                            <button onclick="copyToClipboard(`esempioCodiceNan`)">Copy Code</button>
+                            <button class="copyButton"  onclick="copyToClipboard( `esempioCodiceNan`)"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                     </li>
                     <br>
@@ -629,7 +635,8 @@
                                     <br> Let square root =  Math.sqrt(-1) ; è NaN
                                 </code> 
                             </pre>
-                            <button onclick="copyToClipboard(`esempioCodicesqrt`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`esempioCodicesqrt`)"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                     </li>
                     <br>
@@ -641,7 +648,8 @@
                                     <br>  Let numb  = "NaN";
                                 </code> 
                             </pre>
-                            <button onclick="copyToClipboard(`esempioCodiceNan2`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`esempioCodiceNan2`)"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                     </li>
                     <br>Per controllare se il valore è NaN si possono usare 2 funzion:
@@ -658,7 +666,8 @@
                                         <br> isNaN(123) ; è falso
                                     </code> 
                                 </pre>
-                                <button onclick="copyToClipboard(`esempioCodiceBoolNaN`)">Copy Code</button>
+                                <button onclick="copyToClipboard(`esempioCodiceBoolNaN`)"> <img src="/Media/copy.png"
+                                        alt="Copy Icon" class="copy-icon"></button>
                             </div>
                         </li>
                         <br>
@@ -684,7 +693,8 @@
                                     <br> Let division = 1/0; è infinito
                                 </code> 
                             </pre>
-                            <button onclick="copyToClipboard(`esempioCodiceInfinity`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`esempioCodiceInfinity`)"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                     </li>
                     <br>
@@ -697,7 +707,8 @@
                                     <br>console.log(-10 / Infinity); // -0
                                 </code> 
                             </pre>
-                            <button onclick="copyToClipboard('esempioCodiceMultInf')">Copy Code</button>
+                            <button onclick="copyToClipboard('esempioCodiceMultInf')"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                     </li>
                     <br>
@@ -710,7 +721,8 @@
                                     <br>console.log(Math.pow(10, 1000)); // Infinity
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard('esempioPowMathInf')">Copy Code</button>
+                            <button onclick="copyToClipboard('esempioPowMathInf')"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                     </li>
                 </ul>
@@ -725,7 +737,8 @@
                             <br>isFinite(5); // true
                         </code>
                     </pre>
-                    <button onclick="copyToClipboard('esempioCheckInf')">Copy Code</button>
+                    <button onclick="copyToClipboard('esempioCheckInf')"> <img src="/Media/copy.png" alt="Copy Icon"
+                            class="copy-icon"></button>
                 </div>
                 <br>
                 <br>Da notare che "isFinite" diventa falso sia per "infinity" e "-infinity".
@@ -755,7 +768,8 @@
                                     <br>console.log(floatValue); // 3.14
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard('exCoParse')">Copy Code</button>
+                            <button onclick="copyToClipboard('exCoParse')"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
 
                     </li>
@@ -773,7 +787,8 @@
                                     <br>console.log(parsedObject.name); // John
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard('exCoJSON')">Copy Code</button>
+                            <button onclick="copyToClipboard('exCoJSON')"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                         <br>
                         <br>
@@ -806,7 +821,8 @@
 
                                         </code>
                                     </pre>
-                                    <button onclick="copyToClipboard('exCoConvNumb')">Copy Code</button>
+                                    <button onclick="copyToClipboard('exCoConvNumb')"> <img src="/Media/copy.png"
+                                            alt="Copy Icon" class="copy-icon"></button>
                                 </div>
                             </li>
                             <br>
@@ -824,7 +840,8 @@
                                             <br>console.log(booleanValue); // true
                                         </code>
                                     </pre>
-                                    <button onclick="copyToClipboard('exCoConvBoo')">Copy Code</button>
+                                    <button onclick="copyToClipboard('exCoConvBoo')"> <img src="/Media/copy.png"
+                                            alt="Copy Icon" class="copy-icon"></button>
                                 </div>
                             </li>
                             <br>
@@ -841,7 +858,8 @@
                                             <br>console.log(charArray); // ["h", "e", "l", "l", "o"]
                                         </code>
                                     </pre>
-                                    <button onclick="copyToClipboard('exCoConvStr')">Copy Code</button>
+                                    <button onclick="copyToClipboard('exCoConvStr')"> <img src="/Media/copy.png"
+                                            alt="Copy Icon" class="copy-icon"></button>
                                 </div>
                             </li>
                             <br>
@@ -874,7 +892,8 @@
 
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard('exCoMethStr')">Copy Code</button>
+                            <button onclick="copyToClipboard('exCoMethStr')"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                     </li>
                     <br>
@@ -890,7 +909,8 @@
                                     <br>console.log(typeof myString); // Output: string
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard('exConcStr')">Copy Code</button>
+                            <button onclick="copyToClipboard('exConcStr')"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                     </li>
                     <li>Usare la funzione "String()":
@@ -904,7 +924,8 @@
                                     <br>console.log(typeof myString); // Output: string
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard('exCoStrConv')">Copy Code</button>
+                            <button onclick="copyToClipboard('exCoStrConv')"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                     </li>
                     <br>Tutti questi metodi convertirano i numeri alla loro rappresentazione come stringa. Sono
@@ -928,7 +949,8 @@
                                     <br>console.log(formattedNumber); // Output: "3.14"
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard('toFixedCod')">Copy Code</button>
+                            <button onclick="copyToClipboard('toFixedCod')"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                     </li>
                     <li>toPrecision:
@@ -944,7 +966,8 @@
                                     <br>console.log(formattedNumber); // Output: "123.46"
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard('exCoToPrecision')">Copy Code</button>
+                            <button onclick="copyToClipboard('exCoToPrecision')"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                     </li>
                     <li>toExponential():
@@ -960,7 +983,8 @@
                                     <br>console.log(exponentialNumber); // Output: "1.23e+4"
                                 </code>
                             </pre>
-                            <button onclick="copyToClipboard('exCoToExp')">Copy Code</button>
+                            <button onclick="copyToClipboard('exCoToExp')"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                     </li>
                 </ul>
@@ -990,7 +1014,8 @@
                         <br>let str =`Hello World`
                     </code>
                 </pre>
-                    <button onclick="copyToClipboard('exDeclStr')">Copy Code</button>
+                    <button onclick="copyToClipboard('exDeclStr')"> <img src="/Media/copy.png" alt="Copy Icon"
+                            class="copy-icon"></button>
                 </div>
             </li>
             <br>
@@ -1004,7 +1029,8 @@
                         <br>let str = "I am" double quoted"string"double quotes""
                     </code>
                 </pre>
-                    <button onclick="copyToClipboard('exCoEscCh')">Copy Code</button>
+                    <button onclick="copyToClipboard('exCoEscCh')"> <img src="/Media/copy.png" alt="Copy Icon"
+                            class="copy-icon"></button>
                 </div>
                 <br>
                 <br>Per ovviare a questo problema c'è una cosa chiamata carattere di fuga:
@@ -1023,7 +1049,8 @@
                                 <br>This is the second line.
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard('NewLineCod')">Copy Code</button>
+                            <button onclick="copyToClipboard('NewLineCod')"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                         <br>
                     </li>
@@ -1041,7 +1068,8 @@
                                 <br>This text will overwrite the previous line.
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`return`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`return`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                         Quindi il carriage return cuasa la sovrascrittura della seconda parte della stringa sulla
                         stessa linea. Tuttavia il carriage return, in tempi moderni, è il meno usato ma lo si
@@ -1061,7 +1089,8 @@
                                 <br>This is some text. This text is indented with a tab.
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`tabCharCod`)"> Copy Code</button>
+                            <button onclick="copyToClipboard(`tabCharCod`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                         In questo esempio il tab character è usato tra le due parti di una stringa, creando cosi un
                         effetto di indentazione. Ciò può tornare utile quando si vuole formattare l'output o
@@ -1080,7 +1109,8 @@
                                 <br>Hel World!
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`backCharCod`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`backCharCod`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                         Nell'esempio lo space character causa una sovrascrittura dei caratteri 'o' ed 'l' in
                         'Hello', cosi che l'output risulti "Hel World". Tuttavia il carattere di backspace non è
@@ -1100,7 +1130,8 @@
                                 <br>console.log(mystr)//Output: I am "double quote"string"double quotes
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`bsCharCod`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`bsCharCod`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                         Un altra cosa che posso fare è che se volessi aggiungere le backslash nella mia stringa devo
                         per forza metterne due perche la prima va ad indicare l'escape character.
@@ -1113,7 +1144,8 @@
                                 <br>This is a backslash: \
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`bsCharCod2`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`bsCharCod2`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                         questo è particolarmtente Importante quando si ha a che fare con percorsi file o espressioni
                         regolari dove le backslashes sono usate come caratteri speciali e hanno bisogno di
@@ -1132,7 +1164,8 @@
                                 <br>This is a single quote: '
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`sQEscCharCod`)"> Copy Code</button>
+                            <button onclick="copyToClipboard(`sQEscCharCod`)"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                     </li>
                     <br>
@@ -1147,7 +1180,8 @@
                                 <br>This is a double quote: "
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`dQEscCharCod`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`dQEscCharCod`)"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                     </li>
                     <br>
@@ -1162,7 +1196,8 @@
                                 <br>Next line of text.
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`fFCharCod`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`fFCharCod`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                         N.B. il risultato dell'output può dipendere su dove fai uscire il testo (console, HTML,
                         etc.), quindi l'effetto del form feed dipende dall'ambiente nel quale è visualizzato.
@@ -1203,7 +1238,8 @@
                         <br>console.log(str[0]); // Outputs 'H'
                     </code>
                 </pre>
-                    <button onclick="copyToClipboard(`strSqrCod`)">Copy Code</button>
+                    <button onclick="copyToClipboard(`strSqrCod`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                            class="copy-icon"></button>
                 </div>
                 <br>Un altro metodo è il "charAt()":
                 <br>
@@ -1215,7 +1251,8 @@
                     <br>console.log(firstCharacter); // Output: H.
                 </code>
             </pre>
-                    <button onclick="copyToClipboard(`charAtCod`)">Copy Code</button>
+                    <button onclick="copyToClipboard(`charAtCod`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                            class="copy-icon"></button>
                 </div>
                 <br>N.B. tra i due non c'è differenza, eccetto che le parentesi quadre sono più concise e per
                 questo sono il metodo preferito nel moderno Js.
@@ -1236,7 +1273,8 @@
                             <br>console.log(charCode); // Output: 72
                         </code>
                     </pre>
-                        <button onclick="copyToClipboard(`charCodeAtCod`)">Copy Code</button>
+                        <button onclick="copyToClipboard(`charCodeAtCod`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                                class="copy-icon"></button>
                     </div>
                     <br>Come possiamo vedere nell'esempio viene riportato come output il valore Unicode del
                     carattere all'index 0, che è "H", ma nell'Unicode il valore per "H" è 72.
@@ -1257,7 +1295,8 @@
                                 }
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`UniCod`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`UniCod`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                         </p>
                     </div>
@@ -1281,7 +1320,8 @@
                                     <br>console.log(character); // Output: H
                                 </code>
                             </pre>
-                                <button onclick="copyToClipboard(`exRetTypeCod`)">Copy Code</button>
+                                <button onclick="copyToClipboard(`exRetTypeCod`)"> <img src="/Media/copy.png"
+                                        alt="Copy Icon" class="copy-icon"></button>
                             </div>
                         </li>
                         <li id="charCodeAt"> <a href="#bN" target="_blank">"charCodeAt(index)":</a>
@@ -1297,7 +1337,8 @@
                                             <br>console.log(charCode); // Output: 72 (Unicode value for 'H')
                                         </code>
                                     </pre>
-                                    <button onclick="copyToClipboard(`charCodeAtCod`)">Copy Code</button>
+                                    <button onclick="copyToClipboard(`charCodeAtCod`)"> <img src="/Media/copy.png"
+                                            alt="Copy Icon" class="copy-icon"></button>
                                 </div>
                             </ul>
                         </li>
@@ -1326,7 +1367,8 @@
                                 <br>let subStr = str.substring(0, 5); // Returns "Hello"
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`substrinCod`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`substrinCod`)"> <img src="/Media/copy.png" alt="Copy Icon"
+                                    class="copy-icon"></button>
                         </div>
                         <br>
                         Come possiamo vedere dall'esempio il metodo 'substring' viene usato per estrarre i caratteri
@@ -1344,7 +1386,8 @@
                                 <br>console.log(substring) //Output:'Hello world'
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`substrinCod2`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`substrinCod2`)"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                         <br>è importante notare che il metodo 'substring' non modifica la stringa originale, invece
                         se lo si volesse fare è necessario riassegnare il risultato alla variabile
@@ -1357,7 +1400,8 @@
                                 <br>str = str.substring(0, 5); // Now, str is "Hello"
                             </code>
                         </pre>
-                            <button onclick="copyToClipboard(`substrinCod3`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`substrinCod3`)"> <img src="/Media/copy.png"
+                                    alt="Copy Icon" class="copy-icon"></button>
                         </div>
                         <br> è bene sapere anche che nel caso in cui l'indice di inzio sia più grande dell'indice di
                         fine, il metodo 'substring' cambierà i due indici
@@ -1369,7 +1413,7 @@
                                 <br>let str = "Hello, World!";
                                 <br>let subStr = str.substring(7, 2); // Returns "llo, "
                             </code>
-                            <button onclick="copyToClipboard(`substrinCod4`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`substrinCod4`)"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>Come possiamo ben vedere inizia dall'index 2 e finisce all'index 6 perchè il 7 non viene
@@ -1386,7 +1430,7 @@
                                 <br>let substring = str.substring(-7,-13)
                                 <br>console.log(substring) // No Output
                             </code>
-                            <button onclick="copyToClipboard(`exNegSubstrinCode`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`exNegSubstrinCode`)"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                     </li>
@@ -1404,7 +1448,7 @@
                                 <br>let str = "Hello, World!";
                                 <br>let subStr = str.slice(0, 5); // Returns "Hello"
                             </code>
-                            <button onclick="copyToClipboard(`exSliceMethCod`)">Copy Code</button>
+                            <button onclick="copyToClipboard(`exSliceMethCod`)"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>
@@ -1420,7 +1464,7 @@
                                 <br>let str = "Hello, World!";
                                 <br>let subStrEnd = str.slice(-6); // Returns "World!"
                             </code>
-                            <button onclick="copyToClipboard('sliceCod')">Copy Code</button>
+                            <button onclick="copyToClipboard('sliceCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>In questo caso il metodo 'slice' estrae gli ultimi 6 caratteri della stringa, partendo
@@ -1435,7 +1479,7 @@
                                 <br>let str = "Hello, World!";
                                 <br>str = str.slice(0, 5); // Now, str is "Hello"
                             </code>
-                            <button onclick="copyToClipboard('sliceCod2')">Copy Code</button>
+                            <button onclick="copyToClipboard('sliceCod2')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>N.B. anche per il metodo 'slice' se si omette il secondo parametro la sottostringa
@@ -1456,7 +1500,7 @@
                                 <br>let str = "Hello, World!";
                                 <br>let subStr = str.substr(0, 5); // Returns "Hello"
                             </code>
-                            <button onclick="copyToClipboard('substrCod')">Copy Code</button>
+                            <button onclick="copyToClipboard('substrCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>
@@ -1473,7 +1517,7 @@
                                 <br>let str = "Hello, World!";
                                 <br>let subStrEnd = str.substr(-6); // Returns "World!"
                             </code>
-                            <button onclick="copyToClipboard('substrNegCod')">Copy Code</button>
+                            <button onclick="copyToClipboard('substrNegCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>Come per gli altri metodi elencati qui sopra anche 'substr' non modifica la stringa
@@ -1487,7 +1531,7 @@
                                 <br>let str = "Hello, World!";
                                 <br>str = str.substr(0, 5); // Now, str is "Hello"
                             </code>
-                            <button onclick="copyToClipboard('substrCod2')">Copy Code</button>
+                            <button onclick="copyToClipboard('substrCod2')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                     </li>
@@ -1512,7 +1556,7 @@
                                 <br>var result = string1 + string2;
                                 <br>console.log(result); // Output: Hello World
                             </code>
-                            <button onclick="copyToClipboard('fMethConcat')">Copy Code</button>
+                            <button onclick="copyToClipboard('fMethConcat')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>Come possiamo vedere nell'esempio l'operatore '+' è usato per concatenare i contenuti
@@ -1530,7 +1574,7 @@
                                 <br>var result = string1 + string2 + string3;
                                 <br>console.log(result); // Output: Hello beautiful World
                             </code>
-                            <button onclick="copyToClipboard('plusOpConcStr')">Copy Code</button>
+                            <button onclick="copyToClipboard('plusOpConcStr')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                     </li>
@@ -1546,7 +1590,7 @@
                                 <br>var result = string1.concat(string2);
                                 <br>console.log(result); // Output: Hello World
                             </code>
-                            <button onclick="copyToClipboard('concMethCod')">Copy Code</button>
+                            <button onclick="copyToClipboard('concMethCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>Possiamo vedere nell'esempio che il metodo '.concat' è stato usato sulla string1, mentre
@@ -1567,7 +1611,7 @@
                                 <br>var result = string1.concat(string2, string3);
                                 <br>console.log(result); // Output: Hello beautiful World
                             </code>
-                            <button onclick="copyToClipboard('concMethCod2')">Copy Code</button>
+                            <button onclick="copyToClipboard('concMethCod2')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>
@@ -1600,7 +1644,7 @@
                                 <br>str+=str2
                                 <br>console.log(str+=str2)
                             </code>
-                            <button onclick="copyToClipboard('plus-equalOp')">Copy Code</button>
+                            <button onclick="copyToClipboard('plus-equalOp')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         Come Possiamo vedere l'operatore '+=' è stato usato per concatenare la variabile 'str1' con
@@ -1618,7 +1662,7 @@
                                 <br>string1 += string2 + string3;
                                 <br>console.log(string1); // Output: Hello beautiful World
                             </code>
-                            <button onclick="copyToClipboard('plus-equalOp2')">Copy Code</button>
+                            <button onclick="copyToClipboard('plus-equalOp2')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                     </li>
@@ -1646,7 +1690,7 @@
                         <br>let templateLiteral = `Hello, ${variable}!`;
                         <br>console.log(templateLiteral)//Output: Hello world
                     </code>
-                    <button onclick="copyToClipboard('tLitSynt')">Copy Code</button>
+                    <button onclick="copyToClipboard('tLitSynt')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                 </pre>
                 </div>
                 In questo esempio possiamo vedere che la variabile 'variable' è stata messa dentro un placeholder
@@ -1668,7 +1712,7 @@
                                 <br>const y = 10;
                                 <br>const sum = `The sum of ${x} and ${y} is ${x + y}.`;
                             </code>
-                            <button onclick="copyToClipboard('exprIntCod')">Copy Code</button>
+                            <button onclick="copyToClipboard('exprIntCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                     </li>
@@ -1690,7 +1734,7 @@
                                 <br>`;
                                 <br>console.log(multiLineString);
                             </code>
-                            <button onclick="copyToClipboard('tLitMulti-lineStr')">Copy Code</button>
+                            <button onclick="copyToClipboard('tLitMulti-lineStr')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>
@@ -1721,7 +1765,7 @@
                                 <br>}
                                 <br>const result = myTagFunction`Hello, ${name}!`;
                             </code>
-                            <button onclick="copyToClipboard('tagFuncTLit')">Copy Code</button>
+                            <button onclick="copyToClipboard('tagFuncTLit')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         <br>
@@ -1750,7 +1794,7 @@
                                 <br>const formattedString = currencyFormatter`The price of the ${product} is ${price}.`;
                                 <br>console.log(formattedString);
                             </code>
-                            <button onclick="copyToClipboard('tagFuncTLitCod')">Copy Code</button>
+                            <button onclick="copyToClipboard('tagFuncTLitCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                         </div>
                         In questo esempio <b> 'currencyFormatter' </b> è un tag function che formatta valori
@@ -1820,7 +1864,7 @@
                                     <br>var lastName = "Doe";
                                     <br>var fullName = `${firstName} ${lastName}`;
                                 </code>
-                                <button onclick="copyToClipboard('strFormaCod')">Copy Code</button>
+                                <button onclick="copyToClipboard('strFormaCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                             </pre>
                             </div>
                             Come possiamo vedere da questo esempio ${firstName} e ${lastName} agiscono come
@@ -1840,7 +1884,7 @@
                                     <br>const result = `The sum of ${a} and ${b} is ${a + b}.`;
                                     <br>console.log(result); // Outputs: The sum of 5 and 10 is 15.
                                 </code>
-                                <button onclick="copyToClipboard('plhTLit')">Copy Code</button>
+                                <button onclick="copyToClipboard('plhTLit')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                             </pre>
                             </div>
                             Come possiamo notare nell'esempio i placeholder '${a}', '${b}', '${a + b}' valutano le
@@ -1880,7 +1924,7 @@
                         <br>let bracketNot = str[0]
                         <br>console.log(bracketNot)//Output: `H`
                     </code>
-                    <button onclick="copyToClipboard('brNotCod')">Copy Code</button>
+                    <button onclick="copyToClipboard('brNotCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                 </pre>
                 </div>
                 N.B. Anche in questo caso l'indicizzazione parte da 0.
@@ -1897,7 +1941,7 @@
                             <br>let character = str.charAt(1); // Returns the character at index 1
                             <br>console.log(character); // Outputs: e
                         </code>
-                        <button onclick="copyToClipboard('charAtCod2')">Copy Code</button>
+                        <button onclick="copyToClipboard('charAtCod2')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                     </pre>
                     </div>
                     <br>
@@ -1913,7 +1957,7 @@
                             <br>// Returns the Unicode value of the character at index 1
                             <br>console.log(unicodeValue); // Outputs: 101 (Unicode value for 'e')
                         </code>
-                        <button onclick="copyToClipboard('charCodeAtCod')">Copy Code</button>
+                        <button onclick="copyToClipboard('charCodeAtCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                     </pre>
                     </div>
                     <br>
@@ -1928,7 +1972,7 @@
                                 <br>let character = str[1]; // Returns the character at index 1
                                 <br>console.log(character); // Outputs: e
                             </code>
-                            <button onclick="copyToClipboard('brNotCod2')">Copy Code</button>
+                            <button onclick="copyToClipboard('brNotCod2')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                     </div>
                     <br>Tuttavia, se l'index è al di fuori del range, ritorna 'undefined'
@@ -1939,7 +1983,7 @@
                                 <br>let outOfRange = str[10]; // Index 10 is out of range
                                 <br>console.log(outOfRange); // Outputs: undefined
                             </code>
-                            <button onclick="copyToClipboard('brNotCod3')">Copy Code</button>
+                            <button onclick="copyToClipboard('brNotCod3')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                     </div>
                 </ul>
@@ -1973,7 +2017,7 @@
                                     <br>console.log(uppercaseString); // Output: "HELLO, WORLD!"
                                     <br>console.log(originalString); // Output: "Hello, World!" (original string is unchanged)
                                 </code>
-                                <button onclick="copyToClipboard('toUpCaseCod')">Copy Code</button>
+                                <button onclick="copyToClipboard('toUpCaseCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                             </pre>
                         </div>
                     </li>
@@ -1992,7 +2036,7 @@
                                     <br>console.log(lowercaseString); // Output: "hello, world!"
                                     <br>console.log(originalString); // Output: "Hello, World!" (original string is unchanged)
                                 </code>
-                                <button onclick="copyToClipboard('toLowCaseCod')">Copy Code </button>
+                                <button onclick="copyToClipboard('toLowCaseCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"> </button>
                             </pre>
                         </div>
                     </li>
@@ -2024,7 +2068,7 @@
                                     <br>console.log("Substring not found.");
                                     <br>}
                                 </code>
-                                <button onclick="copyToClipboard('indexOfCod')">Copy Code</button>
+                                <button onclick="copyToClipboard('indexOfCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                             </pre>
                         </div>
                         La sintassi di questo metodo prevede che come argomento vengano indicati
@@ -2043,7 +2087,7 @@
                                         <br>let indexOfWorld = str.indexOf("World");
                                         <br>console.log(indexOfWorld); // Output: 7
                                     </code>
-                                    <button onclick="copyToClipboard('indexOfCod2')">Copy Code</button>
+                                    <button onclick="copyToClipboard('indexOfCod2')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                                 </pre>
                             </div>
                             Ovviamente si può usare il metodo 'IndexOf' per trovare più occorrenze fornendo un
@@ -2060,7 +2104,7 @@
                                         <br>indexOfHello = str.indexOf("Hello", 1);
                                         <br>console.log(indexOfHello); // Output: 7
                                     </code>
-                                    <button onclick="copyToClipboard('indOfOccuCod')">Copy Code</button>
+                                    <button onclick="copyToClipboard('indOfOccuCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                                 </pre>
                             </div>
                             Come ultima cosa va detto che questo metodo è case-sensitive, quindi nel caso si avesse
@@ -2083,7 +2127,7 @@
                                 <code id="incluMethSynt">
                                     <br>string.includes(searchValue[, startIndex]);
                                 </code>
-                                <button onclick="copyToClipboard('incluMethSynt')">Copy Code</button>
+                                <button onclick="copyToClipboard('incluMethSynt')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                             </pre>
                         </div>
                         <ul>
@@ -2106,7 +2150,7 @@
                                         <br>console.log("Substring not found.");
                                         <br>}
                                     </code>
-                                    <button onclick="copyToClipboard('incluMethCod')">Copy Code</button>
+                                    <button onclick="copyToClipboard('incluMethCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                                 </pre>
                             </div>
                         </ul>
@@ -2126,7 +2170,7 @@
                                     <br>console.log("Substring not found.");
                                     <br>}
                                 </code>
-                                <button onclick="copyToClipboard('incluMethCod2')">Copy code</button>
+                                <button onclick="copyToClipboard('incluMethCod2')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                             </pre>
                         </div>
                         <br>Difatti nell'esempio la sottostringa 'world' non viene trovata poichè è diversa da
@@ -2145,7 +2189,7 @@
                                     <br>console.log("Substring not found.");
                                     <br>}
                                 </code>
-                                <button onclick="copyToClipboard('incluMethCod3')">Copy Code</button>
+                                <button onclick="copyToClipboard('incluMethCod3')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                             </pre>
                         </div>
                         <br>In questo esempio, inizia a cercare "Hello" dall'indice 1 e, poiché trova una seconda
@@ -2177,7 +2221,7 @@
                                             <br>console.log("Substring not found.");
                                             <br>}
                                         </code>
-                                        <button onclick="copyToClipboard('regExpCod')">Copy Code</button>
+                                        <button onclick="copyToClipboard('regExpCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                                     </pre>
                                 </div>
                                 <br>In questo esempio l'espressione regolare '/World/' è usata per verificare se la
@@ -2204,7 +2248,7 @@
                                             <br>console.log("Substring not found.");
                                             <br>}
                                         </code>
-                                        <button onclick="copyToClipboard('matchMethCod')">Copy Code</button>
+                                        <button onclick="copyToClipboard('matchMethCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                                     </pre>
                                 </div>
                                 <br>In questo esempio l'espressione regolare '/World/' è usata con im emetodo
@@ -2239,7 +2283,7 @@
                             <br>let newString = originalString.replace(substringToReplace, replacementString);
                             <br>console.log(newString);
                         </code>
-                        <button onclick="copyToClipboard('repMethCod')">Copy Code</button>
+                        <button onclick="copyToClipboard('repMethCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                     </pre>
                 </div>
                 <br>In questo esempio il metodo 'replace' è chiamato su 'originalString' con 2 argomenti: il
@@ -2260,7 +2304,7 @@
                                     <br>let newString = originalString.replace(substringToReplace, replacementString);
                                     <br>console.log(newString);
                                 </code>
-                                <button onclick="copyToClipboard('repMethRegExp')">Copy Code</button>
+                                <button onclick="copyToClipboard('repMethRegExp')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                             </pre>
                         </div>
                         <br>In questo esempio, l'espressione regolare /World/g viene utilizzata per sostituire tutte
@@ -2289,7 +2333,7 @@
                             <br>let arrayOfStrings = originalString.split(',');
                             <br>console.log(arrayOfStrings);
                         </code>
-                        <button onclick="copyToClipboard('splitMethCod')">Copy Code</button>
+                        <button onclick="copyToClipboard('splitMethCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                     </pre>
                 </div>
                 <br>in questo esempio, il metodo 'split' è chiamato su 'originalString', e le virgolotte sono messe
@@ -2306,7 +2350,7 @@
                             <br>let arrayOfStrings = originalString.split(';');
                             <br>console.log(arrayOfStrings);
                         </code>
-                        <button onclick="copyToClipboard('splitMethCod2')">Copy Code</button>
+                        <button onclick="copyToClipboard('splitMethCod2')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                     </pre>
                 </div>
                 <br>In questo caso la stringa è splittata usando il punto e virogla come delimitatore.
@@ -2322,7 +2366,7 @@
                             <br>let arrayOfCharacters = originalString.split('');
                             <br>console.log(arrayOfCharacters);
                         </code>
-                        <button onclick="copyToClipboard('splitMethCod3')">Copy Code</button>
+                        <button onclick="copyToClipboard('splitMethCod3')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                     </pre>
                 </div>
                 <br>In questo caso l'output sarà un array dei caratteri che compongono la parola 'hello'.
@@ -2341,7 +2385,7 @@
                             <br>let trimmedString = stringWithWhitespace.trim();
                             <br>console.log(trimmedString);
                         </code>
-                        <button onclick="copyToClipboard('trimMethCod')">Copy Code</button>
+                        <button onclick="copyToClipboard('trimMethCod')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                     </pre>
                 </div>
                 <br>In questo esempio il metodo 'trim' è chiamato per rimuovere gli spazi bianchi dalla stringa.
@@ -2371,7 +2415,7 @@
                     <br>str[0] = `H`
                     <br>console.log(str[0])//Output : TypeError: 0 is read-only (/index.js:37)
                 </code>
-                <button onclick="copyToClipboard('immuStr')">Copy Code</button>
+                <button onclick="copyToClipboard('immuStr')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
             </pre>
         </div>
         Come possiamo vedere ci da errore poichè il singolo carattere non può essere cambiato una volta che la
@@ -2391,7 +2435,7 @@
                             <br>str = `Hello World`
                             <br>console.log(str) //Output: `Hello World`
                         </code>
-                        <button onclick="copyToClipboard('immuStr2')">Copy Code</button>
+                        <button onclick="copyToClipboard('immuStr2')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                     </pre>
                 </div>
             </li>
@@ -2456,7 +2500,7 @@
                                 <br>shallowCopy[2][0] = 99;
                                 <br>console.log(originalArray); // [1, 2, [99, 4]]
                             </code>
-                            <button onclick="copyToClipboard('shaCopArr')">Copy Code</button>
+                            <button onclick="copyToClipboard('shaCopArr')"> <img src="/Media/copy.png" alt="Copy Icon" class="copy-icon"></button>
                         </pre>
                     </div>
                 </ul>
