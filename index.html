@@ -2191,15 +2191,21 @@
                                 <br>Se la corrispondenza è stata trovata, restituisce un array contenente la stringa
                                 corrispondente e tutti i gruppi catturati
                                 <br>
-                                <div id="esempio">Es:
-                                    <br>let str = "Hello, World!";
-                                    <br>let substringPattern = /World/;
-                                    <br>let matchResult = str.match(substringPattern);
-                                    <br>if (matchResult) {
-                                    <br>console.log("Substring found: " + matchResult[0]);
-                                    <br>} else {
-                                    <br>console.log("Substring not found.");
-                                    <br>}
+                                <br>Es:
+                                <div class="code-container">
+                                    <pre>
+                                        <code id="matchMethCod">
+                                            <br>let str = "Hello, World!";
+                                            <br>let substringPattern = /World/;
+                                            <br>let matchResult = str.match(substringPattern);
+                                            <br>if (matchResult) {
+                                            <br>console.log("Substring found: " + matchResult[0]);
+                                            <br>} else {
+                                            <br>console.log("Substring not found.");
+                                            <br>}
+                                        </code>
+                                        <button onclick="copyToClipboard('matchMethCod')">Copy Code</button>
+                                    </pre>
                                 </div>
                                 <br>In questo esempio l'espressione regolare '/World/' è usata con im emetodo
                                 'match()'.Se una corrsipondenza è stata trovata, stampa la sottostringa
@@ -2223,12 +2229,18 @@
                 sensibile
                 alle maiuscole (case sensitive).
                 <br>
-                <div id="esempio">Es:
-                    <br>let originalString = "Hello, World!";
-                    <br>let substringToReplace = "World";
-                    <br>let replacementString = "Universe";
-                    <br>let newString = originalString.replace(substringToReplace, replacementString);
-                    <br>console.log(newString);
+                <br>Es:
+                <div class="code-container">
+                    <pre>
+                        <code id="repMethCod">
+                            <br>let originalString = "Hello, World!";
+                            <br>let substringToReplace = "World";
+                            <br>let replacementString = "Universe";
+                            <br>let newString = originalString.replace(substringToReplace, replacementString);
+                            <br>console.log(newString);
+                        </code>
+                        <button onclick="copyToClipboard('repMethCod')">Copy Code</button>
+                    </pre>
                 </div>
                 <br>In questo esempio il metodo 'replace' è chiamato su 'originalString' con 2 argomenti: il
                 'substringToReplace' e il 'replacementString'. Il metodo restituisce una nuova stringa dove la prima
@@ -2238,12 +2250,18 @@
                     <li>'/g':
                         <br>ogni volta che trova il primo argomento lo sostituisce con il secondo argomento
                         <br>
-                        <div id="esempio">Es:
-                            <br>let originalString = "Hello, World! World is amazing.";
-                            <br>let substringToReplace = /World/g;
-                            <br>let replacementString = "Universe";
-                            <br>let newString = originalString.replace(substringToReplace, replacementString);
-                            <br>console.log(newString);
+                        <br>Es:
+                        <div class="code-container">
+                            <pre>
+                                <code id="repMethRegExp">
+                                    <br>let originalString = "Hello, World! World is amazing.";
+                                    <br>let substringToReplace = /World/g;
+                                    <br>let replacementString = "Universe";
+                                    <br>let newString = originalString.replace(substringToReplace, replacementString);
+                                    <br>console.log(newString);
+                                </code>
+                                <button onclick="copyToClipboard('repMethRegExp')">Copy Code</button>
+                            </pre>
                         </div>
                         <br>In questo esempio, l'espressione regolare /World/g viene utilizzata per sostituire tutte
                         le occorrenze di "World" nella stringa con "Universe". Il flag g è global scope, il che
@@ -2262,32 +2280,50 @@
                 carattere immesso nell'argomento.
                 <br>Per fare un esempio:
                 <br>
-                <div id="esempio">Es:
-                    <br>let originalString = "apple,orange,banana";
-                    <br>// Split the string using a comma as the delimiter
-                    <br>let arrayOfStrings = originalString.split(',');
-                    <br>console.log(arrayOfStrings);
+                <br>Es:
+                <div class="code-container">
+                    <pre>
+                        <code id="splitMethCod">
+                            <br>let originalString = "apple,orange,banana";
+                            <br>// Split the string using a comma as the delimiter
+                            <br>let arrayOfStrings = originalString.split(',');
+                            <br>console.log(arrayOfStrings);
+                        </code>
+                        <button onclick="copyToClipboard('splitMethCod')">Copy Code</button>
+                    </pre>
                 </div>
                 <br>in questo esempio, il metodo 'split' è chiamato su 'originalString', e le virgolotte sono messe
                 tra le parestesi tonde come argomento. Il risultato è quindi un array dei tre elementi ('apple',
                 'orange', 'banana').
                 <br>Posso usare anche delimitatori diversi come ad esempio:
                 <br>
-                <div id="esempio">Es:
-                    <br>let originalString = "apple;orange;banana";
-                    <br>// Split the string using a semicolon as the delimiter
-                    <br>let arrayOfStrings = originalString.split(';');
-                    <br>console.log(arrayOfStrings);
+                <br>Es:
+                <div class="code-container">
+                    <pre>
+                        <code id="splitMethCod2">
+                            <br>let originalString = "apple;orange;banana";
+                            <br>// Split the string using a semicolon as the delimiter
+                            <br>let arrayOfStrings = originalString.split(';');
+                            <br>console.log(arrayOfStrings);
+                        </code>
+                        <button onclick="copyToClipboard('splitMethCod2')">Copy Code</button>
+                    </pre>
                 </div>
                 <br>In questo caso la stringa è splittata usando il punto e virogla come delimitatore.
                 <br>Se si vuole splittare una stringa in un carattere individuale, si può usare una stringa vuota
                 come delimitatore.
                 <br>
-                <div id="esempio">Es:
-                    <br>let originalString = "hello";
-                    <br>// Split the string into an array of characters
-                    <br>let arrayOfCharacters = originalString.split('');
-                    <br>console.log(arrayOfCharacters);
+                <br>Es:
+                <div class="code-container">
+                    <pre>
+                        <code id="splitMethCod3">
+                            <br>let originalString = "hello";
+                            <br>// Split the string into an array of characters
+                            <br>let arrayOfCharacters = originalString.split('');
+                            <br>console.log(arrayOfCharacters);
+                        </code>
+                        <button onclick="copyToClipboard('splitMethCod3')">Copy Code</button>
+                    </pre>
                 </div>
                 <br>In questo caso l'output sarà un array dei caratteri che compongono la parola 'hello'.
             </li>
@@ -2296,11 +2332,17 @@
                 <br>è usato per rimuovere gli spazi bianchi(spazi, schede, interruzioni di riga) da entrambe le
                 estremità di una stringa.
                 <br>
-                <div id="esempio">Es:
-                    <br>let stringWithWhitespace = " Hello, World! ";
-                    <br>// Using trim to remove leading and trailing whitespace
-                    <br>let trimmedString = stringWithWhitespace.trim();
-                    <br>console.log(trimmedString);
+                <br>Es:
+                <div class="code-container">
+                    <pre>
+                        <code id="trimMethCod">
+                            <br>let stringWithWhitespace = " Hello, World! ";
+                            <br>// Using trim to remove leading and trailing whitespace
+                            <br>let trimmedString = stringWithWhitespace.trim();
+                            <br>console.log(trimmedString);
+                        </code>
+                        <button onclick="copyToClipboard('trimMethCod')">Copy Code</button>
+                    </pre>
                 </div>
                 <br>In questo esempio il metodo 'trim' è chiamato per rimuovere gli spazi bianchi dalla stringa.
                 è bene notare che il metodo 'trim' non modifica la stringa originale, restituisce una nuova stringa
@@ -2320,11 +2362,17 @@
         caratteri di una stringa letterale non possono essere modificati.
         <br>Per fare un esempio:
         <br>
-        <div id="esempio">Es:
-            <br>//string immutability
-            <br>let str = `Vello World`
-            <br>str[0] = `H`
-            <br>console.log(str[0])//Output : TypeError: 0 is read-only (/index.js:37)
+        <br>Es:
+        <div class="code-container">
+            <pre>
+                <code id="immuStr">
+                    <br>//string immutability
+                    <br>let str = `Vello World`
+                    <br>str[0] = `H`
+                    <br>console.log(str[0])//Output : TypeError: 0 is read-only (/index.js:37)
+                </code>
+                <button onclick="copyToClipboard('immuStr')">Copy Code</button>
+            </pre>
         </div>
         Come possiamo vedere ci da errore poichè il singolo carattere non può essere cambiato una volta che la
         stringa è stata creata. Possiamo ancora cambiarlo in "hello world", ma <mark>non possiamo seplicemente
@@ -2335,10 +2383,16 @@
                 'h' </li>
             <li>Oppure
                 <br>
-                <div id="esempio">Es:
-                    <br>let str = `Vello World`
-                    <br>str = `Hello World`
-                    <br>console.log(str) //Output: `Hello World`
+                <br>Es:
+                <div class="code-container">
+                    <pre>
+                        <code id="immuStr2">
+                            <br>let str = `Vello World`
+                            <br>str = `Hello World`
+                            <br>console.log(str) //Output: `Hello World`
+                        </code>
+                        <button onclick="copyToClipboard('immuStr2')">Copy Code</button>
+                    </pre>
                 </div>
             </li>
         </ul>
@@ -2389,16 +2443,21 @@
                     <li>Gli operatori <b id="slice">'.slice()'</b>, <b id="concat">'.concat()'</b> e<b id="spread">
                             spread('...') </b> sono metodi comunemente usati per creare shallow copies di array.</li>
                     <br>
-                    <br>
-                    <div id="esempio">Es:
-                        <br>const originalArray = [1, 2, [3, 4]];
-                        <br>// Shallow copy using slice()
-                        <br>const shallowCopy = originalArray.slice();
-                        <br>// Shallow copy using spread operator
-                        <br>const shallowCopy2 = [...originalArray];
-                        <br>// Modifying the nested array in the shallow copy affects the original
-                        <br>shallowCopy[2][0] = 99;
-                        <br>console.log(originalArray); // [1, 2, [99, 4]]
+                    <br>Es:
+                    <div class="code-container">
+                        <pre>
+                            <code id="shaCopArr">
+                                <br>const originalArray = [1, 2, [3, 4]];
+                                <br>// Shallow copy using slice()
+                                <br>const shallowCopy = originalArray.slice();
+                                <br>// Shallow copy using spread operator
+                                <br>const shallowCopy2 = [...originalArray];
+                                <br>// Modifying the nested array in the shallow copy affects the original
+                                <br>shallowCopy[2][0] = 99;
+                                <br>console.log(originalArray); // [1, 2, [99, 4]]
+                            </code>
+                            <button onclick="copyToClipboard('shaCopArr')">Copy Code</button>
+                        </pre>
                     </div>
                 </ul>
                 <!-- Thu 30/11/23  11.27: relative about shallow copies characteristics -->

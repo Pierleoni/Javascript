@@ -42,6 +42,7 @@ h5,
 h6 {
     color: var(--ctx);
     font-weight: 700;
+    text-shadow: 4px 4px black;
 }
 
 a:link{
@@ -130,10 +131,13 @@ inserire il pararagrafo all'interno di un div â†’ assegnare una classe al div â†
 
 
 .code-container{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
     position: relative;
     background-color: #000;
     color: #fff;
 }
+
 
 /*  */
 .esempio{
