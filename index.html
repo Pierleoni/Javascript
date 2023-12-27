@@ -793,8 +793,7 @@
                         <br>
                         <br>
                         <div class="info">
-                            <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt=""
-                                class="photo2">
+                            <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="">
                             <h3>Parsing</h3>
                             <p>Il termine Parsing in inglese sta per "interpretare/analizzare",
                                 <br><mark>è spesso riferito al processo di analisi o interpretazione dei dati, in
@@ -2566,7 +2565,7 @@
         elementi HTML, settare gli stili, classi e attributi ed ascoltare e rispondere agli eventi.
         <br>In pratica il DOM tree è generato da un documento HTML, con il quale in seguito si può interagire
         </p>
-        <p id="domStruc">
+        <p id="domStruc-intro">
         <h3>La Struttura del DOM</h3>
         <br>Immaginiamo che il DOM sia un libro dove ogni pagina è una parte diversa del sito web e il DOM tree è come
         un sommario di questo libro che mostra tutti le parti diverse del sito web e come sono organizzate.
@@ -2577,7 +2576,7 @@
         <br>
         <div class="domStructure-paragraph">
             <br><img src="/Media/Photo/Dom Tree Structure.png" class="dom" height="400rem" width="500rem" alt="">
-            <br><small>Illustrazione del DOM Tree</small>
+            <br><small class="notes">Illustrazione del DOM Tree</small>
         </div>
         <!-- Su 10/11/23 12.46: relative about align imagine in the center of this part -->
         <br>Esattamente come il sommario di un libro aiuta il lettore a trovare i paragrafi specifici di quel libro, il
@@ -2598,6 +2597,27 @@
             acceddere e interagire con ogni nodo in un documento. I nodi possono essere creati, spostati e cambiati.
             <br>Gli Event Listeners possono essere aggiunti ai nodi ed innescati al verificarsi di un determinato
             evento.
+        <div class="info">
+            <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="" class="photo2">
+            <h3 id="treeStru">Struttura ad albero (tree structure)</h3>
+            <p>
+                Si puo dire sia tree structure che tree model o tree diagram, ed è un modo per rapperesentare la natura
+                gerarchica in una forma grafica. Viene chiamata struttura ad albero perchè la rappresentazione classica
+                assomiglia ad un albero, sebbene la carta è generalmente capovolto rispetto ad un albero biologico, con
+                il “fusto” in alto e le “foglie” in basso.
+                <br><img src="/Media/Photo/tree structure 2.png" class="photo" height="300px" width="400px" alt="">
+                <br><small class="notes">Nota: Una struttura ad albero che mostra la possibile organizzazione gerarchica
+                    di
+                    un'enciclopedia</small>
+                <br>
+                <br>Questa struttura è ovviamente concettuale ed appare in diverse forme.
+                <br>Gli elementi di questa struttura sono chiamati <i>"nodi"("nodes")</i>, le linee che connettono gli
+                elementi sono detti <i>"rami" ("branches")</i>.
+                <br>Ogni struttura ad albero finita ha un membro che non ha alcun superiore, a sua volta chiamato
+                <i>"radice"("root")</i> o <i>root node</i>(come mostrato poco sopra).
+            </p>
+        </div>
+        <!-- Wed 27/12/2023 11.25: relative about tree structure info -->
         <div class="info">
             <img src="/Media/Photo/lente di ingradimento.jpg" height="40px" width="50px" alt="" class="photo2">
             <h3 id="API">API</h3>
@@ -2634,12 +2654,20 @@
                         spostare o ruotare in modo programmatico le immagini. </td>
                 </tr>
             </table>
+            <br>Quindi, per riassumere, possiamo dire che il document API, o DOM API, ti permette di modificare un DOM
+            tree in qualsiasi modo tu voglia. Ti consente di creare qualsiasi documento HTML o XML da zero o di
+            modificare qualsiasi contenuto di un determinato documento HTML o XML.
+            <br>Gli autori di pagine Web possono modificare il DOM di un documento utilizzando JavaScript per accedere
+            alla proprietà del documento dell'oggetto globale. Questo oggetto documento implementa l'interfaccia
+            Document.
             </p>
         </div>
-        <p>
-            
-        </p>
         <!-- Tue 26/12/2023 14.34: relative about API info -->
+        <h4>I Node </h4>
+        <p id="NodePar">
+
+        </p>
+        <!-- Wed 27/12/2023 11.31: relative about Node paragraph  -->
         </p>
         </p>
         <!-- Sat 09/12/2023 15.01: relative about all dom js  -->

@@ -42,7 +42,7 @@ h5,
 h6 {
     color: var(--ctx);
     font-weight: 700;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 1px black;
 }
 
 a:link{
@@ -79,7 +79,13 @@ a:active{
     text-align: left;
 }
 
-
+.photo{
+    background-color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 /* per allineare una foto al centro del paragrafo richiamare le proprietà 
 "display: block" e "margin: 0 auto", all'interno della classe assegnata a quell'immagine */
 .phcode{
@@ -88,7 +94,7 @@ a:active{
     box-shadow: 10px 10px var(--lightdark);
     width: -5px;
     height: -3px;
-    /* display: block;
+    /*display: block;
     margin: 0 auto; */
 }
 
@@ -108,11 +114,15 @@ bisogna richiamare la proprietà "position: relative" nel classe assegnata a que
 }
 
 .photo2{
-    position: absolute;
+    /*position: absolute;
     top: 0;
-    right: 0;
+    right: 0;*/
+    float: right;
 }
 
+.notes{
+    text-align: center;
+}
 
 /* per allineare un immagine al centro del paragrafo: 
 inserire il pararagrafo all'interno di un div → assegnare una classe al div → richiamare la classe del div nel foglio di stile
@@ -139,7 +149,6 @@ th, td{
     padding-bottom: 20px;
     padding-left: 15px;
     padding-right: 15px;
-
 }
 
 .code-container{
