@@ -2585,6 +2585,63 @@
         <br>In sostanza quindi il DOM tree rappresenta la struttura di un sito web in un modo che i computer possano
         capire. I developers lo usano per accedere e manipolare elementi diversi in quella struttura per creare una
         pagina web dinamica.
+        <br> Per fare un esempio:
+        <br>Supponiamo che si volgia cambiare l'header della parte sopra del documento e scrivere due paragrafi incece
+        di uno.
+        <br>Es:
+        <div>
+            <h4>HTML</h4>
+            <br><img src="/Media/Photo/html tree.png" alt="">
+            <br>
+            <h4>Javascript</h4>
+            <br><img src="/Media/Photo/Js Tree.png" alt="">
+        </div>
+
+        <div class="code-container">
+            <pre>
+                <code id="domTree-using">
+                    <br><html lang="en">
+                        <head>
+                        <title>My Document</title>
+                        </head>
+                        <body>
+                        <input type="button" value="Change this document." onclick="change()" />
+                        <h2>Header</h2>
+                        <p>Paragraph</p>
+                        </body>
+                    </html>
+                    
+                    function change() {
+                        // document.getElementsByTagName("h2") restituisce un NodeList del tag <h2>
+                        // prende gli elementi nel documento per il nome del tag che viene ripotato tra le parentesi tonde (argomento), e il primo è al numero 0:
+                        const header = document.getElementsByTagName("h2").item(0);
+
+                        // il firstChild del header è un Text node:
+                        header.firstChild.data = "A dynamic document";
+                    
+                        //  Adesso l'header è un documento dinamico.
+                    
+                        // Si accede al primo paragrafo
+                        const para = document.getElementsByTagName("p").item(0);
+                        para.firstChild.data = "This is the first paragraph.";
+                    
+                        // Crea un nuovo Text Node per il secondo paragrafo
+                        const newText = document.createTextNode("This is the second paragraph.");
+                    
+                        // Crea un nuovo elemento che viene usato per essere l'elemento del secondo paragrafo
+                        const newElement = document.createElement("p");
+                    
+                        // Mette il testo nel paragrafo
+                        newElement.appendChild(newText);
+                    
+                        // Mette il paragrafo alla fine del documento appendendolo al body(che è il parente del paragrafo)
+                        para.parentNode.appendChild(newElement);
+                    }
+                    
+                </code>
+                <button onclick="copyToClipboard('domTree-using')"><img src="/Media/copy.png" alt="Copy ICon" class="copy-icon"></button>
+            </pre>
+        </div>
         </p>
         <p id="revDom">
             Quindi, per fare un riassunto, il DOM è un API che rappresenta ed interagisce con qualsiasi documento di
@@ -2665,7 +2722,9 @@
         <!-- Tue 26/12/2023 14.34: relative about API info -->
         <h4>I Node </h4>
         <p id="NodePar">
-
+            Nel DOM, un node è una parte fondamentale della struttura del documento. Esso è rappresentato da un tree of
+            nodes; ogni elemento, attributo e pezzo di testo in un documento HTML è un node, e questi nodi sono
+            organizzati in una struttura gerarchica.
         </p>
         <!-- Wed 27/12/2023 11.31: relative about Node paragraph  -->
         </p>
