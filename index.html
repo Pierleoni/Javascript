@@ -132,7 +132,7 @@
                                         <br>"!true" è "false"
                                         <br>viceversa "!false" è "true"</code> 
                                     </pre>
-                                <button onclick="copyToClipboard(`esempioCodiceBooleane`)"> <img src="/Media/copy.png"
+                                <button id="btnExCodBool" onclick="copyToClipboard(`esempioCodiceBooleane`, 'btnExCodBool')"> <img src="/Media/copy.png"
                                         alt="Copy Icon" class="copy-icon"> Copy Code </button>
                             </div>
                         </li>
@@ -2639,7 +2639,7 @@
                     }
                     
                 </code>
-                <button onclick="copyToClipboard('domTree-using')"><img src="/Media/copy.png" alt="Copy ICon" class="copy-icon"></button>
+                <button onclick="copyToClipboard('domTree-using')"><img src="/Media/copy.png" alt="Copy ICon" class="copy-icon">Copy Code</button>
             </pre>
         </div>
         </p>
@@ -2720,13 +2720,19 @@
             </p>
         </div>
         <!-- Tue 26/12/2023 14.34: relative about API info -->
-        <h4>I Node </h4>
-        <p id="NodePar">
-            Nel DOM, un node è una parte fondamentale della struttura del documento. Esso è rappresentato da un tree of
+        </p>
+        <!-- Thu 28/12/2023 12.05: realtive about dom review paragraph  -->
+        <h3>I Nodes </h3>
+        <p id="nodeIntro">
+            Nel DOM, un <b>node</b> è una parte fondamentale della struttura del documento. È rappresentato da un tree
+            of
             nodes; ogni elemento, attributo e pezzo di testo in un documento HTML è un node, e questi nodi sono
             organizzati in una struttura gerarchica.
         </p>
-        <!-- Wed 27/12/2023 11.31: relative about Node paragraph  -->
+        <!-- Wed 27/12/2023 11.31: relative about Node intro paragraph  -->
+        <p id="nodePara">
+            L'interfaccia del DOM Node è una classe base astratta su cui si basano molti altri oggetti API DOM,
+            consentendo così di utilizzare questi tipi di oggetti in modo simile e spesso in modo intercambiabile.
         </p>
         </p>
         <!-- Sat 09/12/2023 15.01: relative about all dom js  -->
