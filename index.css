@@ -94,8 +94,7 @@ a:active{
     box-shadow: 10px 10px var(--lightdark);
     width: -5px;
     height: -3px;
-    /*display: block;
-    margin: 0 auto; */
+    
 }
 
 /* per allineare una foto, all'interno di un div, in alto a destra 
@@ -121,7 +120,9 @@ bisogna richiamare la proprietà "position: relative" nel classe assegnata a que
 }
 
 .notes{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 /* per allineare un immagine al centro del paragrafo: 

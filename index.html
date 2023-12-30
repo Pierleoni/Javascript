@@ -62,7 +62,7 @@
             <img class="phcode" src="/Media/Photo/Esempio commenti Js.png" height="160px" width="600px"
                 alt="Esempio commenti Js">
             <br>
-            <small>Questo è un esempio di in-line comment e multi-line comment</small>
+            <small class="notes">Questo è un esempio di in-line comment e multi-line comment</small>
             <br>
             <h2>Data Types e variabili </h2>
             in informatica i data sono qualsiasi cosa ha siginificato per il computer e Js fornisce 7 tipi di data:
@@ -132,8 +132,9 @@
                                         <br>"!true" è "false"
                                         <br>viceversa "!false" è "true"</code> 
                                     </pre>
-                                <button id="btnExCodBool" onclick="copyToClipboard(`esempioCodiceBooleane`, 'btnExCodBool')"> <img src="/Media/copy.png"
-                                        alt="Copy Icon" class="copy-icon"> Copy Code </button>
+                                <button id="btnExCodBool"
+                                    onclick="copyToClipboard(`esempioCodiceBooleane`, 'btnExCodBool')"> <img
+                                        src="/Media/copy.png" alt="Copy Icon" class="copy-icon"> Copy Code </button>
                             </div>
                         </li>
                     </ul>
@@ -1210,7 +1211,8 @@
                 <br>Restituisce la lunghezza di una stringa.
                 <br>
                 <br><img src="/Media/Photo/string.length.png" height="200px" width="600px" alt="">
-                <br><small>Note: i caratteri presenti nella mia stringa in totale sono di 41 caratteri</small>
+                <br><small class="notes">Note: i caratteri presenti nella mia stringa in totale sono di 41
+                    caratteri</small>
                 <br>
                 <br>N.B.quando si parla dei caratteri delle stringhe si includono pure gli spazi e la puntegiattura.
                 Inoltre la length non è un metodo ma un oggetto della stringa poiche si accede direttamente con la
@@ -2732,10 +2734,69 @@
         <!-- Wed 27/12/2023 11.31: relative about Node intro paragraph  -->
         <p id="nodePara">
             L'interfaccia del DOM Node è una classe base astratta su cui si basano molti altri oggetti API DOM,
-            consentendo così di utilizzare questi tipi di oggetti in modo simile e spesso in modo intercambiabile.
-        </p>
+            consentendo così di utilizzare questi tipi di oggetti in modo simile e spesso in modo
+            intercambiabile.
+            <br>Essendo una classe astratta, non esiste un semplice oggetto Node. Tutti gli oggetti che
+            implementano la funzionalità Node sono basati su una delle relative sottoclassi. I più importanti sono
+            Document, Element e DocumentFragment.
+            <br>Inoltre, ogni tipo di nodo DOM è rappresentato da un'interfaccia basata su Node. Questi includono Attr,
+            CharacterData (su cui si basano Text, Comment, CDATASection e ProcessingInstruction) e DocumentType.
+            <br>In alcuni casi, una particolare funzionalità dell'interfaccia del nodo di base potrebbe non essere
+            applicabile a una delle relative interfacce figlio; In tal caso, il nodo ereditario può restituire null o
+            generare un'eccezione, a seconda delle circostanze. Ad esempio, se si tenta di aggiungere elementi figlio a
+            un tipo di nodo che non può avere elementi figlio, verrà generata un'eccezione.
         </p>
         <!-- Sat 09/12/2023 15.01: relative about all dom js  -->
+        <h4> Node Types & Instance Properties
+            <p id="nodeTypes-And-instanceProperties">
+                Prima di continuare a snocciolare la questione dei node nel DOM Js bisogna chiarire una cosa: seguendo
+                quanto detto poco sopra esistono sia le proprietà dell'istanza  del nodo (Instance Properties) e i tipi di
+                nodo (Node Types).
+                <br>Entrambi sono importanti in contesti differenti quando si lavoro con il DOM in javascript.
+                L'importanza di ognuno dipende sull'attività che si sta tentando di svolgere:
+            <ul type="A">
+                <li><b>Nodes Types</b>
+                    <ul class="unordList">
+                        <li>Importanza:
+                            <ol>
+                                <li>I tipi di nodo sono cruciali quando hai bisogno di identificare e differenziare tra
+                                    differenti tipi di nodi nel DOM tree.</li>
+                                <li>Proveddono a una fondamentale caterizzazione dei nodi, aiutando a comprendere il
+                                    ruolo di ogni nodo nella struttura del documento.</li>
+                            </ol>
+                        </li>
+                        <li>Casi di utilizzo:
+                            <ol>
+                                <li>Il controllo dei tipi di nodo è spesso utile nella logica condizionale quando si
+                                    attraversa il DOM tree.</li>
+                                <li>Aiutano a determinare se un nodo è un elemento, un attributo, un text node, etc., ed
+                                    intraprendono azioni appropriate sulla base di tali informazioni</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Sat 30/12/2023 16.31: relative about Nodes Types -->
+                <li><b>Node Instance Properties</b>
+                    <ul class="unordList">
+                        <li>Importanza:
+                            <ol>
+                                <li>le proprietà dell'istanza del nodo sono importanti per accedere e modificare specifici attributi o contenuti di nodi individuali.</li>
+                                <li>Forniscono un modo per interagire con i dati attuali e le caratteristiche di una particolare istanza del nodo. </li>
+                            </ol>
+                        </li>
+                        <li> Casi di utilizzo:
+                            <ol>
+                                <li>Quando si ha bisogno di leggere o modificare il contenuto di un elemento, si possono utilizzare le proprietà dell'istanza come ad esempio <i>'textContent'</i>, <i> 'innerHTML' </i>, <i>'value</i>.</li>
+                                <li></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            </p>
+            <!-- Sat 30/12/2023 15.55: about nodes types -->
+        </h4>
     </div>
     <!-- Tue 28/11/23  12.58: Relative about all text-->
 
