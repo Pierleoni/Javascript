@@ -2598,52 +2598,6 @@
             <h4>Javascript</h4>
             <br><img src="/Media/Photo/Js Tree.png" alt="">
         </div>
-
-        <div class="code-container">
-            <pre>
-                <code id="domTree-using">
-                    <br><html lang="en">
-                        <head>
-                        <title>My Document</title>
-                        </head>
-                        <body>
-                        <input type="button" value="Change this document." onclick="change()" />
-                        <h2>Header</h2>
-                        <p>Paragraph</p>
-                        </body>
-                    </html>
-                    
-                    function change() {
-                        // document.getElementsByTagName("h2") restituisce un NodeList del tag <h2>
-                        // prende gli elementi nel documento per il nome del tag che viene ripotato tra le parentesi tonde (argomento), e il primo è al numero 0:
-                        const header = document.getElementsByTagName("h2").item(0);
-
-                        // il firstChild del header è un Text node:
-                        header.firstChild.data = "A dynamic document";
-                    
-                        //  Adesso l'header è un documento dinamico.
-                    
-                        // Si accede al primo paragrafo
-                        const para = document.getElementsByTagName("p").item(0);
-                        para.firstChild.data = "This is the first paragraph.";
-                    
-                        // Crea un nuovo Text Node per il secondo paragrafo
-                        const newText = document.createTextNode("This is the second paragraph.");
-                    
-                        // Crea un nuovo elemento che viene usato per essere l'elemento del secondo paragrafo
-                        const newElement = document.createElement("p");
-                    
-                        // Mette il testo nel paragrafo
-                        newElement.appendChild(newText);
-                    
-                        // Mette il paragrafo alla fine del documento appendendolo al body(che è il parente del paragrafo)
-                        para.parentNode.appendChild(newElement);
-                    }
-                    
-                </code>
-                <button onclick="copyToClipboard('domTree-using')"><img src="/Media/copy.png" alt="Copy ICon" class="copy-icon">Copy Code</button>
-            </pre>
-        </div>
         </p>
         <p id="revDom">
             Quindi, per fare un riassunto, il DOM è un API che rappresenta ed interagisce con qualsiasi documento di
@@ -2745,58 +2699,104 @@
             applicabile a una delle relative interfacce figlio; In tal caso, il nodo ereditario può restituire null o
             generare un'eccezione, a seconda delle circostanze. Ad esempio, se si tenta di aggiungere elementi figlio a
             un tipo di nodo che non può avere elementi figlio, verrà generata un'eccezione.
+        <h4> Node Types & Instance Properties</h4>
+        <p id="nodeTypes-And-instanceProperties">
+            Prima di continuare a snocciolare la questione dei node nel DOM Js bisogna chiarire una cosa:
+            <br>seguendo
+            quanto detto poco sopra esistono sia le proprietà dell'istanza del nodo (Instance Properties) e i tipi
+            di
+            nodo (Node Types).
+            <br>Entrambi sono importanti in contesti differenti quando si lavoro con il DOM in javascript.
+            L'importanza di ognuno dipende sull'attività che si sta tentando di svolgere:
+        <ul type="A">
+            <li><b>Nodes Types</b>
+                <ul class="unordList">
+                    <li>Importanza:
+                        <ol>
+                            <li>I tipi di nodo sono cruciali quando hai bisogno di identificare e differenziare tra
+                                differenti tipi di nodi nel DOM tree.</li>
+                            <li>Proveddono a una fondamentale caterizzazione dei nodi, aiutando a comprendere il
+                                ruolo di ogni nodo nella struttura del documento.</li>
+                        </ol>
+                    </li>
+                    <li>Casi di utilizzo:
+                        <ol>
+                            <li>Il controllo dei tipi di nodo è spesso utile nella logica condizionale quando si
+                                attraversa il DOM tree.</li>
+                            <li>Aiutano a determinare se un nodo è un elemento, un attributo, un text node, etc., ed
+                                intraprendono azioni appropriate sulla base di tali informazioni</li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            <!-- Sat 30/12/2023 16.31: relative about Nodes Types -->
+            <li><b>Node Instance Properties</b>
+                <ul class="unordList">
+                    <li>Importanza:
+                        <ol>
+                            <li>le proprietà dell'istanza del nodo sono importanti per accedere e modificare
+                                specifici attributi o contenuti di nodi individuali.</li>
+                            <li>Forniscono un modo per interagire con i dati attuali e le caratteristiche di una
+                                particolare istanza del nodo. </li>
+                        </ol>
+                    </li>
+                    <li> Casi di utilizzo:
+                        <ol>
+                            <li>Quando si ha bisogno di leggere o modificare il contenuto di un elemento, si possono
+                                utilizzare le proprietà dell'istanza come ad esempio <i>'textContent'</i>, <i>
+                                    'innerHTML' </i>, <i>'value</i>.</li>
+                            <li>
+                                Le proprietà dell'istanza sono essenziali per attività come l'aggiornamento del
+                                testo all'interno di un elemento, ottenere il valore di un input field o manipolare
+                                gli attributi di un nodo.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Sun 31/12/23023 14.52: the list about the difference of node types and instance properties  -->
+
+        <p>Per fare un esempio pratico:
+            <br>
+            <br>Es:
+        <div class="code-container">
+            <pre><code id="nodesTypes-InstaProp">
+                        // Node Types
+                        var myNode = document.getElementById('exampleNode');
+                        
+                        if (myNode.nodeType === 1) {
+                            console.log('This is an element node.');
+                        } else if (myNode.nodeType === 3) {
+                            console.log('This is a text node.');
+                        }
+                        
+                        // Node Instance Properties
+                        var textContent = myNode.textContent;
+                        console.log('Text content:', textContent);
+                        
+                    </code>
+                    <button onclick="copyToClipboard('nodesTypes-InstaProp')"><img src="/Media/copy.png" alt="" class="copy-icon"></button>
+                </pre>
+        </div>
+        <br>
+        <br>In questo esempio i node types sono usati per determinare se il node è un elemento o un text node.
+        <br>D'altra parte, le proprietà dell'istanza del nodo (in questo caso il <b><i>'textContent'</i></b>) sono usati
+        per recuperare utilizzato per recuperare il contenuto testuale effettivo del nodo.
+        <br>In conclusione:
+        <ol>
+            <li>Entrambi, sia i node types che le istanze proprietarie sono importanti in scenari differenti</li>
+            <li>I node types sono cruciali per capire le struttura di un documento</li>
+            <li>Le istanze proprietarie sono vitali per interagire e modificare il contenuto e gli attributi dei singoli
+            nodi. </li>
+        </ol>
+        <br>In pratica, si possono ritrovare ad usare sia i node types che i node instance poroperties contemporaneamente, dipende <ins>sempre</ins> dai cosa devi manipolare nel DOM.
+        </p>
+        </p>
+        <!-- Sat 30/12/2023 15.55: about nodes types and Node Instance Properties  -->
+
         </p>
         <!-- Sat 09/12/2023 15.01: relative about all dom js  -->
-        <h4> Node Types & Instance Properties
-            <p id="nodeTypes-And-instanceProperties">
-                Prima di continuare a snocciolare la questione dei node nel DOM Js bisogna chiarire una cosa: seguendo
-                quanto detto poco sopra esistono sia le proprietà dell'istanza  del nodo (Instance Properties) e i tipi di
-                nodo (Node Types).
-                <br>Entrambi sono importanti in contesti differenti quando si lavoro con il DOM in javascript.
-                L'importanza di ognuno dipende sull'attività che si sta tentando di svolgere:
-            <ul type="A">
-                <li><b>Nodes Types</b>
-                    <ul class="unordList">
-                        <li>Importanza:
-                            <ol>
-                                <li>I tipi di nodo sono cruciali quando hai bisogno di identificare e differenziare tra
-                                    differenti tipi di nodi nel DOM tree.</li>
-                                <li>Proveddono a una fondamentale caterizzazione dei nodi, aiutando a comprendere il
-                                    ruolo di ogni nodo nella struttura del documento.</li>
-                            </ol>
-                        </li>
-                        <li>Casi di utilizzo:
-                            <ol>
-                                <li>Il controllo dei tipi di nodo è spesso utile nella logica condizionale quando si
-                                    attraversa il DOM tree.</li>
-                                <li>Aiutano a determinare se un nodo è un elemento, un attributo, un text node, etc., ed
-                                    intraprendono azioni appropriate sulla base di tali informazioni</li>
-                            </ol>
-                        </li>
-                    </ul>
-                </li>
-                <!-- Sat 30/12/2023 16.31: relative about Nodes Types -->
-                <li><b>Node Instance Properties</b>
-                    <ul class="unordList">
-                        <li>Importanza:
-                            <ol>
-                                <li>le proprietà dell'istanza del nodo sono importanti per accedere e modificare specifici attributi o contenuti di nodi individuali.</li>
-                                <li>Forniscono un modo per interagire con i dati attuali e le caratteristiche di una particolare istanza del nodo. </li>
-                            </ol>
-                        </li>
-                        <li> Casi di utilizzo:
-                            <ol>
-                                <li>Quando si ha bisogno di leggere o modificare il contenuto di un elemento, si possono utilizzare le proprietà dell'istanza come ad esempio <i>'textContent'</i>, <i> 'innerHTML' </i>, <i>'value</i>.</li>
-                                <li></li>
-                            </ol>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-
-            </p>
-            <!-- Sat 30/12/2023 15.55: about nodes types -->
-        </h4>
     </div>
     <!-- Tue 28/11/23  12.58: Relative about all text-->
 
