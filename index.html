@@ -2776,7 +2776,7 @@
                         console.log('Text content:', textContent);
                         
                     </code>
-                    <button onclick="copyToClipboard('nodesTypes-InstaProp')"><img src="/Media/copy.png" alt="" class="copy-icon"></button>
+                    <button onclick="copyToClipboard('nodesTypes-InstaProp')"><img src="/Media/copy.png" alt="" class="copy-icon">Copy Code</button>
                 </pre>
         </div>
         <br>
@@ -2788,12 +2788,51 @@
             <li>Entrambi, sia i node types che le istanze proprietarie sono importanti in scenari differenti</li>
             <li>I node types sono cruciali per capire le struttura di un documento</li>
             <li>Le istanze proprietarie sono vitali per interagire e modificare il contenuto e gli attributi dei singoli
-            nodi. </li>
+                nodi. </li>
         </ol>
-        <br>In pratica, si possono ritrovare ad usare sia i node types che i node instance poroperties contemporaneamente, dipende <ins>sempre</ins> dai cosa devi manipolare nel DOM.
+        <br>In pratica, si possono ritrovare ad usare sia i node types che i node instance poroperties
+        contemporaneamente, dipende <ins>sempre</ins> dai cosa devi manipolare nel DOM.
         </p>
+        <div class="info">
+            <img src="/Media/Photo/lente di ingradimento.jpg"  height="40px" width="50px" alt="" class="photo2">
+            <p id="commUsed-NodeTypes">
+                In javascript e nel DOM, ci sono diversi node types comuni che si incotrano quando si lavora con le pagine web. 
+                <br>I più importanti sono: 
+            </p>
+            <table>
+                <tr>
+                    <th><b>Element Node (Node Type:1)</b></th>
+                    <th><b>Text Node (Node Type:3)</b></th>
+                    <th><b>Attribute Node (Node Type:2)</b></th>
+                    <th><b>Comment Node (Node Type:8)</b></th>
+                    <th><b>Document Node (Node Type:9)</b></th>
+                    <th><b>DocumentFragment Node (Node Type:11)</b></th>
+                </tr>
+                <td>Rappresenta un elemento HTML o XML, ad esempio i tag <b>'div', 'p', o 'a'</b> possono essere
+                    rappesentati come un element node </td>
+                    <br>
+                    <br>Es:
+                    <div class="code-container">
+                        <pre><code id="elNodes">
+                            &lt;div id="myDiv"&gt;Hello, World!&lt;/div&gt;
+                        </code></pre>
+                        <button onclick="copyToClipboard('elNodes')">Copy Code</button>
+                    </div>
+                    
+                <td>Rappesenta il contenuto testuale all'interno di un elemento. 
+                    <br>Per esempio, il testo dentro i tag <b>'p'</b> possono essere rappesentati come un text node</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </table>
+        </div>
         </p>
         <!-- Sat 30/12/2023 15.55: about nodes types and Node Instance Properties  -->
+        <h3>Node List</h3>
+        <p>
+            Il Node List sono oggetti ed l'insieme de nodi
+        </p>
 
         </p>
         <!-- Sat 09/12/2023 15.01: relative about all dom js  -->
